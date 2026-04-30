@@ -70,14 +70,59 @@ export default class UniversalCarousel {
   }
 
   _initDrag() {
-    this.container.addEventListener('mousedown', (e) => {
-      if (e.button !== 0) return;
+    const handleStart = (e) => {
+      const pageX = e.type.startsWith('touch') ? e.touches[0].pageX : e.pageX;
+      if (e.type === 'mousedown' && e.button !== 0) return;
+      
       this.isDown = true;
       this.hasMoved = false;
       this.container.classList.add('is-dragging');
-      this.startX = e.pageX - this.container.offsetLeft;
+      this.startX = pageX - this.container.offsetLeft;
       this.scrollLeft = this.container.scrollLeft;
-    });
+      
+      // Disable snap during drag for smooth movement
+      this.container.style.scrollSnapType = 'none';
+      this.container.style.scrollBehavior = 'auto';
+    };
+
+    const handleMove = (e) => {
+      if (!this.isDown) return;
+      
+      const pageX = e.type.startsWith('touch') ? e.touches[0].pageX : e.pageX;
+      const x = pageX - this.container.offsetLeft;
+      const dist = x - this.startX;
+      
+      if (!this.hasMoved && Math.abs(dist) > 8) {
+        this.hasMoved = true;
+      }
+
+      if (this.hasMoved) {
+        if (e.cancelable) e.preventDefault(); 
+        const walk = dist * 1.5;
+        this.container.scrollLeft = this.scrollLeft - walk;
+      }
+    };
+
+    const handleEnd = () => {
+      if (!this.isDown) return;
+      this.isDown = false;
+      this.container.classList.remove('is-dragging');
+      
+      // Restore snap and smooth behavior
+      this.container.style.scrollSnapType = 'x mandatory';
+      this.container.style.scrollBehavior = 'smooth';
+    };
+
+    // Mouse events
+    this.container.addEventListener('mousedown', handleStart);
+    window.addEventListener('mousemove', handleMove);
+    window.addEventListener('mouseup', handleEnd);
+    window.addEventListener('mouseleave', handleEnd);
+
+    // Touch events
+    this.container.addEventListener('touchstart', handleStart, { passive: true });
+    window.addEventListener('touchmove', handleMove, { passive: false });
+    window.addEventListener('touchend', handleEnd);
 
     this.container.addEventListener('click', (e) => {
       if (this.hasMoved) {
@@ -85,28 +130,6 @@ export default class UniversalCarousel {
         e.stopPropagation();
       }
     }, true);
-
-    window.addEventListener('mouseleave', () => this._stopDragging());
-    window.addEventListener('mouseup', () => this._stopDragging());
-
-    window.addEventListener('mousemove', (e) => {
-      if (!this.isDown) return;
-      const x = e.pageX - this.container.offsetLeft;
-      const dist = x - this.startX;
-      if (!this.hasMoved && Math.abs(dist) > 8) this.hasMoved = true;
-
-      if (this.hasMoved) {
-        e.preventDefault();
-        const walk = dist * 1.5;
-        this.container.scrollLeft = this.scrollLeft - walk;
-      }
-    });
-  }
-
-  _stopDragging() {
-    if (!this.isDown) return;
-    this.isDown = false;
-    this.container.classList.remove('is-dragging');
   }
 
   _initDots() {
