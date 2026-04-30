@@ -133,8 +133,6 @@ export default class Cursor {
         });
     }
 
-
-
     initTiltCards() {
         // Disable on touch devices (mobile)
         if (window.matchMedia('(pointer: coarse)').matches) return;
@@ -176,8 +174,6 @@ export default class Cursor {
             });
         });
     }
-
-
 
     initScrollAnimations() {
         const els = document.querySelectorAll('[data-animate]');
