@@ -1,7 +1,7 @@
 import '../css/style.css';
 import Cursor from './components/Cursor.js';
 import PortfolioSlider from './components/PortfolioSlider.js';
-import ReviewsSlider from './components/ReviewsSlider.js';
+import UniversalCarousel from './components/UniversalCarousel.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   new Cursor();
@@ -11,8 +11,26 @@ document.addEventListener('DOMContentLoaded', () => {
     new Scene();
   });
 
+  // 1. Portfolio Slider (Desktop Grouping)
   new PortfolioSlider('.bento-grid').init();
-  new ReviewsSlider().init();
+
+  // 2. Reviews Carousel (Draggable)
+  new UniversalCarousel({
+    container: '.reviews-scroll',
+    dots: '.reviews-dots',
+    cards: '.review-card',
+    gap: 24
+  }).init();
+
+  // 3. Projects Mobile Carousel (Draggable, Mobile Only)
+  new UniversalCarousel({
+    container: '.bento-grid',
+    dots: '.projects-dots',
+    cards: '.bento-wrapper',
+    gap: 24,
+    mobileOnly: true
+  }).init();
+
   // Cookie Banner Logic
   const cookieBanner = document.getElementById('cookie-banner');
   const btnAccept = document.getElementById('cookie-accept');
