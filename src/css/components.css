@@ -270,6 +270,15 @@ section {
     gap: 2rem;
 }
 
+.nav-links-divider,
+.nav-mobile-socials {
+    display: none;
+}
+
+.nav-links-actions {
+    display: contents;
+}
+
 .nav-links a {
     font-size: .875rem;
     font-weight: 500;
@@ -449,6 +458,7 @@ section {
     }
 
     .nav-links-divider {
+        display: block;
         width: 40px;
         height: 2px;
         background: var(--border);
