@@ -350,10 +350,10 @@ section {
         backdrop-filter: blur(25px);
         -webkit-backdrop-filter: blur(25px);
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         gap: 0.8rem;
-        padding: 2rem;
+        padding: 6rem 2rem 2rem;
         z-index: 2000;
         opacity: 0;
         visibility: hidden;
@@ -365,7 +365,7 @@ section {
     .nav-links::after {
         content: attr(data-label);
         position: absolute;
-        top: 2rem;
+        top: 3.5rem;
         left: 50%;
         transform: translateX(-50%);
         font-size: 0.65rem;
