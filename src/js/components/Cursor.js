@@ -230,7 +230,7 @@ export default class Cursor {
 
             if (isOpen) {
                 // Staggered entry for links and footer elements
-                gsap.fromTo(links.querySelectorAll('li, .nav-links-actions > a, .nav-mobile-socials > a'), 
+                gsap.fromTo(links.querySelectorAll('li, .nav-links-actions > a'), 
                     { opacity: 0, y: 20 },
                     { opacity: 1, y: 0, duration: 0.6, stagger: 0.08, ease: 'power3.out', delay: 0.1 }
                 );

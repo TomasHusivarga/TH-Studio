@@ -473,24 +473,6 @@ section {
         gap: 1rem;
         width: 100%;
     }
-
-    .nav-mobile-socials {
-        display: flex;
-        gap: 1.5rem;
-        margin-top: 1.2rem;
-        opacity: 0.7;
-    }
-
-    .nav-mobile-socials a {
-        padding: 0 !important;
-        font-size: 1.2rem !important;
-        color: var(--dim);
-        transition: color 0.3s ease;
-    }
-
-    .nav-mobile-socials a:hover {
-        color: var(--accent);
-    }
 }
 
 /* ─── BUTTONS ─── */
