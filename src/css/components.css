@@ -209,6 +209,37 @@ section {
     color: var(--text);
 }
 
+.portfolio-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    color: var(--accent);
+    padding: 0.2rem 1rem;
+    border-radius: 50px;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 700;
+    vertical-align: middle;
+    margin-left: 0.75rem;
+    position: relative;
+    top: -0.1em;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px -5px rgba(56, 189, 248, 0.3);
+}
+
+.portfolio-count::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: 8px;
+    box-shadow: 0 0 10px var(--accent);
+}
+
 .body-text {
     color: var(--muted);
     font-size: 1rem;

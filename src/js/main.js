@@ -11,6 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     new Scene();
   });
 
+  // Update Portfolio Counter dynamically
+  const portfolioCounter = document.getElementById('portfolio-counter');
+  const portfolioProjects = document.querySelectorAll('#prace .bento-wrapper');
+  if (portfolioCounter && portfolioProjects.length > 0) {
+    portfolioCounter.textContent = portfolioProjects.length;
+  }
+
   // 1. Portfolio Slider (Desktop Grouping)
   new PortfolioSlider('.bento-grid').init();
 
