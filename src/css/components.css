@@ -701,6 +701,33 @@ section {
     grid-column: span 12;
 }
 
+/* Row 3: same staggered pattern as rows 1+2 */
+.bento-grid>.bento-wrapper:nth-child(6) {
+    grid-column: span 7;
+}
+
+.bento-grid>.bento-wrapper:nth-child(7) {
+    grid-column: span 5;
+}
+
+/* Row 4 */
+.bento-grid>.bento-wrapper:nth-child(8) {
+    grid-column: span 5;
+}
+
+.bento-grid>.bento-wrapper:nth-child(9) {
+    grid-column: span 7;
+}
+
+/* Row 5 */
+.bento-grid>.bento-wrapper:nth-child(10) {
+    grid-column: span 7;
+}
+
+.bento-grid>.bento-wrapper:nth-child(11) {
+    grid-column: span 5;
+}
+
 /* Full-width card modifier */
 .bento-card--wide .bento-card__screen {
     min-height: 240px;
@@ -931,6 +958,7 @@ section {
 .bento-card__screen--carepoint .bc-browser-bar { background: #051232; }
 .bento-card__screen--humienok .bc-browser-bar { background: #280505; }
 .bento-card__screen--spiremage .bc-browser-bar { background: #0a0a1e; }
+.bento-card__screen--viamax .bc-browser-bar { background: #1a0a00; }
 
 .bc-logo {
     font-size: .6rem;
