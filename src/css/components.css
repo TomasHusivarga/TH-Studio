@@ -923,6 +923,10 @@ section {
     background: linear-gradient(180deg, rgba(5, 18, 50, 0.75) 0%, rgba(23, 85, 201, 0.15) 100%);
 }
 
+.bento-card__screen--viamax .bc-content::before {
+    background: linear-gradient(180deg, rgba(2, 10, 26, 0.75) 0%, rgba(0, 86, 179, 0.16) 100%);
+}
+
 /* Browser bars inherit base project color */
 .bento-card__screen--rehamax .bc-browser-bar { background: #05122d; }
 .bento-card__screen--psychiatria .bc-browser-bar { background: #12081e; }
@@ -930,6 +934,7 @@ section {
 .bento-card__screen--ekoprofit .bc-browser-bar { background: #040e08; }
 .bento-card__screen--carepoint .bc-browser-bar { background: #051232; }
 .bento-card__screen--humienok .bc-browser-bar { background: #280505; }
+.bento-card__screen--viamax .bc-browser-bar { background: #020a1a; }
 .bento-card__screen--spiremage .bc-browser-bar { background: #0a0a1e; }
 
 .bc-logo {
