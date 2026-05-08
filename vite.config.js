@@ -42,6 +42,16 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         en: resolve(__dirname, 'en/index.html'),
         gdpr: resolve(__dirname, 'gdpr.html'),
+        rehamax: resolve(__dirname, 'projects/rehamax.html'),
+        donnabella: resolve(__dirname, 'projects/donnabella.html'),
+        ekoprofit: resolve(__dirname, 'projects/ekoprofit.html'),
+        safePlaceClinic: resolve(__dirname, 'projects/safe-place-clinic.html'),
+        carepoint: resolve(__dirname, 'projects/carepoint.html'),
+        humienok: resolve(__dirname, 'projects/humienok.html'),
+        miningflow: resolve(__dirname, 'projects/miningflow.html'),
+        ecpro: resolve(__dirname, 'projects/ecpro.html'),
+        waventry: resolve(__dirname, 'projects/waventry.html'),
+        viamax: resolve(__dirname, 'projects/viamax.html'),
       },
       output: {
         manualChunks: {

@@ -1031,6 +1031,16 @@ section {
     .services-grid {
         grid-template-columns: 1fr;
     }
+
+    .service-detail-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detail,
+    .faq-item {
+        padding: 1.25rem;
+    }
 }
 
 .service-card {
@@ -1066,6 +1076,42 @@ section {
     font-size: .9rem;
     color: var(--muted);
     line-height: 1.65;
+}
+
+.service-detail-grid,
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.service-detail,
+.faq-item,
+.contact-prompt {
+    background: rgba(255, 255, 255, .035);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.service-detail,
+.faq-item {
+    padding: 1.5rem;
+}
+
+.service-detail h3,
+.faq-item h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: .75rem;
+}
+
+.service-detail p,
+.faq-item p {
+    color: var(--muted);
+    font-size: .92rem;
+    line-height: 1.75;
 }
 
 /* ─── PRICING ─── */
@@ -1394,6 +1440,271 @@ section {
     gap: .75rem;
     margin-top: 2rem;
     color: var(--text);
+}
+
+.contact-prompt {
+    padding: .9rem 1rem;
+    margin-top: 1.5rem;
+    color: var(--muted);
+    font-size: .9rem;
+    line-height: 1.6;
+}
+
+/* Case study pages */
+.case-hero {
+    min-height: auto;
+    padding: calc(var(--nav-h) + 70px) 0 70px;
+}
+
+.case-page-nav-links {
+    display: flex;
+}
+
+.case-section--compact {
+    padding-top: 0;
+}
+
+.case-hero__grid,
+.case-content-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+    gap: 3rem;
+    align-items: start;
+}
+
+.case-kicker {
+    color: var(--accent);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.case-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    margin-bottom: 1.25rem;
+}
+
+.case-lead {
+    max-width: 760px;
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.case-meta {
+    display: grid;
+    gap: .75rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+}
+
+.case-meta span {
+    color: var(--dim);
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.case-meta strong {
+    display: block;
+    color: var(--text);
+    font-weight: 600;
+    margin-top: .2rem;
+}
+
+.case-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .38);
+    margin-top: 2.5rem;
+    object-fit: cover;
+    background: var(--bg-card);
+}
+
+.case-section {
+    padding: 80px 0;
+}
+
+.case-block {
+    background: rgba(255, 255, 255, .035);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, .16);
+}
+
+.case-block + .case-block {
+    margin-top: 1rem;
+}
+
+.case-block h2,
+.case-block h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text);
+    margin-bottom: .75rem;
+}
+
+.case-block h2 {
+    font-size: 1.35rem;
+}
+
+.case-block h3 {
+    font-size: 1rem;
+}
+
+.case-block p,
+.case-block li {
+    color: var(--muted);
+    font-size: .95rem;
+    line-height: 1.75;
+}
+
+.case-block ul {
+    display: grid;
+    gap: .45rem;
+    list-style: disc;
+    padding-left: 1.2rem;
+}
+
+.case-sidebar {
+    position: sticky;
+    top: calc(var(--nav-h) + 24px);
+    display: grid;
+    gap: 1rem;
+}
+
+.case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.case-tags span {
+    background: rgba(56, 189, 248, .08);
+    border: 1px solid rgba(56, 189, 248, .22);
+    color: var(--accent);
+    border-radius: 30px;
+    padding: .35rem .75rem;
+    font-size: .78rem;
+    font-weight: 600;
+}
+
+.case-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.case-nav .btn {
+    min-width: 210px;
+}
+
+@media (max-width: 900px) {
+    .case-hero__grid,
+    .case-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .case-page-nav-links {
+        position: static;
+        inset: auto;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: .75rem;
+        padding: 0;
+        background: transparent;
+        opacity: 1;
+        visibility: visible;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .case-page-nav-links::before,
+    .case-page-nav-links::after {
+        display: none;
+    }
+
+    .case-page-nav-links li {
+        width: auto;
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .case-page-nav-links a {
+        font-family: 'Inter', sans-serif;
+        font-size: .82rem;
+        font-weight: 700;
+        text-transform: none;
+        letter-spacing: 0;
+        padding: .35rem .6rem;
+    }
+
+    .case-page-nav-links a::before {
+        display: none;
+    }
+
+    .case-page-nav-links .nav-cta {
+        margin-top: 0;
+        padding: .45rem .8rem;
+        font-size: .82rem;
+        background: transparent;
+        color: var(--text) !important;
+        border: 1px solid var(--border);
+    }
+
+    .case-hero {
+        padding: calc(var(--nav-h) + 44px) 0 48px;
+    }
+
+    .case-title {
+        font-size: 2.25rem;
+    }
+
+    .case-lead {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .case-cover {
+        border-radius: 12px;
+        margin-top: 1.5rem;
+    }
+
+    .case-section {
+        padding: 56px 0;
+    }
+
+    .case-nav {
+        flex-direction: column;
+    }
+
+    .case-nav .btn {
+        width: 100%;
+        min-width: 0;
+    }
 }
 
 .contact-link {
