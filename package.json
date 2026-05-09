@@ -20,13 +20,13 @@
   "main": "vite.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tomas1564230/TH-Studio.git"
+    "url": "git+https://github.com/TomasHusivarga/TH-Studio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Tomas1564230/TH-Studio/issues"
+    "url": "https://github.com/TomasHusivarga/TH-Studio/issues"
   },
-  "homepage": "https://github.com/Tomas1564230/TH-Studio#readme"
+  "homepage": "https://github.com/TomasHusivarga/TH-Studio#readme"
 }
