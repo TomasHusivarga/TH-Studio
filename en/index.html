@@ -85,6 +85,8 @@
     body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; }
     #hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: calc(var(--nav-h) + 60px) 5% 80px; text-align: center; position: relative; }
     .hero-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(1.9rem, 4.4vw, 3.75rem); font-weight: 800; line-height: 1.12; margin-bottom: 1.5rem; color: #FFF; letter-spacing: -.01em; }
+    .hero-title--en { max-width: 820px; margin-left: auto; margin-right: auto; }
+    .text-nowrap { white-space: nowrap; }
     .hero-title__accent { background: linear-gradient(120deg, var(--accent) 0%, var(--amber) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
     .hero-sub { font-size: 1.15rem; color: #CBD5E1; line-height: 1.75; margin-bottom: 2.5rem; max-width: 520px; margin-left: auto; margin-right: auto; }
     .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
@@ -161,9 +163,9 @@
     <div class="hero-bg-blob" aria-hidden="true"></div>
     <div class="container container--center">
       <p class="eyebrow">Freelance web developer · Slovakia</p>
-      <h1 class="hero-title">
-        <span>WordPress websites and e-shops</span><br>
-        <span class="hero-title__accent">for businesses that need results.</span>
+      <h1 class="hero-title hero-title--en">
+        <span>WordPress sites and <span class="text-nowrap">e-shops</span></span><br>
+        <span class="hero-title__accent">built to bring results.</span>
       </h1>
       <p class="hero-sub">I help small businesses, e-commerce stores, and local services build clear websites that load fast,
         work well on phones, and make it easier for visitors to contact you or buy.</p>

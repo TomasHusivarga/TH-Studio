@@ -685,6 +685,14 @@ section {
     margin-right: auto;
 }
 
+.hero-title--en {
+    max-width: 820px;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
 .hero-title__accent {
     background: linear-gradient(120deg, var(--accent) 0%, var(--amber) 100%);
     -webkit-background-clip: text;
