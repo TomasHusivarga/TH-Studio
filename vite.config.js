@@ -52,6 +52,8 @@ export default defineConfig({
         ecpro: resolve(__dirname, 'projects/ecpro.html'),
         waventry: resolve(__dirname, 'projects/waventry.html'),
         viamax: resolve(__dirname, 'projects/viamax.html'),
+        humienokNewsletter: resolve(__dirname, 'projects/humienok-newsletter.html'),
+        viamaxFooterTemplate: resolve(__dirname, 'projects/viamax-footer-template.html'),
       },
       output: {
         manualChunks: {

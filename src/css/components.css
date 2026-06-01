@@ -1107,6 +1107,143 @@ section {
     font-weight: 800;
 }
 
+.addon-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.addon-card {
+    display: grid;
+    grid-template-rows: minmax(260px, auto) 1fr;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    color: inherit;
+    text-decoration: none;
+    transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+
+.addon-card:hover {
+    border-color: rgba(56, 189, 248, .35);
+    transform: translateY(-5px);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, .34);
+}
+
+.addon-card__visual {
+    min-height: 260px;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.addon-card__visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size: 32px 32px;
+    opacity: .35;
+}
+
+.addon-card__visual--humienok {
+    background:
+        radial-gradient(circle at 20% 12%, rgba(251, 191, 36, .2), transparent 34%),
+        linear-gradient(145deg, #1c0707 0%, #3a0d12 100%);
+}
+
+.addon-card__visual--viamax {
+    background:
+        radial-gradient(circle at 82% 0%, rgba(56, 189, 248, .2), transparent 36%),
+        linear-gradient(145deg, #020a1a 0%, #06285b 100%);
+}
+
+.addon-card__body {
+    padding: 1.35rem;
+    display: grid;
+    gap: .8rem;
+}
+
+.addon-card__body h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text);
+    font-size: 1.15rem;
+}
+
+.addon-card__body p {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: .92rem;
+}
+
+.email-preview--compact {
+    width: min(92%, 360px);
+}
+
+.footer-template-preview {
+    position: relative;
+    z-index: 2;
+    width: min(92%, 380px);
+    padding: 1.25rem;
+    border-radius: 16px;
+    background: rgba(248, 250, 252, .96);
+    border: 1px solid rgba(226, 232, 240, .9);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .32);
+}
+
+.footer-template-preview__brand {
+    color: #1d4ed8;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+}
+
+.footer-template-preview__line {
+    height: 3px;
+    width: 100%;
+    margin: .8rem 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #1d4ed8, #38bdf8);
+}
+
+.footer-template-preview__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .45rem;
+}
+
+.footer-template-preview__grid span {
+    height: 9px;
+    border-radius: 999px;
+    background: #cbd5e1;
+}
+
+.footer-template-preview__grid span:first-child {
+    grid-column: 1 / -1;
+}
+
+.footer-template-preview__cta {
+    display: inline-flex;
+    margin-top: 1rem;
+    padding: .45rem .8rem;
+    border-radius: 999px;
+    background: #1d4ed8;
+    color: #fff;
+    font-size: .76rem;
+    font-weight: 800;
+}
+
+@media (max-width: 768px) {
+    .addon-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Browser bars inherit base project color */
 .bento-card__screen--rehamax .bc-browser-bar { background: #05122d; }
 .bento-card__screen--psychiatria .bc-browser-bar { background: #12081e; }
@@ -1785,6 +1922,160 @@ section {
     margin-top: 2.5rem;
     object-fit: cover;
     background: var(--bg-card);
+}
+
+.case-render {
+    margin-top: 2.5rem;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    background: #e5e7eb;
+    padding: clamp(1rem, 3vw, 2.5rem);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .38);
+}
+
+.rendered-email {
+    max-width: 720px;
+    margin: 0 auto;
+    background: #ffffff;
+    color: #111827;
+    border-radius: 14px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, .18);
+}
+
+.rendered-email__header {
+    padding: 28px 34px;
+    background: #fff7ed;
+    border-bottom: 1px solid #fed7aa;
+}
+
+.rendered-email__brand {
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #7c2d12;
+}
+
+.rendered-email__hero {
+    padding: 36px 34px;
+    background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%);
+}
+
+.rendered-email__hero h2 {
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    line-height: 1.05;
+    margin-bottom: .75rem;
+    color: #1f2937;
+    font-family: Arial, sans-serif;
+}
+
+.rendered-email__hero p,
+.rendered-email__body p {
+    color: #4b5563;
+    line-height: 1.65;
+}
+
+.rendered-email__body {
+    padding: 30px 34px;
+}
+
+.rendered-email__features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .75rem;
+    margin: 1.4rem 0;
+}
+
+.rendered-email__feature {
+    border-radius: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 1rem;
+    font-size: .86rem;
+    color: #374151;
+}
+
+.rendered-email__button {
+    display: inline-flex;
+    margin-top: .5rem;
+    padding: .85rem 1.25rem;
+    border-radius: 999px;
+    background: #f59e0b;
+    color: #111827;
+    font-weight: 800;
+}
+
+.rendered-footer {
+    max-width: 760px;
+    margin: 0 auto;
+    background: #ffffff;
+    color: #0f172a;
+    border-radius: 14px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, .18);
+}
+
+.rendered-footer__bar {
+    height: 10px;
+    background: linear-gradient(90deg, #0f4aa8, #38bdf8);
+}
+
+.rendered-footer__content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(180px, .7fr);
+    gap: 1.5rem;
+    padding: 30px 34px;
+}
+
+.rendered-footer__brand {
+    color: #0f4aa8;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: .04em;
+}
+
+.rendered-footer__subtitle {
+    color: #475569;
+    font-weight: 700;
+    margin-top: .25rem;
+}
+
+.rendered-footer__links {
+    display: grid;
+    gap: .45rem;
+    margin-top: 1.1rem;
+    color: #334155;
+    font-size: .9rem;
+}
+
+.rendered-footer__cta {
+    align-self: center;
+    justify-self: end;
+    padding: .8rem 1rem;
+    border-radius: 999px;
+    background: #0f4aa8;
+    color: #fff;
+    font-weight: 800;
+    text-align: center;
+}
+
+.template-code-note {
+    margin-top: 1rem;
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+@media (max-width: 640px) {
+    .rendered-email__features,
+    .rendered-footer__content {
+        grid-template-columns: 1fr;
+    }
+
+    .rendered-footer__cta {
+        justify-self: start;
+    }
 }
 
 .case-section {
