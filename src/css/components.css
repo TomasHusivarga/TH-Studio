@@ -1027,6 +1027,86 @@ section {
     background: linear-gradient(180deg, rgba(2, 10, 26, 0.75) 0%, rgba(0, 86, 179, 0.16) 100%);
 }
 
+.bento-card__screen--email-template .bc-content {
+    background:
+        radial-gradient(circle at 18% 12%, rgba(251, 191, 36, .18), transparent 30%),
+        radial-gradient(circle at 82% 0%, rgba(56, 189, 248, .2), transparent 34%),
+        linear-gradient(145deg, #0b1020 0%, #111827 100%);
+}
+
+.bento-card__screen--email-template .bc-content::before {
+    background: linear-gradient(180deg, rgba(8, 12, 24, .3) 0%, rgba(8, 12, 24, .05) 100%);
+}
+
+.email-preview {
+    position: relative;
+    z-index: 2;
+    width: min(82%, 320px);
+    padding: 1rem;
+    border-radius: 16px;
+    background: rgba(248, 250, 252, .96);
+    border: 1px solid rgba(226, 232, 240, .9);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .32);
+    text-align: left;
+    transform: rotate(-2deg);
+}
+
+.email-preview__topline {
+    color: #64748b;
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.email-preview__title {
+    color: #0f172a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    font-weight: 800;
+    margin-top: .35rem;
+}
+
+.email-preview__hero {
+    height: 48px;
+    margin: .75rem 0;
+    border-radius: 12px;
+    background:
+        linear-gradient(135deg, rgba(56, 189, 248, .9), rgba(251, 191, 36, .85)),
+        linear-gradient(90deg, #e2e8f0, #f8fafc);
+}
+
+.email-preview__lines {
+    display: grid;
+    gap: .38rem;
+}
+
+.email-preview__lines span {
+    display: block;
+    height: 7px;
+    border-radius: 20px;
+    background: #cbd5e1;
+}
+
+.email-preview__lines span:nth-child(2) {
+    width: 86%;
+}
+
+.email-preview__lines span:nth-child(3) {
+    width: 62%;
+}
+
+.email-preview__cta {
+    display: inline-flex;
+    margin-top: .8rem;
+    padding: .35rem .75rem;
+    border-radius: 999px;
+    background: var(--amber);
+    color: #0f172a;
+    font-size: .72rem;
+    font-weight: 800;
+}
+
 /* Browser bars inherit base project color */
 .bento-card__screen--rehamax .bc-browser-bar { background: #05122d; }
 .bento-card__screen--psychiatria .bc-browser-bar { background: #12081e; }
@@ -1035,6 +1115,7 @@ section {
 .bento-card__screen--carepoint .bc-browser-bar { background: #051232; }
 .bento-card__screen--humienok .bc-browser-bar { background: #280505; }
 .bento-card__screen--viamax .bc-browser-bar { background: #020a1a; }
+.bento-card__screen--email-template .bc-browser-bar { background: #101827; }
 .bento-card__screen--spiremage .bc-browser-bar { background: #0a0a1e; }
 
 .bc-logo {
