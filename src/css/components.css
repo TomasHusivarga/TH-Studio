@@ -1019,6 +1019,10 @@ section {
     background: linear-gradient(180deg, rgba(244, 238, 226, .05) 0%, rgba(52, 33, 28, .82) 100%);
 }
 
+.bento-card__screen--modafinil .bc-content::before {
+    background: linear-gradient(180deg, rgba(4, 12, 8, .08) 0%, rgba(2, 18, 12, .84) 100%);
+}
+
 .bento-card__screen--spiremage .bc-content::before {
     background: linear-gradient(180deg, rgba(10, 10, 30, 0.75) 0%, rgba(22, 33, 62, 0.2) 100%);
 }
@@ -1257,6 +1261,7 @@ section {
 .bento-card__screen--humienok .bc-browser-bar { background: #280505; }
 .bento-card__screen--viamax .bc-browser-bar { background: #020a1a; }
 .bento-card__screen--slovasozmyslom .bc-browser-bar { background: #33241f; }
+.bento-card__screen--modafinil .bc-browser-bar { background: #04120c; }
 .bento-card__screen--email-template .bc-browser-bar { background: #101827; }
 .bento-card__screen--spiremage .bc-browser-bar { background: #0a0a1e; }
 
