@@ -58,6 +58,8 @@ Get-ChildItem $dest -Recurse -File -Include "*.js","*.css","*.txt","*.xml","*.ht
     $content = $content -replace 'https://tomashusivarga\.github\.io/TH-Studio/', '/'
     $content = $content -replace 'https://tomashusivarga\.github\.io/', ($jaspravimSiteUrl + '/')
     $content = $content -replace 'Sitemap:\s*/sitemap\.xml', ('Sitemap: ' + $jaspravimSiteUrl + '/sitemap.xml')
+    $content = $content -replace '/#kontakt', $jaspravimProfile
+    $content = $content -replace '#kontakt', $jaspravimProfile
     $content = $content -replace 'mailto:Husivarga1412@gmail\.com\?subject=', ($jaspravimProfile + '?subject=')
     $content = $content -replace 'Husivarga1412@gmail\.com', 'jaspravim.sk/profil/tomas1412'
     Set-Content -Path $_.FullName -Value $content -Encoding UTF8 -NoNewline
