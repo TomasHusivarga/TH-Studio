@@ -1433,15 +1433,14 @@ section {
         display: none;
     }
 
-    .service-detail-grid,
-    .faq-grid {
+    .service-detail-grid {
         grid-template-columns: 1fr;
     }
 
-    .service-detail,
-    .faq-item {
+    .service-detail {
         padding: 1.25rem;
     }
+
 }
 
 .service-card {
@@ -1479,40 +1478,198 @@ section {
     line-height: 1.65;
 }
 
-.service-detail-grid,
-.faq-grid {
+.service-detail-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.25rem;
     margin-top: 2rem;
 }
 
+.case-block .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.case-block .faq-item {
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, .035);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.case-block .faq-item h3 {
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.case-block .faq-item p {
+    font-size: .92rem;
+    line-height: 1.75;
+}
+
 .service-detail,
-.faq-item,
 .contact-prompt {
     background: rgba(255, 255, 255, .035);
     border: 1px solid var(--border);
     border-radius: var(--radius);
 }
 
-.service-detail,
-.faq-item {
+.service-detail {
     padding: 1.5rem;
 }
 
-.service-detail h3,
-.faq-item h3 {
+.service-detail h3 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--text);
     font-size: 1rem;
     margin-bottom: .75rem;
 }
 
-.service-detail p,
-.faq-item p {
+.service-detail p {
     color: var(--muted);
     font-size: .92rem;
     line-height: 1.75;
+}
+
+.faq-panel {
+    display: grid;
+    grid-template-columns: minmax(220px, .85fr) minmax(0, 1.45fr) minmax(220px, .8fr);
+    gap: 1.25rem;
+    margin-top: 3rem;
+    align-items: stretch;
+}
+
+.faq-tabs,
+.faq-content,
+.faq-aside {
+    background: rgba(255, 255, 255, .035);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.faq-tabs {
+    padding: .7rem;
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+}
+
+.faq-tab {
+    appearance: none;
+    border: 0;
+    width: 100%;
+    padding: .95rem 1rem;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--muted);
+    text-align: left;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: .92rem;
+    font-weight: 700;
+    line-height: 1.3;
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.faq-tab:hover,
+.faq-tab:focus-visible {
+    background: rgba(56, 189, 248, .08);
+    color: var(--text);
+    outline: none;
+}
+
+.faq-tab.is-active {
+    background: linear-gradient(135deg, rgba(56, 189, 248, .16), rgba(251, 191, 36, .1));
+    color: var(--text);
+}
+
+.faq-content {
+    min-height: 300px;
+    padding: clamp(1.6rem, 4vw, 2.5rem);
+    display: flex;
+    align-items: center;
+}
+
+.faq-item {
+    width: 100%;
+}
+
+.faq-item h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text);
+    font-size: clamp(1.55rem, 3vw, 2.35rem);
+    line-height: 1.08;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0;
+}
+
+.faq-item p {
+    color: var(--muted);
+    font-size: 1.02rem;
+    line-height: 1.85;
+    max-width: 58ch;
+}
+
+.faq-aside {
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .85rem;
+}
+
+.faq-aside span {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--accent);
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.faq-aside p {
+    color: var(--muted);
+    font-size: .92rem;
+    line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+    .faq-panel {
+        grid-template-columns: 1fr;
+        margin-top: 2rem;
+    }
+
+    .faq-tabs {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .faq-content {
+        min-height: 0;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        display: grid;
+        gap: 1rem;
+    }
+
+    .faq-item,
+    .faq-item[hidden] {
+        display: block;
+        padding: 1.25rem;
+        background: rgba(255, 255, 255, .035);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+    }
+
+    .faq-item h3 {
+        font-size: 1.15rem;
+    }
+
+    .faq-item p {
+        font-size: .94rem;
+    }
 }
 
 /* ─── PRICING ─── */

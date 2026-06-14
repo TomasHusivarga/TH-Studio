@@ -18,6 +18,39 @@ document.addEventListener('DOMContentLoaded', () => {
     portfolioCounter.textContent = portfolioProjects.length;
   }
 
+  const faqPanel = document.querySelector('.faq-panel');
+  if (faqPanel) {
+    const tabs = [...faqPanel.querySelectorAll('.faq-tab')];
+    const items = [...faqPanel.querySelectorAll('.faq-item')];
+    const activateFaq = (tab) => {
+      tabs.forEach((candidate) => {
+        const isActive = candidate === tab;
+        candidate.classList.toggle('is-active', isActive);
+        candidate.setAttribute('aria-selected', String(isActive));
+      });
+      items.forEach((item) => {
+        const isActive = item.id === tab.getAttribute('aria-controls');
+        item.classList.toggle('is-active', isActive);
+        if (window.matchMedia('(min-width: 769px)').matches) {
+          item.hidden = !isActive;
+        } else {
+          item.hidden = false;
+        }
+      });
+    };
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => activateFaq(tab));
+    });
+
+    window.addEventListener('resize', () => {
+      const activeTab = tabs.find((tab) => tab.classList.contains('is-active')) || tabs[0];
+      if (activeTab) activateFaq(activeTab);
+    });
+
+    activateFaq(tabs[0]);
+  }
+
   // 1. Portfolio Slider (Desktop Grouping)
   new PortfolioSlider('.bento-grid').init();
 
