@@ -68,7 +68,19 @@
   </url>
   <url>
     <loc>https://tomashusivarga.github.io/TH-Studio/projects/viamax.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tomashusivarga.github.io/TH-Studio/projects/slovasozmyslom.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tomashusivarga.github.io/TH-Studio/projects/modafinil-cz.html</loc>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

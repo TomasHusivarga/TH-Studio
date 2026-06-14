@@ -1,71 +1,96 @@
 # strip-contact.ps1
-# Copies dist/ to dist-jaspravim/ and removes all contact info from the HTML.
-# Run from the project root: .\strip-contact.ps1
+# Copies dist/ to dist-jaspravim/ and removes direct contact info from the static HTML export.
+# Run from the project root after npm run build: .\strip-contact.ps1
 
 $jaspravimProfile = 'https://www.jaspravim.sk/profil/tomas1412'
+$jaspravimSiteUrl = 'https://jolly-nasturtium-8f54af.netlify.app'
 
 $src  = ".\dist"
 $dest = ".\dist-jaspravim"
 
-# ── 1. Fresh copy ────────────────────────────────────────────────────────────
+if (-not (Test-Path $src)) {
+    Write-Error "Source build folder not found: $src. Run npm run build first."
+    exit 1
+}
+
 if (Test-Path $dest) { Remove-Item $dest -Recurse -Force }
 Copy-Item $src $dest -Recurse -Force
-Write-Host "[1/9] Copied dist → dist-jaspravim" -ForegroundColor Cyan
+Write-Host "[1/7] Copied dist -> dist-jaspravim" -ForegroundColor Cyan
 
-# ── 2. Rewrite /TH-Studio/ base paths → / for Netlify ───────────────────────
-# Vite bakes in base:'/TH-Studio/' for GitHub Pages. Netlify serves from root.
-Get-ChildItem $dest -Filter "*.html" -Recurse | ForEach-Object {
-    $content = Get-Content $_.FullName -Raw -Encoding UTF8
-    $fixed   = $content -replace '/TH-Studio/', '/'
-    Set-Content $_.FullName -Value $fixed -Encoding UTF8 -NoNewline
-    Write-Host "    Rewritten: $($_.Name)" -ForegroundColor DarkCyan
-}
-Write-Host "[2/9] Rewrote /TH-Studio/ → / in all HTML files" -ForegroundColor Cyan
-
-# ── 3. Locate the compiled index.html ────────────────────────────────────────
-$htmlPath = Get-ChildItem $dest -Filter "index.html" -Recurse |
-            Select-Object -First 1 -ExpandProperty FullName
-
-if (-not $htmlPath) {
-    Write-Error "index.html not found in $dest"; exit 1
-}
-Write-Host "[3/9] Editing contact info: $htmlPath" -ForegroundColor Cyan
-
-$html = Get-Content $htmlPath -Raw -Encoding UTF8
-
-# ── 4. Strip email from JSON-LD schema ───────────────────────────────────────
-$html = $html -replace '(?m)^\s*"email"\s*:\s*"[^"]*",?\s*\r?\n', ''
-Write-Host "[4/9] Removed email from JSON-LD schema" -ForegroundColor Cyan
-
-# ── 5. Replace contact section with TOS notice ───────────────────────────────
-# Loaded from a separate UTF-8 file to avoid PowerShell 5 encoding issues
-# with non-ASCII characters in here-strings.
 $noticePath = Join-Path $PSScriptRoot "_jaspravim-notice.html"
+if (-not (Test-Path $noticePath)) {
+    Write-Error "Notice template not found: $noticePath"
+    exit 1
+}
 $notice = Get-Content $noticePath -Raw -Encoding UTF8
 
-$html = $html -replace '(?s)<section[^>]*id=["\x27]kontakt["\x27][^>]*>.*?</section>', $notice
+$htmlFiles = Get-ChildItem $dest -Filter "*.html" -Recurse
+foreach ($file in $htmlFiles) {
+    $html = Get-Content $file.FullName -Raw -Encoding UTF8
 
-Write-Host "[5/9] Replaced #kontakt section with TOS notice" -ForegroundColor Cyan
+    # Vite bakes in base:'/TH-Studio/' for GitHub Pages. The Jaspravim export is served from root.
+    $html = $html -replace '/TH-Studio/', '/'
+    $html = $html -replace 'https://tomashusivarga\.github\.io/', ($jaspravimSiteUrl + '/')
 
-# ── 6. Clean up nav & button links that point to #kontakt ────────────────────
-$html = $html -replace '(?s)<li[^>]*>\s*<a[^>]*class=["\x27][^"\x27]*nav-cta[^"\x27]*["\x27][^>]*>.*?</a>\s*</li>', ''
-$html = $html -replace 'href=["\x27]#kontakt["\x27]', 'href="#"'
-Write-Host "[6/9] Cleaned up #kontakt href references" -ForegroundColor Cyan
+    # Remove direct contact data from metadata, schema, content, and forms.
+    $html = $html -replace '(?m)^\s*"email"\s*:\s*"[^"]*",?\s*\r?\n', ''
+    $html = $html -replace '(?s)<section[^>]*id=["'']kontakt["''][^>]*>.*?</section>', $notice
+    $html = $html -replace '(?s)<form[^>]*id=["'']contact-form["''][^>]*>.*?</form>', ''
+    $html = $html -replace '(?s)<a[^>]*href=["'']mailto:[^"'']+["''][^>]*>.*?</a>', ''
+    $html = $html -replace '(?s)<a[^>]*href=["'']tel:[^"'']+["''][^>]*>.*?</a>', ''
+    $html = $html -replace '(?s)<footer[^>]*>.*?</footer>', ''
 
-# ── 7. Relink hero 'Bezplatná konzultácia' ghost button to jaspravim profile ─
-# Use a lookahead so we can match href="#" when the Bezplatna title appears
-# anywhere later in the same opening tag — avoids attribute-order issues.
-$html = $html -replace '(href=["\x27]#["\x27])(?=[^>]*title=["\x27]Bezplatn)', "href=`"$jaspravimProfile`" target=`"_blank`" rel=`"noopener`""
-Write-Host "[7/9] Relinked hero CTA to jaspravim profile" -ForegroundColor Cyan
+    # Remove contact CTA items from navigation and point remaining contact CTAs to the platform profile.
+    $html = $html -replace '(?s)<li[^>]*>\s*<a[^>]*class=["''][^"'']*nav-cta[^"'']*["''][^>]*>.*?</a>\s*</li>', ''
+    $html = $html -replace 'href=["''](?:/)?#kontakt["'']', "href=`"$jaspravimProfile`" target=`"_blank`" rel=`"noopener`""
+    $html = $html -replace 'href=["''](?:/)?projects/([^"'']+)["'']', 'href="/projects/$1"'
+    $html = $html -replace 'href=["''](?:/)?gdpr\.html["'']', 'href="/gdpr.html"'
 
-# ── 8. Remove footer entirely ────────────────────────────────────────────────
-$html = $html -replace '(?s)<footer[^>]*>.*?</footer>', ''
-Write-Host "[8/9] Removed footer" -ForegroundColor Cyan
+    Set-Content -Path $file.FullName -Value $html -Encoding UTF8 -NoNewline
+    Write-Host "    Sanitized: $($file.FullName.Replace((Resolve-Path $dest).Path + '\', ''))" -ForegroundColor DarkCyan
+}
+Write-Host "[2/7] Sanitized HTML files" -ForegroundColor Cyan
 
-# ── 9. Write back ────────────────────────────────────────────────────────────
-Set-Content -Path $htmlPath -Value $html -Encoding UTF8 -NoNewline
-Write-Host "[9/9] Saved index.html" -ForegroundColor Cyan
+# Rewrite the GitHub Pages base path in text assets and remove direct email strings from JS.
+Get-ChildItem $dest -Recurse -File -Include "*.js","*.css","*.txt","*.xml","*.html" | ForEach-Object {
+    $content = Get-Content $_.FullName -Raw -Encoding UTF8
+    $content = $content -replace '/TH-Studio/', '/'
+    $content = $content -replace 'https://tomashusivarga\.github\.io/TH-Studio/', '/'
+    $content = $content -replace 'https://tomashusivarga\.github\.io/', ($jaspravimSiteUrl + '/')
+    $content = $content -replace 'Sitemap:\s*/sitemap\.xml', ('Sitemap: ' + $jaspravimSiteUrl + '/sitemap.xml')
+    $content = $content -replace 'mailto:Husivarga1412@gmail\.com\?subject=', ($jaspravimProfile + '?subject=')
+    $content = $content -replace 'Husivarga1412@gmail\.com', 'jaspravim.sk/profil/tomas1412'
+    Set-Content -Path $_.FullName -Value $content -Encoding UTF8 -NoNewline
+}
+Write-Host "[3/7] Rewrote base paths and removed direct email strings from text assets" -ForegroundColor Cyan
 
-Write-Host "`n✅  Done! dist-jaspravim is ready to drag onto Netlify." -ForegroundColor Green
+# GDPR is not suitable for the marketplace copy because it necessarily names direct controller contact data.
+$gdprPath = Join-Path $dest "gdpr.html"
+if (Test-Path $gdprPath) {
+    Remove-Item $gdprPath -Force
+    Write-Host "[4/7] Removed GDPR page from Jaspravim export" -ForegroundColor Cyan
+} else {
+    Write-Host "[4/7] No GDPR page found" -ForegroundColor DarkCyan
+}
+
+$sitemapPath = Join-Path $dest "sitemap.xml"
+if (Test-Path $sitemapPath) {
+    $sitemap = Get-Content $sitemapPath -Raw -Encoding UTF8
+    $sitemap = $sitemap -replace '(?s)\s*<url>\s*<loc>[^<]*gdpr\.html</loc>.*?</url>', ''
+    $sitemap = $sitemap -replace 'https://tomashusivarga\.github\.io/TH-Studio/', '/'
+    $sitemap = $sitemap -replace 'https://tomashusivarga\.github\.io/', ($jaspravimSiteUrl + '/')
+    $sitemap = $sitemap -replace '<loc>/', ('<loc>' + $jaspravimSiteUrl + '/')
+    Set-Content -Path $sitemapPath -Value $sitemap -Encoding UTF8 -NoNewline
+}
+Write-Host "[5/7] Updated sitemap" -ForegroundColor Cyan
+
+$leaks = rg -n "mailto:|tel:|formspree|Husivarga1412@gmail\.com|#kontakt|/TH-Studio/|tomashusivarga\.github\.io" $dest
+if ($LASTEXITCODE -eq 0) {
+    Write-Host $leaks -ForegroundColor Yellow
+    Write-Error "Potential direct contact or GitHub Pages base path references remain."
+    exit 1
+}
+Write-Host "[6/7] Leak check passed" -ForegroundColor Cyan
+
+Write-Host "[7/7] Done. dist-jaspravim is ready." -ForegroundColor Green
 Write-Host "    Folder: $(Resolve-Path $dest)" -ForegroundColor Gray
-
