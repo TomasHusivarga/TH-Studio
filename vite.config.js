@@ -12,7 +12,7 @@ function copySeoFilesToRoot() {
   return {
     name: 'copy-seo-to-root',
     closeBundle() {
-      const files = ['robots.txt', 'sitemap.xml'];
+      const files = ['robots.txt', 'sitemap.xml', 'sitemap.txt'];
       for (const file of files) {
         const src = resolve(__dirname, 'public', file);
         const dest = resolve(__dirname, 'dist', file);

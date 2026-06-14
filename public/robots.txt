@@ -2,3 +2,4 @@ User-agent: *
 Disallow:
 
 Sitemap: https://tomashusivarga.github.io/TH-Studio/sitemap.xml
+Sitemap: https://tomashusivarga.github.io/TH-Studio/sitemap.txt
