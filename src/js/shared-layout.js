@@ -129,14 +129,14 @@ export function renderHeader() {
         </a>
         <ul class="nav-links" data-label="${t.navLabel}">
           <li class="nav-projects">
-            <button type="button" class="nav-projects-toggle" data-number="01" title="${t.workTitle}" aria-label="${t.workAria}">${t.work}</button>
+            <button type="button" class="nav-projects-toggle" data-number="01" title="${t.workTitle}" aria-label="${t.workAria}" aria-expanded="false">${t.work}</button>
             <div class="nav-projects-menu">
               <a href="${t.workUrl}">${t.workAll}</a>
               ${navMenu(projects)}
             </div>
           </li>
           <li class="nav-projects">
-            <button type="button" class="nav-projects-toggle" data-number="02" title="${t.servicesTitle}" aria-label="${t.servicesAria}">${t.services}</button>
+            <button type="button" class="nav-projects-toggle" data-number="02" title="${t.servicesTitle}" aria-label="${t.servicesAria}" aria-expanded="false">${t.services}</button>
             <div class="nav-projects-menu">
               ${navMenu(t.servicesList)}
             </div>
@@ -184,6 +184,19 @@ export function initSharedNavigation() {
   const desktopNav = window.matchMedia('(min-width: 769px)');
   let closeTimer;
 
+  const closeOtherMenus = (activeMenu) => {
+    projectMenus.forEach((menu) => {
+      if (menu !== activeMenu) {
+        menu.classList.remove('is-open');
+        const toggle = menu.querySelector('.nav-projects-toggle');
+        if (toggle) {
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.blur();
+        }
+      }
+    });
+  };
+
   projectMenus.forEach((menu) => {
     const toggle = menu.querySelector('.nav-projects-toggle');
     if (!toggle) return;
@@ -191,19 +204,24 @@ export function initSharedNavigation() {
     menu.addEventListener('pointerenter', () => {
       if (desktopNav.matches) {
         window.clearTimeout(closeTimer);
+        closeOtherMenus(menu);
         menu.classList.add('is-open');
+        toggle.setAttribute('aria-expanded', 'true');
       }
     });
 
     menu.addEventListener('pointerleave', () => {
       if (desktopNav.matches) {
         closeTimer = window.setTimeout(() => menu.classList.remove('is-open'), 180);
+        toggle.setAttribute('aria-expanded', 'false');
       }
     });
 
     toggle.addEventListener('click', () => {
       window.clearTimeout(closeTimer);
-      menu.classList.toggle('is-open');
+      closeOtherMenus(menu);
+      const isOpen = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
     });
   });
 
