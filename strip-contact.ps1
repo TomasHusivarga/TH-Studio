@@ -96,3 +96,4 @@ Write-Host "[6/7] Leak check passed" -ForegroundColor Cyan
 
 Write-Host "[7/7] Done. dist-jaspravim is ready." -ForegroundColor Green
 Write-Host "    Folder: $(Resolve-Path $dest)" -ForegroundColor Gray
+exit 0
