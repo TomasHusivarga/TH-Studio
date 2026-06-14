@@ -18,51 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     portfolioCounter.textContent = portfolioProjects.length;
   }
 
-  const projectMenus = document.querySelectorAll('.nav-projects');
-  if (projectMenus.length > 0) {
-    const desktopNav = window.matchMedia('(min-width: 769px)');
-    let projectMenuCloseTimer;
-
-    projectMenus.forEach((menu) => {
-      const toggle = menu.querySelector('.nav-projects-toggle');
-      if (!toggle) return;
-
-      menu.addEventListener('pointerenter', () => {
-        if (desktopNav.matches) {
-          window.clearTimeout(projectMenuCloseTimer);
-          menu.classList.add('is-open');
-        }
-      });
-
-      menu.addEventListener('pointerleave', () => {
-        if (desktopNav.matches) {
-          projectMenuCloseTimer = window.setTimeout(() => {
-            menu.classList.remove('is-open');
-          }, 180);
-        }
-      });
-
-      toggle.addEventListener('click', () => {
-        window.clearTimeout(projectMenuCloseTimer);
-        menu.classList.toggle('is-open');
-      });
-    });
-
-    document.addEventListener('click', (event) => {
-      projectMenus.forEach((menu) => {
-        if (!menu.contains(event.target)) {
-          menu.classList.remove('is-open');
-        }
-      });
-    });
-
-    document.querySelectorAll('.nav-links a').forEach((link) => {
-      link.addEventListener('click', () => {
-        projectMenus.forEach((menu) => menu.classList.remove('is-open'));
-      });
-    });
-  }
-
   // 1. Portfolio Slider (Desktop Grouping)
   new PortfolioSlider('.bento-grid').init();
 

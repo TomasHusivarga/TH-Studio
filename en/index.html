@@ -161,54 +161,7 @@
   <div id="cursor-ring"></div>
 
   <!-- NAV -->
-  <nav id="nav" class="nav">
-    <div class="nav-container">
-      <a href="/TH-Studio/en/" class="nav-logo" aria-label="TH Studio Home" title="TH Studio – Home">
-        <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
-          <rect width="100" height="100" rx="20" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" />
-          <defs>
-            <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="var(--accent)" />
-              <stop offset="100%" stop-color="var(--amber)" />
-            </linearGradient>
-          </defs>
-          <path d="M25 35 H75 V45 H55 V75 H45 V45 H25 V35 Z" fill="url(#logo-gradient)" />
-        </svg>
-        <span>TH Studio</span>
-      </a>
-      <ul class="nav-links" data-label="NAVIGATION">
-        <li class="nav-projects">
-          <button type="button" class="nav-projects-toggle" data-number="01" title="View my work and projects" aria-label="Work — choose a project">Work</button>
-            <div class="nav-projects-menu">
-              <a href="#prace">All projects</a>
-              <a href="/TH-Studio/projects/rehamax.html">Rehamax</a>
-              <a href="/TH-Studio/projects/donnabella.html">DonnaBella</a>
-              <a href="/TH-Studio/projects/ekoprofit.html">Eko-Profit SK</a>
-              <a href="/TH-Studio/projects/safe-place-clinic.html">Safe Place Clinic</a>
-              <a href="/TH-Studio/projects/carepoint.html">Carepoint</a>
-              <a href="/TH-Studio/projects/humienok.html">Humienok</a>
-              <a href="/TH-Studio/projects/miningflow.html">MiningFlow</a>
-              <a href="/TH-Studio/projects/ecpro.html">ECPro</a>
-              <a href="/TH-Studio/projects/waventry.html">Waventry</a>
-              <a href="/TH-Studio/projects/viamax.html">Viamax</a>
-              <a href="/TH-Studio/projects/slovasozmyslom.html">Slová so zmyslom</a>
-              <a href="/TH-Studio/projects/modafinil-cz.html">Modafinil CZ</a>
-            </div>
-        </li>
-        <li><a href="#sluzby" data-number="02" title="My web services" aria-label="Services — My services">Services</a></li>
-        <li><a href="#ceny" data-number="03" title="Web development pricing" aria-label="Pricing — Price list">Pricing</a></li>
-        <li><a href="#o-mne" data-number="04" title="About me — Tomáš Husivarga" aria-label="About — More about me">About</a></li>
-        <li class="nav-links-divider"></li>
-        <li class="nav-links-actions">
-          <a href="/TH-Studio/" class="lang-switch" title="Prepnúť do slovenčiny" aria-label="SK — Switch to Slovak">SK</a>
-          <a href="#kontakt" class="nav-cta" title="Contact me – free consultation" aria-label="Get in touch — Contact">Get in touch</a>
-        </li>
-      </ul>
-      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+  <div data-shared-header></div>
 
   <main id="main-content">
   <!-- HERO -->
@@ -899,19 +852,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer id="footer">
-    <div class="footer-inner">
-      <div class="footer-left" style="display:flex; flex-direction:column; gap:0.2rem;">
-        <span class="footer-brand">TH Studio</span>
-        <span class="footer-copy">
-          © 2026 Tomáš Husivarga · Freelance web developer · Slovakia<br>
-          <a href="/TH-Studio/gdpr.html" title="Privacy Policy – GDPR"
-            style="text-decoration: underline; display: inline-block; margin-top: 0.2rem;">Privacy Policy</a>
-        </span>
-      </div>
-      <a href="#" class="footer-top" title="Back to top" aria-label="Back to top ↑">Back to top ↑</a>
-    </div>
-  </footer>
+  <div data-shared-footer></div>
   </main>
 
   <!-- COOKIE BANNER -->
@@ -926,6 +867,7 @@
     </div>
   </div>
 
+  <script type="module" src="/src/js/shared-layout.js"></script>
   <script type="module" src="/src/js/main.js"></script>
 </body>
 

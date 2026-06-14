@@ -1,0 +1,244 @@
+const projects = [
+  ['Rehamax', '/TH-Studio/projects/rehamax.html'],
+  ['DonnaBella', '/TH-Studio/projects/donnabella.html'],
+  ['Eko-Profit SK', '/TH-Studio/projects/ekoprofit.html'],
+  ['Safe Place Clinic', '/TH-Studio/projects/safe-place-clinic.html'],
+  ['Carepoint', '/TH-Studio/projects/carepoint.html'],
+  ['Humienok', '/TH-Studio/projects/humienok.html'],
+  ['MiningFlow', '/TH-Studio/projects/miningflow.html'],
+  ['ECPro', '/TH-Studio/projects/ecpro.html'],
+  ['Waventry', '/TH-Studio/projects/waventry.html'],
+  ['Viamax', '/TH-Studio/projects/viamax.html'],
+  ['Slová so zmyslom', '/TH-Studio/projects/slovasozmyslom.html'],
+  ['Modafinil CZ', '/TH-Studio/projects/modafinil-cz.html'],
+];
+
+const servicesSk = [
+  ['Prehľad služieb', '/TH-Studio/#sluzby'],
+  ['Tvorba webstránok', '/TH-Studio/sluzby/tvorba-webstranok.html'],
+  ['Tvorba e-shopov', '/TH-Studio/sluzby/tvorba-eshopov.html'],
+  ['Úpravy WordPressu', '/TH-Studio/sluzby/uprava-wordpress-webu.html'],
+];
+
+const servicesEn = [
+  ['Services overview', '/TH-Studio/en/#sluzby'],
+  ['Website development', '/TH-Studio/sluzby/tvorba-webstranok.html'],
+  ['E-shop development', '/TH-Studio/sluzby/tvorba-eshopov.html'],
+  ['WordPress edits', '/TH-Studio/sluzby/uprava-wordpress-webu.html'],
+];
+
+const text = {
+  sk: {
+    navLabel: 'NAVIGÁCIA',
+    homeLabel: 'TH Studio Home',
+    logoTitle: 'TH Studio - Domov',
+    homeUrl: '/TH-Studio/',
+    workUrl: '/TH-Studio/#prace',
+    pricingUrl: '/TH-Studio/#ceny',
+    aboutUrl: '/TH-Studio/#o-mne',
+    contactUrl: '/TH-Studio/#kontakt',
+    work: 'Práce',
+    workAll: 'Všetky práce',
+    workTitle: 'Pozrieť moje práce a projekty',
+    workAria: 'Práce - vybrať projekt',
+    services: 'Služby',
+    servicesTitle: 'Moje webové služby',
+    servicesAria: 'Služby - vybrať službu',
+    pricing: 'Ceny',
+    pricingTitle: 'Cenník tvorby webstránok',
+    about: 'O mne',
+    aboutTitle: 'O mne - Tomáš Husivarga',
+    contact: 'Ozvi sa',
+    contactTitle: 'Kontaktovať - bezplatná konzultácia',
+    langUrl: '/TH-Studio/en/',
+    langLabel: 'EN',
+    langTitle: 'Switch to English',
+    footerRole: 'Freelance web developer - Slovensko',
+    privacy: 'Ochrana osobných údajov',
+    top: 'Späť hore ↑',
+    topTitle: 'Späť na začiatok stránky',
+    servicesList: servicesSk,
+  },
+  en: {
+    navLabel: 'NAVIGATION',
+    homeLabel: 'TH Studio Home',
+    logoTitle: 'TH Studio - Home',
+    homeUrl: '/TH-Studio/en/',
+    workUrl: '/TH-Studio/en/#prace',
+    pricingUrl: '/TH-Studio/en/#ceny',
+    aboutUrl: '/TH-Studio/en/#o-mne',
+    contactUrl: '/TH-Studio/en/#kontakt',
+    work: 'Work',
+    workAll: 'All work',
+    workTitle: 'View work and projects',
+    workAria: 'Work - choose a project',
+    services: 'Services',
+    servicesTitle: 'Web services',
+    servicesAria: 'Services - choose a service',
+    pricing: 'Pricing',
+    pricingTitle: 'Website pricing',
+    about: 'About',
+    aboutTitle: 'About Tomáš Husivarga',
+    contact: 'Contact',
+    contactTitle: 'Contact - free consultation',
+    langUrl: '/TH-Studio/',
+    langLabel: 'SK',
+    langTitle: 'Prepnúť do slovenčiny',
+    footerRole: 'Freelance web developer - Slovakia',
+    privacy: 'Privacy policy',
+    top: 'Back to top ↑',
+    topTitle: 'Back to top',
+    servicesList: servicesEn,
+  },
+};
+
+function isEnglishPage() {
+  return document.documentElement.lang === 'en' || window.location.pathname.includes('/en/');
+}
+
+function navMenu(items) {
+  return items.map(([label, href]) => `<a href="${href}">${label}</a>`).join('');
+}
+
+function logoSvg() {
+  return `
+    <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
+      <rect width="100" height="100" rx="20" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" />
+      <defs>
+        <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="var(--accent)" />
+          <stop offset="100%" stop-color="var(--amber)" />
+        </linearGradient>
+      </defs>
+      <path d="M25 35 H75 V45 H55 V75 H45 V45 H25 V35 Z" fill="url(#logo-gradient)" />
+    </svg>`;
+}
+
+export function renderHeader() {
+  const target = document.querySelector('[data-shared-header]');
+  if (!target) return;
+
+  const lang = isEnglishPage() ? 'en' : 'sk';
+  const t = text[lang];
+  target.outerHTML = `
+    <nav id="nav" class="nav">
+      <div class="nav-container">
+        <a href="${t.homeUrl}" class="nav-logo" aria-label="${t.homeLabel}" title="${t.logoTitle}">
+          ${logoSvg()}
+          <span>TH Studio</span>
+        </a>
+        <ul class="nav-links" data-label="${t.navLabel}">
+          <li class="nav-projects">
+            <button type="button" class="nav-projects-toggle" data-number="01" title="${t.workTitle}" aria-label="${t.workAria}">${t.work}</button>
+            <div class="nav-projects-menu">
+              <a href="${t.workUrl}">${t.workAll}</a>
+              ${navMenu(projects)}
+            </div>
+          </li>
+          <li class="nav-projects">
+            <button type="button" class="nav-projects-toggle" data-number="02" title="${t.servicesTitle}" aria-label="${t.servicesAria}">${t.services}</button>
+            <div class="nav-projects-menu">
+              ${navMenu(t.servicesList)}
+            </div>
+          </li>
+          <li><a href="${t.pricingUrl}" data-number="03" title="${t.pricingTitle}">${t.pricing}</a></li>
+          <li><a href="${t.aboutUrl}" data-number="04" title="${t.aboutTitle}">${t.about}</a></li>
+          <li class="nav-links-divider"></li>
+          <li class="nav-links-actions">
+            <a href="${t.langUrl}" class="lang-switch" title="${t.langTitle}" aria-label="${t.langLabel}">${t.langLabel}</a>
+            <a href="${t.contactUrl}" class="nav-cta" title="${t.contactTitle}">${t.contact}</a>
+          </li>
+        </ul>
+        <button class="nav-hamburger" id="hamburger" aria-label="${t.services}" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>`;
+}
+
+export function renderFooter() {
+  const target = document.querySelector('[data-shared-footer]');
+  if (!target) return;
+
+  const lang = isEnglishPage() ? 'en' : 'sk';
+  const t = text[lang];
+  target.outerHTML = `
+    <footer id="footer">
+      <div class="footer-inner">
+        <div class="footer-left" style="display:flex; flex-direction:column; gap:0.2rem;">
+          <span class="footer-brand">TH Studio</span>
+          <span class="footer-copy">
+            © 2026 Tomáš Husivarga · ${t.footerRole}<br>
+            <a href="/TH-Studio/gdpr.html" title="${t.privacy}" style="text-decoration: underline; display: inline-block; margin-top: 0.2rem;">${t.privacy}</a>
+          </span>
+        </div>
+        <a href="#" class="footer-top" title="${t.topTitle}" aria-label="${t.topTitle}">${t.top}</a>
+      </div>
+    </footer>`;
+}
+
+export function initSharedNavigation() {
+  const links = document.querySelector('.nav-links');
+  const hamburger = document.getElementById('hamburger');
+  const projectMenus = document.querySelectorAll('.nav-projects');
+  const desktopNav = window.matchMedia('(min-width: 769px)');
+  let closeTimer;
+
+  projectMenus.forEach((menu) => {
+    const toggle = menu.querySelector('.nav-projects-toggle');
+    if (!toggle) return;
+
+    menu.addEventListener('pointerenter', () => {
+      if (desktopNav.matches) {
+        window.clearTimeout(closeTimer);
+        menu.classList.add('is-open');
+      }
+    });
+
+    menu.addEventListener('pointerleave', () => {
+      if (desktopNav.matches) {
+        closeTimer = window.setTimeout(() => menu.classList.remove('is-open'), 180);
+      }
+    });
+
+    toggle.addEventListener('click', () => {
+      window.clearTimeout(closeTimer);
+      menu.classList.toggle('is-open');
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    projectMenus.forEach((menu) => {
+      if (!menu.contains(event.target)) menu.classList.remove('is-open');
+    });
+  });
+
+  if (links && hamburger) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    links.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        links.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        projectMenus.forEach((menu) => menu.classList.remove('is-open'));
+      });
+    });
+  }
+}
+
+export function renderSharedLayout() {
+  renderHeader();
+  renderFooter();
+  initSharedNavigation();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderSharedLayout);
+} else {
+  renderSharedLayout();
+}
