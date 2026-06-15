@@ -129,16 +129,16 @@ export function renderHeader() {
         </a>
         <ul class="nav-links" data-label="${t.navLabel}">
           <li class="nav-projects">
-            <button type="button" class="nav-projects-toggle" data-number="01" title="${t.workTitle}" aria-label="${t.workAria}" aria-expanded="false">${t.work}</button>
+            <button type="button" class="nav-projects-toggle" data-number="01" title="${t.servicesTitle}" aria-label="${t.servicesAria}" aria-expanded="false">${t.services}</button>
             <div class="nav-projects-menu">
-              <a href="${t.workUrl}">${t.workAll}</a>
-              ${navMenu(projects)}
+              ${navMenu(t.servicesList)}
             </div>
           </li>
           <li class="nav-projects">
-            <button type="button" class="nav-projects-toggle" data-number="02" title="${t.servicesTitle}" aria-label="${t.servicesAria}" aria-expanded="false">${t.services}</button>
+            <button type="button" class="nav-projects-toggle" data-number="02" title="${t.workTitle}" aria-label="${t.workAria}" aria-expanded="false">${t.work}</button>
             <div class="nav-projects-menu">
-              ${navMenu(t.servicesList)}
+              <a href="${t.workUrl}">${t.workAll}</a>
+              ${navMenu(projects)}
             </div>
           </li>
           <li><a href="${t.pricingUrl}" data-number="03" title="${t.pricingTitle}">${t.pricing}</a></li>
