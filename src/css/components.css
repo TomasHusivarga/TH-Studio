@@ -1667,11 +1667,12 @@ section {
 }
 
 .faq-aside {
-    padding: 1.1rem 1.25rem;
+    padding: 1.2rem 1.4rem;
     display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: 1rem;
+    column-gap: 1.5rem;
+    row-gap: .35rem;
 }
 
 .faq-aside span {
@@ -1681,6 +1682,7 @@ section {
     font-weight: 800;
     letter-spacing: .08em;
     text-transform: uppercase;
+    grid-column: 1;
 }
 
 .faq-aside p {
@@ -1688,6 +1690,15 @@ section {
     font-size: .92rem;
     line-height: 1.6;
     margin: 0;
+    max-width: 62ch;
+    grid-column: 1;
+}
+
+.faq-aside .bento-link {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    justify-self: end;
+    white-space: nowrap;
 }
 
 @media (max-width: 768px) {
@@ -1737,6 +1748,12 @@ section {
 
     .faq-aside {
         grid-template-columns: 1fr;
+    }
+
+    .faq-aside .bento-link {
+        grid-column: 1;
+        grid-row: auto;
+        justify-self: start;
     }
 }
 
