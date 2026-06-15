@@ -126,7 +126,7 @@ export default class Cursor {
         });
 
         // Also add cursor hover class for all interactive elements
-        const hoverEls = document.querySelectorAll('a, button, .bento-card, .service-card, .pricing-card, .skill-tag');
+        const hoverEls = document.querySelectorAll('a, button, .bento-card, .service-card, .skill-tag');
         hoverEls.forEach(el => {
             el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hovering'));
             el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hovering'));
