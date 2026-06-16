@@ -16,3 +16,12 @@ When updating the portfolio or adding new projects, follow these strict rules:
 ## 3. SEO & Accessibility
 - Ensure every new project card has proper `title` attributes on links and `alt` tags on images.
 - Use semantic HTML.
+
+## 4. Client Privacy & Reference Safety
+- Treat portfolio pages as public marketing material, not internal project documentation.
+- Show only public-safe details: project name, live URL, public screenshots, broad scope, stack, and business outcome.
+- Do not imply endorsement unless the client explicitly approved it. Avoid wording like "client approved", "official partner", "trusted by", or similar claims.
+- Do not publish private/internal details: admin screens, analytics, emails, phone numbers, personal names, exact notification addresses, unpaid/payment details, strategy notes, private documents, local/staging workflow, GitHub/internal issue details, or confidential handoff notes.
+- For email templates, admin-related work, or anything that may contain contact details, use anonymized portfolio previews with placeholders.
+- For reviews, use public platform links and generic labels such as "Verified customer" / "Overený zákazník" unless the reviewer name is clearly intended for public reuse.
+- If a contract or client request suggests white-label/confidential work, do not add it to the portfolio without explicit permission.
