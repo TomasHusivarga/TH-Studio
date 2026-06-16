@@ -3,6 +3,9 @@ https://tomashusivarga.github.io/TH-Studio/en/
 https://tomashusivarga.github.io/TH-Studio/sluzby/tvorba-webstranok.html
 https://tomashusivarga.github.io/TH-Studio/sluzby/tvorba-eshopov.html
 https://tomashusivarga.github.io/TH-Studio/sluzby/uprava-wordpress-webu.html
+https://tomashusivarga.github.io/TH-Studio/en/sluzby/tvorba-webstranok.html
+https://tomashusivarga.github.io/TH-Studio/en/sluzby/tvorba-eshopov.html
+https://tomashusivarga.github.io/TH-Studio/en/sluzby/uprava-wordpress-webu.html
 https://tomashusivarga.github.io/TH-Studio/projects/rehamax.html
 https://tomashusivarga.github.io/TH-Studio/projects/donnabella.html
 https://tomashusivarga.github.io/TH-Studio/projects/ekoprofit.html

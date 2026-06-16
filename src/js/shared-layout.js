@@ -22,9 +22,9 @@ const servicesSk = [
 
 const servicesEn = [
   ['Services overview', '/TH-Studio/en/#sluzby'],
-  ['Website development', '/TH-Studio/sluzby/tvorba-webstranok.html'],
-  ['E-shop development', '/TH-Studio/sluzby/tvorba-eshopov.html'],
-  ['WordPress edits', '/TH-Studio/sluzby/uprava-wordpress-webu.html'],
+  ['Website development', '/TH-Studio/en/sluzby/tvorba-webstranok.html'],
+  ['E-shop development', '/TH-Studio/en/sluzby/tvorba-eshopov.html'],
+  ['WordPress edits', '/TH-Studio/en/sluzby/uprava-wordpress-webu.html'],
 ];
 
 const text = {
@@ -100,6 +100,22 @@ function navMenu(items) {
   return items.map(([label, href]) => `<a href="${href}">${label}</a>`).join('');
 }
 
+function languageUrl(lang) {
+  const path = window.location.pathname;
+  const servicePath = '/TH-Studio/sluzby/';
+  const servicePathEn = '/TH-Studio/en/sluzby/';
+
+  if (lang === 'en' && path.startsWith(servicePathEn)) {
+    return path.replace(servicePathEn, servicePath);
+  }
+
+  if (lang === 'sk' && path.startsWith(servicePath)) {
+    return path.replace(servicePath, servicePathEn);
+  }
+
+  return text[lang].langUrl;
+}
+
 function logoSvg() {
   return `
     <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
@@ -120,6 +136,7 @@ export function renderHeader() {
 
   const lang = isEnglishPage() ? 'en' : 'sk';
   const t = text[lang];
+  const langUrl = languageUrl(lang);
   target.outerHTML = `
     <nav id="nav" class="nav">
       <div class="nav-container">
@@ -145,7 +162,7 @@ export function renderHeader() {
           <li><a href="${t.aboutUrl}" data-number="04" title="${t.aboutTitle}">${t.about}</a></li>
           <li class="nav-links-divider"></li>
           <li class="nav-links-actions">
-            <a href="${t.langUrl}" class="lang-switch" title="${t.langTitle}" aria-label="${t.langLabel}">${t.langLabel}</a>
+            <a href="${langUrl}" class="lang-switch" title="${t.langTitle}" aria-label="${t.langLabel}">${t.langLabel}</a>
             <a href="${t.contactUrl}" class="nav-cta" title="${t.contactTitle}">${t.contact}</a>
           </li>
         </ul>
