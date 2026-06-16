@@ -1763,7 +1763,7 @@ section {
     pointer-events: none;
 }
 
-.faq-item {
+.faq-content .faq-item {
     width: 100%;
     grid-area: 1 / 1;
     position: relative;
@@ -1776,18 +1776,18 @@ section {
     will-change: opacity, transform;
 }
 
-.faq-item.is-active {
+.faq-content .faq-item.is-active {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
 
-.faq-item.is-leaving {
+.faq-content .faq-item.is-leaving {
     opacity: 0;
     transform: translateY(-12px) scale(.99);
     pointer-events: none;
 }
 
-.faq-item h3 {
+.faq-content .faq-item h3 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--text);
     font-size: clamp(2rem, 3.25vw, 3rem);
@@ -1798,7 +1798,7 @@ section {
     text-wrap: balance;
 }
 
-.faq-item p {
+.faq-content .faq-item p {
     color: var(--muted);
     font-size: clamp(1rem, 1.45vw, 1.13rem);
     line-height: 1.85;
@@ -1866,8 +1866,8 @@ section {
         display: none;
     }
 
-    .faq-item,
-    .faq-item[hidden] {
+    .faq-content .faq-item,
+    .faq-content .faq-item[hidden] {
         display: block;
         opacity: 1;
         transform: none;
@@ -1878,13 +1878,13 @@ section {
         border-radius: var(--radius);
     }
 
-    .faq-item h3 {
+    .faq-content .faq-item h3 {
         font-size: 1.15rem;
         line-height: 1.25;
         max-width: none;
     }
 
-    .faq-item p {
+    .faq-content .faq-item p {
         font-size: .94rem;
     }
 
