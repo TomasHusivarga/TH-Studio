@@ -22,21 +22,58 @@ document.addEventListener('DOMContentLoaded', () => {
   if (faqPanel) {
     const tabs = [...faqPanel.querySelectorAll('.faq-tab')];
     const items = [...faqPanel.querySelectorAll('.faq-item')];
+    const isDesktopFaq = () => window.matchMedia('(min-width: 769px)').matches;
+    let faqTransitionTimer;
+
     const activateFaq = (tab) => {
+      if (!tab || tab.classList.contains('is-active')) return;
+      const targetId = tab.getAttribute('aria-controls');
+      const targetItem = items.find((item) => item.id === targetId);
+
       tabs.forEach((candidate) => {
         const isActive = candidate === tab;
         candidate.classList.toggle('is-active', isActive);
         candidate.setAttribute('aria-selected', String(isActive));
       });
-      items.forEach((item) => {
-        const isActive = item.id === tab.getAttribute('aria-controls');
-        item.classList.toggle('is-active', isActive);
-        if (window.matchMedia('(min-width: 769px)').matches) {
-          item.hidden = !isActive;
-        } else {
+
+      clearTimeout(faqTransitionTimer);
+
+      if (!isDesktopFaq()) {
+        items.forEach((item) => {
           item.hidden = false;
+          item.classList.toggle('is-active', item === targetItem);
+          item.classList.remove('is-leaving');
+        });
+        return;
+      }
+
+      items.forEach((item) => {
+        if (item === targetItem) return;
+        if (item.classList.contains('is-active')) {
+          item.classList.remove('is-active');
+          item.classList.add('is-leaving');
+        } else {
+          item.hidden = true;
+          item.classList.remove('is-leaving');
         }
       });
+
+      if (targetItem) {
+        targetItem.hidden = false;
+        targetItem.classList.remove('is-leaving');
+        requestAnimationFrame(() => {
+          targetItem.classList.add('is-active');
+        });
+      }
+
+      faqTransitionTimer = window.setTimeout(() => {
+        items.forEach((item) => {
+          if (item !== targetItem) {
+            item.hidden = true;
+            item.classList.remove('is-leaving');
+          }
+        });
+      }, 320);
     };
 
     tabs.forEach((tab) => {
@@ -45,9 +82,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', () => {
       const activeTab = tabs.find((tab) => tab.classList.contains('is-active')) || tabs[0];
-      if (activeTab) activateFaq(activeTab);
+      const targetId = activeTab?.getAttribute('aria-controls');
+      items.forEach((item) => {
+        item.hidden = isDesktopFaq() ? item.id !== targetId : false;
+        item.classList.toggle('is-active', item.id === targetId);
+        item.classList.remove('is-leaving');
+      });
     });
 
+    tabs[0]?.classList.remove('is-active');
     activateFaq(tabs[0]);
   }
 
