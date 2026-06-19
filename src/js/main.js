@@ -40,8 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!isDesktopFaq()) {
         items.forEach((item) => {
-          item.hidden = false;
-          item.classList.toggle('is-active', item === targetItem);
+          const isActive = item === targetItem;
+          item.hidden = !isActive;
+          item.classList.toggle('is-active', isActive);
           item.classList.remove('is-leaving');
         });
         return;
@@ -84,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const activeTab = tabs.find((tab) => tab.classList.contains('is-active')) || tabs[0];
       const targetId = activeTab?.getAttribute('aria-controls');
       items.forEach((item) => {
-        item.hidden = isDesktopFaq() ? item.id !== targetId : false;
+        item.hidden = item.id !== targetId;
         item.classList.toggle('is-active', item.id === targetId);
         item.classList.remove('is-leaving');
       });

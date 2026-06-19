@@ -1869,6 +1869,7 @@ section {
     .faq-content .faq-item,
     .faq-content .faq-item[hidden] {
         display: block;
+        grid-area: auto;
         opacity: 1;
         transform: none;
         transition: none;
@@ -1876,6 +1877,10 @@ section {
         background: rgba(255, 255, 255, .035);
         border: 1px solid var(--border);
         border-radius: var(--radius);
+    }
+
+    .faq-content .faq-item[hidden] {
+        display: none;
     }
 
     .faq-content .faq-item h3 {

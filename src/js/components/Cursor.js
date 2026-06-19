@@ -180,6 +180,27 @@ export default class Cursor {
         const scrambleEls = document.querySelectorAll('.scramble');
         const counterEls = document.querySelectorAll('[data-count]');
         const triggered = new Set();
+        const reveal = (el) => {
+            if (triggered.has(el)) return;
+
+            triggered.add(el);
+            const section = el.closest('section');
+            const siblings = section ? [...section.querySelectorAll('[data-animate]')] : [el];
+            const idx = siblings.indexOf(el);
+            const delay = Math.min(idx * 90, 360);
+            setTimeout(() => el.classList.add('visible'), delay);
+        };
+
+        const revealVisibleElements = () => {
+            const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+            els.forEach((el) => {
+                if (triggered.has(el)) return;
+                const rect = el.getBoundingClientRect();
+                if (rect.top < viewportHeight * 0.9 && rect.bottom > viewportHeight * -0.15) {
+                    reveal(el);
+                }
+            });
+        };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -187,12 +208,7 @@ export default class Cursor {
 
                 // Handle fade-in animations
                 if (entry.target.hasAttribute('data-animate') && !triggered.has(entry.target)) {
-                    triggered.add(entry.target);
-                    const section = entry.target.closest('section');
-                    const siblings = section ? [...section.querySelectorAll('[data-animate]')] : [entry.target];
-                    const idx = siblings.indexOf(entry.target);
-                    const delay = idx * 120;
-                    setTimeout(() => entry.target.classList.add('visible'), delay);
+                    reveal(entry.target);
                 }
 
                 // Handle text scramble
@@ -211,11 +227,15 @@ export default class Cursor {
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1 });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
 
         els.forEach(el => observer.observe(el));
         scrambleEls.forEach(el => observer.observe(el));
         counterEls.forEach(el => observer.observe(el));
+
+        revealVisibleElements();
+        window.addEventListener('scroll', revealVisibleElements, { passive: true });
+        window.addEventListener('resize', revealVisibleElements);
     }
 
     initHamburger() {
