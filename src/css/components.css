@@ -2177,6 +2177,10 @@ section {
     padding-top: 0;
 }
 
+.seo-service-bridge {
+    padding-bottom: 0;
+}
+
 .case-hero__grid,
 .case-content-grid {
     display: grid;
@@ -2512,6 +2516,17 @@ section {
     min-width: 210px;
 }
 
+.seo-service-bridge__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.seo-service-bridge__inner p:last-child {
+    margin-bottom: 0;
+}
+
 @media (max-width: 900px) {
     .case-hero__grid,
     .case-content-grid {
@@ -2599,6 +2614,11 @@ section {
     }
 
     .case-nav {
+        flex-direction: column;
+    }
+
+    .seo-service-bridge__inner {
+        align-items: flex-start;
         flex-direction: column;
     }
 
