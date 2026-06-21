@@ -146,6 +146,13 @@
     .btn-ghost { border: 1px solid rgba(255,255,255,.22); color: var(--text); }
     .container { max-width: 1280px; margin: 0 auto; padding: 0 5%; width: 100%; }
     .container--center { max-width: 1040px; }
+    @media (max-width: 480px) {
+      #hero { padding-left: 1.25rem; padding-right: 1.25rem; }
+      .hero-title { max-width: 22rem; font-size: clamp(1.5rem, 7vw, 1.7rem); line-height: 1.18; overflow-wrap: anywhere; }
+      .hero-sub { font-size: 1rem; }
+      .hero-proof { gap: 1.1rem; }
+      .proof-num { font-size: 1.55rem; }
+    }
   </style>
 </head>
 
