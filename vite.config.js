@@ -44,6 +44,8 @@ export default defineConfig({
         gdpr: resolve(__dirname, 'gdpr.html'),
         blog: resolve(__dirname, 'blog/index.html'),
         blogPortfolioImpressions: resolve(__dirname, 'blog/preco-portfolio-ma-impresie-bez-klikov.html'),
+        blogEn: resolve(__dirname, 'en/blog/index.html'),
+        blogPortfolioImpressionsEn: resolve(__dirname, 'en/blog/why-portfolio-gets-impressions-without-clicks.html'),
         serviceWebsites: resolve(__dirname, 'sluzby/tvorba-webstranok.html'),
         serviceEshops: resolve(__dirname, 'sluzby/tvorba-eshopov.html'),
         serviceWordPressEdits: resolve(__dirname, 'sluzby/uprava-wordpress-webu.html'),

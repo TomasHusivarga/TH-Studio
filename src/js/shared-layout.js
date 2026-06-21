@@ -68,7 +68,7 @@ const text = {
     logoTitle: 'TH Studio - Home',
     homeUrl: '/TH-Studio/en/',
     workUrl: '/TH-Studio/en/#prace',
-    blogUrl: '/TH-Studio/blog/',
+    blogUrl: '/TH-Studio/en/blog/',
     pricingUrl: '/TH-Studio/en/#ceny',
     aboutUrl: '/TH-Studio/en/#o-mne',
     contactUrl: '/TH-Studio/en/#kontakt',
@@ -110,6 +110,24 @@ function languageUrl(lang) {
   const path = window.location.pathname;
   const servicePath = '/TH-Studio/sluzby/';
   const servicePathEn = '/TH-Studio/en/sluzby/';
+  const blogPath = '/TH-Studio/blog/';
+  const blogPathEn = '/TH-Studio/en/blog/';
+  const blogArticleMap = {
+    '/TH-Studio/blog/preco-portfolio-ma-impresie-bez-klikov.html': '/TH-Studio/en/blog/why-portfolio-gets-impressions-without-clicks.html',
+    '/TH-Studio/en/blog/why-portfolio-gets-impressions-without-clicks.html': '/TH-Studio/blog/preco-portfolio-ma-impresie-bez-klikov.html',
+  };
+
+  if (blogArticleMap[path]) {
+    return blogArticleMap[path];
+  }
+
+  if (lang === 'en' && path === blogPathEn) {
+    return blogPath;
+  }
+
+  if (lang === 'sk' && path === blogPath) {
+    return blogPathEn;
+  }
 
   if (lang === 'en' && path.startsWith(servicePathEn)) {
     return path.replace(servicePathEn, servicePath);
