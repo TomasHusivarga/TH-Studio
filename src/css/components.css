@@ -667,6 +667,90 @@ section {
     align-items: center;
     justify-content: center;
     padding: calc(var(--nav-h) + 60px) 5% 80px;
+    position: relative;
+    --hero-x: 0px;
+    --hero-y: 0px;
+    --hero-scale: 1;
+    --hero-glow-x: 0px;
+    --hero-glow-y: 0px;
+}
+
+#hero .container--center {
+    position: relative;
+    z-index: 1;
+}
+
+#hero.hero-presence .eyebrow,
+#hero.hero-presence .hero-title,
+#hero.hero-presence .hero-sub,
+#hero.hero-presence .hero-actions,
+#hero.hero-presence .hero-proof {
+    opacity: 0;
+    transform: translateY(24px) scale(.98);
+    transition:
+        opacity .72s cubic-bezier(.16, 1, .3, 1),
+        transform .72s cubic-bezier(.16, 1, .3, 1);
+}
+
+#hero.hero-presence.is-visible .eyebrow,
+#hero.hero-presence.is-visible .hero-title,
+#hero.hero-presence.is-visible .hero-sub,
+#hero.hero-presence.is-visible .hero-actions,
+#hero.hero-presence.is-visible .hero-proof {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+#hero.hero-presence.is-visible .hero-title {
+    transition-delay: .08s;
+}
+
+#hero.hero-presence.is-visible .hero-sub {
+    transition-delay: .16s;
+}
+
+#hero.hero-presence.is-visible .hero-actions {
+    transition-delay: .24s;
+}
+
+#hero.hero-presence.is-visible .hero-proof {
+    transition-delay: .32s;
+}
+
+@media (min-width: 901px) {
+    #hero.hero-presence .container--center {
+        transform: translate3d(var(--hero-x), var(--hero-y), 0) scale(var(--hero-scale));
+        transition: transform .18s ease-out;
+        will-change: transform;
+    }
+
+    #hero.hero-presence .hero-title__accent {
+        filter: drop-shadow(
+            var(--hero-glow-x)
+            var(--hero-glow-y)
+            18px rgba(56, 189, 248, .18)
+        );
+        transition: filter .18s ease-out;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #hero.hero-presence .eyebrow,
+    #hero.hero-presence .hero-title,
+    #hero.hero-presence .hero-sub,
+    #hero.hero-presence .hero-actions,
+    #hero.hero-presence .hero-proof {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    #hero.hero-presence .container--center,
+    #hero.hero-presence .hero-title__accent {
+        transform: none;
+        filter: none;
+        transition: none;
+    }
 }
 
 .hero-title {
