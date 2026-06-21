@@ -4,7 +4,7 @@ Use this file before writing or editing blog posts for the portfolio.
 
 ## Goal
 
-Blog posts should sound like Tomáš thinking through a real web problem in plain language. The writing should feel direct, practical, slightly informal, and honest. It should not sound like an agency blog, SEO filler, or polished corporate advice.
+Blog posts should sound like Tomáš thinking through a real web topic in plain language. The topic can be a problem, plugin decision, WooCommerce setup, WordPress fix, SEO observation, speed issue, pricing/process note, content decision, or something learned during a project. The writing should feel direct, practical, slightly informal, and honest. It should not sound like an agency blog, SEO filler, or polished corporate advice.
 
 ## Voice
 
@@ -31,13 +31,21 @@ Bad:
 
 ## Structure
 
-Use simple, readable structure:
+Use simple, readable structure. For problem posts:
 
 1. What happened
 2. Why it mattered
 3. What was checked
 4. What was changed
 5. What to watch next
+
+For broader topic posts, use:
+
+1. What the topic is
+2. Why people usually get it wrong or underestimate it
+3. What I would check or choose
+4. Practical examples
+5. Short takeaway
 
 Do not over-explain. If a section does not add anything useful, skip it.
 
@@ -74,7 +82,7 @@ Avoid or use rarely:
 
 Before publishing a blog post:
 
-- Does it sound like a real person explaining a real problem?
+- Does it sound like a real person explaining a real topic or decision?
 - Is there at least one concrete detail from actual work?
 - Are the headings natural in Slovak?
 - Is there a useful internal link to a service page?
