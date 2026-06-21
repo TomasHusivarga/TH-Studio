@@ -25,3 +25,9 @@ When updating the portfolio or adding new projects, follow these strict rules:
 - For email templates, admin-related work, or anything that may contain contact details, use anonymized portfolio previews with placeholders.
 - For reviews, use public platform links and generic labels such as "Verified customer" / "Overený zákazník" unless the reviewer name is clearly intended for public reuse.
 - If a contract or client request suggests white-label/confidential work, do not add it to the portfolio without explicit permission.
+
+## 5. Blog Writing Style
+- Before writing or editing blog posts, read `BLOG_WRITING_STYLE.md`.
+- Blog posts should sound like Tomáš explaining a real problem from work in clean Slovak: direct, practical, slightly informal, and not corporate.
+- Do not publish raw chat typos, private details, analytics screenshots, admin screens, client emails, payment details, or internal notes.
+- Prefer real problems encountered during work over generic SEO/content filler.
