@@ -42,6 +42,8 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         en: resolve(__dirname, 'en/index.html'),
         gdpr: resolve(__dirname, 'gdpr.html'),
+        blog: resolve(__dirname, 'blog/index.html'),
+        blogPortfolioImpressions: resolve(__dirname, 'blog/preco-portfolio-ma-impresie-bez-klikov.html'),
         serviceWebsites: resolve(__dirname, 'sluzby/tvorba-webstranok.html'),
         serviceEshops: resolve(__dirname, 'sluzby/tvorba-eshopov.html'),
         serviceWordPressEdits: resolve(__dirname, 'sluzby/uprava-wordpress-webu.html'),

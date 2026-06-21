@@ -1294,6 +1294,49 @@ section {
     font-size: .92rem;
 }
 
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.blog-card {
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: inherit;
+    display: grid;
+    gap: 1rem;
+    padding: clamp(1.35rem, 3vw, 2rem);
+    transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.blog-card:hover {
+    border-color: rgba(56, 189, 248, .36);
+    box-shadow: 0 20px 54px rgba(0, 0, 0, .22);
+    transform: translateY(-4px);
+}
+
+.blog-card h2,
+.blog-card h3 {
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+    line-height: 1.15;
+}
+
+.blog-card p {
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+.section-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
 .email-preview--compact {
     width: min(92%, 360px);
 }

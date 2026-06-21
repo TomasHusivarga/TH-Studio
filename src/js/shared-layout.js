@@ -34,6 +34,7 @@ const text = {
     logoTitle: 'TH Studio - Domov',
     homeUrl: '/TH-Studio/',
     workUrl: '/TH-Studio/#prace',
+    blogUrl: '/TH-Studio/blog/',
     pricingUrl: '/TH-Studio/#ceny',
     aboutUrl: '/TH-Studio/#o-mne',
     contactUrl: '/TH-Studio/#kontakt',
@@ -42,6 +43,8 @@ const text = {
     workTitle: 'Pozrieť moje práce a projekty',
     workAria: 'Práce - vybrať projekt',
     services: 'Služby',
+    blog: 'Blog',
+    blogTitle: 'Poznamky z praxe',
     servicesTitle: 'Moje webové služby',
     servicesAria: 'Služby - vybrať službu',
     pricing: 'Ceny',
@@ -65,6 +68,7 @@ const text = {
     logoTitle: 'TH Studio - Home',
     homeUrl: '/TH-Studio/en/',
     workUrl: '/TH-Studio/en/#prace',
+    blogUrl: '/TH-Studio/blog/',
     pricingUrl: '/TH-Studio/en/#ceny',
     aboutUrl: '/TH-Studio/en/#o-mne',
     contactUrl: '/TH-Studio/en/#kontakt',
@@ -73,6 +77,8 @@ const text = {
     workTitle: 'View work and projects',
     workAria: 'Work - choose a project',
     services: 'Services',
+    blog: 'Blog',
+    blogTitle: 'Practical project notes',
     servicesTitle: 'Web services',
     servicesAria: 'Services - choose a service',
     pricing: 'Pricing',
@@ -159,7 +165,8 @@ export function renderHeader() {
             </div>
           </li>
           <li><a href="${t.pricingUrl}" data-number="03" title="${t.pricingTitle}">${t.pricing}</a></li>
-          <li><a href="${t.aboutUrl}" data-number="04" title="${t.aboutTitle}">${t.about}</a></li>
+          <li><a href="${t.blogUrl}" data-number="04" title="${t.blogTitle}">${t.blog}</a></li>
+          <li><a href="${t.aboutUrl}" data-number="05" title="${t.aboutTitle}">${t.about}</a></li>
           <li class="nav-links-divider"></li>
           <li class="nav-links-actions">
             <a href="${langUrl}" class="lang-switch" title="${t.langTitle}" aria-label="${t.langLabel}">${t.langLabel}</a>
