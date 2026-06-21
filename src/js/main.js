@@ -10,6 +10,7 @@ import { initMobileNav } from './modules/mobileNav.js';
 import { getMotionPreferences } from './modules/motionPreferences.js';
 import { initPortfolioCounter } from './modules/portfolioCounter.js';
 import { initScene } from './modules/sceneLoader.js';
+import { initServicesFocus } from './modules/scrollEffects/servicesFocus.js';
 import { initScrollProgress } from './modules/scrollProgress.js';
 import { initScrollReveal } from './modules/scrollReveal.js';
 import { initTiltCards } from './modules/tiltCards.js';
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initTiltCards({ motion });
   initScene();
+  initServicesFocus({ motion });
   initPortfolioCounter();
   initFaqTabs();
 

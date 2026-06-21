@@ -1495,6 +1495,19 @@ section {
     transform: translateY(-4px);
 }
 
+@media (min-width: 901px) {
+    .service-card {
+        will-change: transform, border-color, box-shadow, background;
+    }
+
+    .service-card.is-scroll-focused {
+        border-color: rgba(56, 189, 248, .68);
+        background: rgba(56, 189, 248, .055);
+        box-shadow: 0 22px 60px rgba(0, 0, 0, .24), 0 0 0 1px rgba(56, 189, 248, .12) inset;
+        transform: translateY(-6px);
+    }
+}
+
 .service-num {
     font-size: .65rem;
     font-weight: 700;
