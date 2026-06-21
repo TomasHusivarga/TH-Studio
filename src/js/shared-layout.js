@@ -44,7 +44,7 @@ const text = {
     workAria: 'Práce - vybrať projekt',
     services: 'Služby',
     blog: 'Blog',
-    blogTitle: 'Poznamky z praxe',
+    blogTitle: 'Články z praxe',
     servicesTitle: 'Moje webové služby',
     servicesAria: 'Služby - vybrať službu',
     pricing: 'Ceny',
