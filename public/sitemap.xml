@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tomashusivarga.github.io/TH-Studio/</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://tomashusivarga.github.io/TH-Studio/en/</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tomashusivarga.github.io/TH-Studio/blog/</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -25,14 +25,38 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tomashusivarga.github.io/TH-Studio/blog/ako-pouzit-ai-pri-cisteni-napadnuteho-wordpress-webu.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tomashusivarga.github.io/TH-Studio/blog/ako-presunut-wordpress-web-cez-backup-migration-plugin.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tomashusivarga.github.io/TH-Studio/en/blog/</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tomashusivarga.github.io/TH-Studio/en/blog/why-portfolio-gets-impressions-without-clicks.html</loc>
     <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-use-ai-when-cleaning-infected-wordpress-site.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-move-wordpress-site-with-backup-migration-plugin.html</loc>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -141,6 +165,12 @@
   <url>
     <loc>https://tomashusivarga.github.io/TH-Studio/projects/modafinil-cz.html</loc>
     <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tomashusivarga.github.io/TH-Studio/projects/profivyziva.html</loc>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

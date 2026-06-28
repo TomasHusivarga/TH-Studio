@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to use AI when cleaning an infected WordPress site | TH Studio</title>
+  <meta name="description" content="A practical guide on using AI during WordPress malware cleanup: suspicious code, checklists, limits, backups and manual verification." />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-use-ai-when-cleaning-infected-wordpress-site.html" />
+  <link rel="alternate" hreflang="sk" href="https://tomashusivarga.github.io/TH-Studio/blog/ako-pouzit-ai-pri-cisteni-napadnuteho-wordpress-webu.html" />
+  <link rel="alternate" hreflang="en" href="https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-use-ai-when-cleaning-infected-wordpress-site.html" />
+  <link rel="icon" type="image/svg+xml" href="/TH-Studio/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/TH-Studio/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/TH-Studio/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/TH-Studio/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/TH-Studio/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to use AI when cleaning an infected WordPress site",
+    "description": "A practical guide on using AI during WordPress malware cleanup without blindly trusting generated fixes.",
+    "datePublished": "2026-06-28",
+    "dateModified": "2026-06-28",
+    "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/en/"},
+    "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
+    "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-use-ai-when-cleaning-infected-wordpress-site.html",
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div data-shared-header></div>
+  <main>
+    <article>
+      <section class="case-hero">
+        <div class="container">
+          <div class="case-hero__grid">
+            <div>
+              <p class="case-kicker">WordPress / security</p>
+              <h1 class="case-title">How to use AI when cleaning an infected WordPress site</h1>
+              <p class="case-lead">AI can save time during WordPress malware cleanup, but only when you treat it as a helper. Not as the person deciding what should be deleted on a live website.</p>
+            </div>
+            <aside class="case-meta">
+              <div><span>Topic</span><strong>WordPress malware cleanup</strong></div>
+              <div><span>Important</span><strong>backup, checks, caution</strong></div>
+              <a href="/TH-Studio/en/sluzby/uprava-wordpress-webu.html" class="btn btn-primary">WordPress edits</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section class="case-section">
+        <div class="container case-content-grid">
+          <div>
+            <div class="case-block">
+              <h2>Start with backup and risk control</h2>
+              <p>I would not start by pasting random code into AI and hoping for a miracle. First, create a backup of files and database, check hosting access, rotate passwords and stop anything that can keep spreading the damage.</p>
+              <p>If the site sends spam, redirects visitors or creates new admin users, the priority is control. AI can help with analysis, but it does not replace basic security work.</p>
+            </div>
+            <div class="case-block">
+              <h2>Where AI actually helps</h2>
+              <ul>
+                <li>Explaining suspicious PHP or JavaScript in plain language.</li>
+                <li>Spotting obfuscation such as `base64_decode`, `eval`, long strings or hidden redirects.</li>
+                <li>Comparing a suspicious file with a clean plugin or theme file.</li>
+                <li>Building a checklist: files, database, admin users, cron, `.htaccess`, `wp-config.php`, plugins and theme.</li>
+                <li>Turning a technical finding into a client-friendly explanation.</li>
+              </ul>
+            </div>
+            <div class="case-block">
+              <h2>Where I would not trust AI blindly</h2>
+              <p>I would not let AI decide that a specific file is safe to delete without the full site context. I also would not paste a generated “fix” back into the site without understanding it.</p>
+              <p>Security is unforgiving. One small mistake can break the site or leave a backdoor open. AI is useful for explanation and orientation, but final decisions need manual verification.</p>
+            </div>
+            <div class="case-block">
+              <h2>Practical workflow</h2>
+              <ol>
+                <li>Back up the current state, even if the site is infected.</li>
+                <li>Change WordPress, hosting, FTP/SFTP, database and email passwords.</li>
+                <li>Check admin users, suspicious plugins and recently changed files.</li>
+                <li>Use AI to explain suspicious code, not to blindly fix it.</li>
+                <li>Compare plugins and theme files with clean official versions.</li>
+                <li>Update WordPress, plugins and theme, and remove unused items.</li>
+                <li>Check `.htaccess`, `wp-config.php`, cron jobs and database links.</li>
+                <li>After cleanup, test the site, forms, redirects and Search Console.</li>
+              </ol>
+            </div>
+            <div class="case-block">
+              <h2>Short takeaway</h2>
+              <p>AI is a useful second pair of eyes for an infected WordPress site. It helps you understand suspicious code faster and avoid missing checks. But the order still matters: backup first, verify manually, then change things.</p>
+            </div>
+          </div>
+          <aside class="case-sidebar">
+            <div class="case-block">
+              <h3>Related services</h3>
+              <a href="/TH-Studio/en/sluzby/uprava-wordpress-webu.html" class="bento-link">WordPress edits →</a>
+              <a href="/TH-Studio/en/sluzby/tvorba-webstranok.html" class="bento-link">WordPress website development →</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </article>
+    <section class="case-section case-section--compact"><div class="container"><div class="case-nav"><a href="/TH-Studio/en/blog/" class="btn btn-ghost">Back to blog</a><a href="/TH-Studio/en/#kontakt" class="btn btn-primary">Discuss a WordPress issue</a></div></div></section>
+  </main>
+  <div data-shared-footer></div>
+  <script type="module" src="/src/js/shared-layout.js"></script>
+</body>
+</html>

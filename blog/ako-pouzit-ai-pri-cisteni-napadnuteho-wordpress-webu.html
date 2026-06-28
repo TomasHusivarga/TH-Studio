@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ako použiť AI pri čistení napadnutého WordPress webu | TH Studio</title>
+  <meta name="description" content="Praktický návod, ako môže AI pomôcť pri čistení napadnutého WordPress webu: kontrola podozrivého kódu, checklist, obmedzenia a bezpečný postup." />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tomashusivarga.github.io/TH-Studio/blog/ako-pouzit-ai-pri-cisteni-napadnuteho-wordpress-webu.html" />
+  <link rel="alternate" hreflang="sk" href="https://tomashusivarga.github.io/TH-Studio/blog/ako-pouzit-ai-pri-cisteni-napadnuteho-wordpress-webu.html" />
+  <link rel="alternate" hreflang="en" href="https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-use-ai-when-cleaning-infected-wordpress-site.html" />
+  <link rel="icon" type="image/svg+xml" href="/TH-Studio/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/TH-Studio/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/TH-Studio/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/TH-Studio/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/TH-Studio/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Ako použiť AI pri čistení napadnutého WordPress webu",
+    "description": "Praktický návod, ako môže AI pomôcť pri čistení napadnutého WordPress webu bez slepého spoliehania sa na automatické odpovede.",
+    "datePublished": "2026-06-28",
+    "dateModified": "2026-06-28",
+    "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/"},
+    "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
+    "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/blog/ako-pouzit-ai-pri-cisteni-napadnuteho-wordpress-webu.html",
+    "inLanguage": "sk"
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div data-shared-header></div>
+  <main>
+    <article>
+      <section class="case-hero">
+        <div class="container">
+          <div class="case-hero__grid">
+            <div>
+              <p class="case-kicker">WordPress / bezpečnosť</p>
+              <h1 class="case-title">Ako použiť AI pri čistení napadnutého WordPress webu</h1>
+              <p class="case-lead">AI vie pri zavírenom WordPresse ušetriť čas, ale iba keď ju používaš ako pomocníka. Nie ako človeka, ktorý má naslepo rozhodnúť, čo sa má zmazať na produkčnom webe.</p>
+            </div>
+            <aside class="case-meta">
+              <div><span>Téma</span><strong>WordPress malware cleanup</strong></div>
+              <div><span>Dôležité</span><strong>záloha, kontrola, opatrnosť</strong></div>
+              <a href="/TH-Studio/sluzby/uprava-wordpress-webu.html" class="btn btn-primary">Úprava WordPress webu</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container case-content-grid">
+          <div>
+            <div class="case-block">
+              <h2>Najprv záloha a odstavenie rizika</h2>
+              <p>Pri napadnutom webe by som nezačínal tým, že pošlem AI celý kus kódu a čakám zázrak. Najprv treba spraviť zálohu súborov aj databázy, skontrolovať hosting, zmeniť heslá a zastaviť veci, ktoré môžu škodu šíriť ďalej.</p>
+              <p>Ak web odosiela spam, presmerúva návštevníkov alebo vytvára nové admin účty, priorita je dostať situáciu pod kontrolu. AI môže pomôcť s analýzou, ale nie je náhrada za základnú bezpečnostnú hygienu.</p>
+            </div>
+            <div class="case-block">
+              <h2>Kde AI reálne pomáha</h2>
+              <ul>
+                <li>Vysvetlí podozrivý PHP alebo JavaScript kód v ľudskej reči.</li>
+                <li>Pomôže rozpoznať obfuskáciu, napríklad divné `base64_decode`, `eval`, dlhé reťazce alebo skryté presmerovania.</li>
+                <li>Vie porovnať podozrivý súbor s čistou verziou pluginu alebo témy.</li>
+                <li>Pomôže zostaviť checklist: súbory, databáza, admin účty, cron, `.htaccess`, `wp-config.php`, pluginy, téma.</li>
+                <li>Vie preformulovať technický nález tak, aby mu rozumel aj klient.</li>
+              </ul>
+            </div>
+            <div class="case-block">
+              <h2>Kde by som AI neveril naslepo</h2>
+              <p>Nenechal by som AI rozhodnúť, že konkrétny súbor môžeš bezpečne zmazať, ak nepozná celý kontext webu. Tiež by som nekopíroval naspäť žiadny vygenerovaný „fix“ bez toho, aby som mu rozumel.</p>
+              <p>Pri bezpečnosti je problém v tom, že jedna malá chyba vie zhodiť web alebo nechať zadné vrátka otvorené. AI je dobrá na vysvetlenie a orientáciu, ale finálne rozhodnutie musí byť manuálne overené.</p>
+            </div>
+            <div class="case-block">
+              <h2>Praktický postup</h2>
+              <ol>
+                <li>Sprav zálohu aktuálneho stavu, aj keď je web napadnutý.</li>
+                <li>Zmeň heslá do WordPressu, hostingu, FTP/SFTP, databázy a emailov.</li>
+                <li>Skontroluj admin účty, podozrivé pluginy a nedávno menené súbory.</li>
+                <li>Podozrivý kód daj AI vysvetliť, nie automaticky opraviť.</li>
+                <li>Porovnaj pluginy a tému s čistou verziou z oficiálneho zdroja.</li>
+                <li>Aktualizuj WordPress, pluginy a tému, odstráň nepoužívané veci.</li>
+                <li>Skontroluj `.htaccess`, `wp-config.php`, cron úlohy a databázové odkazy.</li>
+                <li>Po čistení otestuj web, formuláre, presmerovania a Search Console.</li>
+              </ol>
+            </div>
+            <div class="case-block">
+              <h2>Krátky záver</h2>
+              <p>AI je pri napadnutom WordPresse dobrý druhý pár očí. Pomáha rýchlejšie pochopiť podozrivý kód a nezabudnúť na dôležité kontroly. Ale stále platí: najprv záloha, potom kontrola, až potom zásahy.</p>
+            </div>
+          </div>
+          <aside class="case-sidebar">
+            <div class="case-block">
+              <h3>Súvisiace služby</h3>
+              <a href="/TH-Studio/sluzby/uprava-wordpress-webu.html" class="bento-link">Úprava WordPress webu →</a>
+              <a href="/TH-Studio/sluzby/tvorba-webstranok.html" class="bento-link">Tvorba WordPress webstránok →</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </article>
+    <section class="case-section case-section--compact"><div class="container"><div class="case-nav"><a href="/TH-Studio/blog/" class="btn btn-ghost">Späť na blog</a><a href="/TH-Studio/#kontakt" class="btn btn-primary">Riešiť WordPress problém</a></div></div></section>
+  </main>
+  <div data-shared-footer></div>
+  <script type="module" src="/src/js/shared-layout.js"></script>
+</body>
+</html>

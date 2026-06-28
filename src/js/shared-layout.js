@@ -11,6 +11,7 @@ const projects = [
   ['Viamax', '/TH-Studio/projects/viamax.html'],
   ['Slová so zmyslom', '/TH-Studio/projects/slovasozmyslom.html'],
   ['Modafinil CZ', '/TH-Studio/projects/modafinil-cz.html'],
+  ['Profi Výživa', '/TH-Studio/projects/profivyziva.html'],
 ];
 
 const servicesSk = [
@@ -115,6 +116,10 @@ function languageUrl(lang) {
   const blogArticleMap = {
     '/TH-Studio/blog/preco-portfolio-ma-impresie-bez-klikov.html': '/TH-Studio/en/blog/why-portfolio-gets-impressions-without-clicks.html',
     '/TH-Studio/en/blog/why-portfolio-gets-impressions-without-clicks.html': '/TH-Studio/blog/preco-portfolio-ma-impresie-bez-klikov.html',
+    '/TH-Studio/blog/ako-pouzit-ai-pri-cisteni-napadnuteho-wordpress-webu.html': '/TH-Studio/en/blog/how-to-use-ai-when-cleaning-infected-wordpress-site.html',
+    '/TH-Studio/en/blog/how-to-use-ai-when-cleaning-infected-wordpress-site.html': '/TH-Studio/blog/ako-pouzit-ai-pri-cisteni-napadnuteho-wordpress-webu.html',
+    '/TH-Studio/blog/ako-presunut-wordpress-web-cez-backup-migration-plugin.html': '/TH-Studio/en/blog/how-to-move-wordpress-site-with-backup-migration-plugin.html',
+    '/TH-Studio/en/blog/how-to-move-wordpress-site-with-backup-migration-plugin.html': '/TH-Studio/blog/ako-presunut-wordpress-web-cez-backup-migration-plugin.html',
   };
 
   if (blogArticleMap[path]) {

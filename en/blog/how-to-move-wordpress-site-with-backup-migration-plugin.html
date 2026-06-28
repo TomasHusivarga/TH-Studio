@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to move a WordPress site with Backup Migration | TH Studio</title>
+  <meta name="description" content="Step-by-step workflow for moving a WordPress site with the Backup Migration plugin: backup, import, URL checks, cache, forms and final testing." />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-move-wordpress-site-with-backup-migration-plugin.html" />
+  <link rel="alternate" hreflang="sk" href="https://tomashusivarga.github.io/TH-Studio/blog/ako-presunut-wordpress-web-cez-backup-migration-plugin.html" />
+  <link rel="alternate" hreflang="en" href="https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-move-wordpress-site-with-backup-migration-plugin.html" />
+  <link rel="icon" type="image/svg+xml" href="/TH-Studio/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/TH-Studio/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/TH-Studio/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/TH-Studio/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/TH-Studio/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to move a WordPress site with Backup Migration",
+    "description": "Step-by-step workflow for moving a WordPress site with the Backup Migration plugin.",
+    "datePublished": "2026-06-28",
+    "dateModified": "2026-06-28",
+    "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/en/"},
+    "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
+    "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-move-wordpress-site-with-backup-migration-plugin.html",
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div data-shared-header></div>
+  <main>
+    <article>
+      <section class="case-hero">
+        <div class="container">
+          <div class="case-hero__grid">
+            <div>
+              <p class="case-kicker">WordPress / migration</p>
+              <h1 class="case-title">How to move a WordPress site with Backup Migration</h1>
+              <p class="case-lead">Backup Migration is useful when you need to move a whole WordPress site. It is not the same as copying one Gutenberg page like text from a document. Think of it as backup and restore for the full site.</p>
+            </div>
+            <aside class="case-meta">
+              <div><span>Topic</span><strong>WordPress migration</strong></div>
+              <div><span>Tool</span><strong>Backup Migration plugin</strong></div>
+              <a href="/TH-Studio/en/sluzby/uprava-wordpress-webu.html" class="btn btn-primary">WordPress help</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section class="case-section">
+        <div class="container case-content-grid">
+          <div>
+            <div class="case-block">
+              <h2>When to use it</h2>
+              <p>I would use it when moving a whole site from one host to another, creating a working copy, or restoring from backup. If you only need one Gutenberg page, copying block code or using WordPress export/import may be cleaner.</p>
+            </div>
+            <div class="case-block">
+              <h2>Step-by-step workflow</h2>
+              <ol>
+                <li>On the old site, update WordPress, plugins and theme if it is safe to do so.</li>
+                <li>Install the Backup Migration plugin.</li>
+                <li>Create a new backup from the plugin settings.</li>
+                <li>Download the backup file and keep a local copy.</li>
+                <li>On the new site, install a clean WordPress and the same plugin.</li>
+                <li>Upload the backup into the plugin and run the restore process.</li>
+                <li>Log back into WordPress, usually with the original site credentials.</li>
+                <li>Check URLs, menus, forms, images, cache, SSL and mobile layout.</li>
+              </ol>
+            </div>
+            <div class="case-block">
+              <h2>What usually needs checking</h2>
+              <p>The common problems after a move are old URLs, broken forms, mixed HTTPS content, cache, missing images or a different PHP version on the new host. The migration is not done when the import finishes. It is done when the live site is checked.</p>
+              <p>For WooCommerce stores, also test cart, checkout, emails, payment methods and shipping. I would not migrate a live store during active orders without a clear plan.</p>
+            </div>
+            <div class="case-block">
+              <h2>Short takeaway</h2>
+              <p>Backup Migration can make moving WordPress much easier, but it is still a full-site operation. Back up, check hosting, restore, clear cache and manually test the important pages.</p>
+            </div>
+          </div>
+          <aside class="case-sidebar">
+            <div class="case-block">
+              <h3>Related services</h3>
+              <a href="/TH-Studio/en/sluzby/uprava-wordpress-webu.html" class="bento-link">WordPress edits →</a>
+              <a href="/TH-Studio/en/sluzby/tvorba-webstranok.html" class="bento-link">WordPress website development →</a>
+              <a href="/TH-Studio/en/sluzby/tvorba-eshopov.html" class="bento-link">WooCommerce store development →</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </article>
+    <section class="case-section case-section--compact"><div class="container"><div class="case-nav"><a href="/TH-Studio/en/blog/" class="btn btn-ghost">Back to blog</a><a href="/TH-Studio/en/#kontakt" class="btn btn-primary">Get migration help</a></div></div></section>
+  </main>
+  <div data-shared-footer></div>
+  <script type="module" src="/src/js/shared-layout.js"></script>
+</body>
+</html>

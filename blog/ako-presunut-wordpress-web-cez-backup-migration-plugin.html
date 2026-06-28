@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ako presunúť WordPress web cez Backup Migration plugin | TH Studio</title>
+  <meta name="description" content="Krokový návod, ako presunúť WordPress web cez Backup Migration plugin: záloha, import, kontrola URL adries, cache, formulárov a finálne overenie." />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tomashusivarga.github.io/TH-Studio/blog/ako-presunut-wordpress-web-cez-backup-migration-plugin.html" />
+  <link rel="alternate" hreflang="sk" href="https://tomashusivarga.github.io/TH-Studio/blog/ako-presunut-wordpress-web-cez-backup-migration-plugin.html" />
+  <link rel="alternate" hreflang="en" href="https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-move-wordpress-site-with-backup-migration-plugin.html" />
+  <link rel="icon" type="image/svg+xml" href="/TH-Studio/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/TH-Studio/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/TH-Studio/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/TH-Studio/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/TH-Studio/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Ako presunúť WordPress web cez Backup Migration plugin",
+    "description": "Krokový návod, ako presunúť WordPress web cez Backup Migration plugin bez zbytočného chaosu.",
+    "datePublished": "2026-06-28",
+    "dateModified": "2026-06-28",
+    "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/"},
+    "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
+    "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/blog/ako-presunut-wordpress-web-cez-backup-migration-plugin.html",
+    "inLanguage": "sk"
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div data-shared-header></div>
+  <main>
+    <article>
+      <section class="case-hero">
+        <div class="container">
+          <div class="case-hero__grid">
+            <div>
+              <p class="case-kicker">WordPress / migrácia</p>
+              <h1 class="case-title">Ako presunúť WordPress web cez Backup Migration plugin</h1>
+              <p class="case-lead">Backup Migration je praktický plugin, keď potrebuješ presunúť celý WordPress web. Nie je to nástroj na kopírovanie jednej sekcie ako text v dokumente. Ber ho skôr ako zálohu a obnovu celého webu.</p>
+            </div>
+            <aside class="case-meta">
+              <div><span>Téma</span><strong>WordPress presun</strong></div>
+              <div><span>Nástroj</span><strong>Backup Migration plugin</strong></div>
+              <a href="/TH-Studio/sluzby/uprava-wordpress-webu.html" class="btn btn-primary">Pomoc s WordPressom</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section class="case-section">
+        <div class="container case-content-grid">
+          <div>
+            <div class="case-block">
+              <h2>Kedy ho použiť</h2>
+              <p>Použil by som ho vtedy, keď chceš presunúť celý web z jedného hostingu na druhý, spraviť pracovnú kópiu alebo obnoviť web zo zálohy. Ak chceš preniesť len jednu stránku z Gutenbergu, často stačí kopírovať blokový kód alebo použiť WordPress export/import.</p>
+            </div>
+            <div class="case-block">
+              <h2>Postup krok za krokom</h2>
+              <ol>
+                <li>Na pôvodnom webe aktualizuj WordPress, pluginy a tému, ak je to bezpečné.</li>
+                <li>Nainštaluj plugin Backup Migration.</li>
+                <li>V nastaveniach pluginu sprav novú zálohu cez tlačidlo na vytvorenie zálohy.</li>
+                <li>Stiahni záložný súbor do počítača a nechaj si ho bokom.</li>
+                <li>Na novom webe nainštaluj čistý WordPress a ten istý Backup Migration plugin.</li>
+                <li>Nahraj zálohu do pluginu a spusti obnovu podľa pokynov pluginu.</li>
+                <li>Po obnove sa znovu prihlás do administrácie, často už s údajmi z pôvodného webu.</li>
+                <li>Skontroluj URL adresy, menu, formuláre, obrázky, cache, SSL a responzívne zobrazenie.</li>
+              </ol>
+            </div>
+            <div class="case-block">
+              <h2>Na čo si dať pozor</h2>
+              <p>Najčastejšie problémy po presune sú staré URL adresy, nefunkčné formuláre, zmiešaný obsah pri HTTPS, cache, chýbajúce obrázky alebo rozdielna verzia PHP na hostingu. Preto presun nekončí importom. Končí až kontrolou webu naživo.</p>
+              <p>Ak ide o e-shop, treba navyše otestovať košík, pokladňu, emaily, platby a dopravu. Pri WooCommerce by som migráciu nerobil počas aktívnych objednávok bez jasného plánu.</p>
+            </div>
+            <div class="case-block">
+              <h2>Krátky záver</h2>
+              <p>Backup Migration vie presun výrazne zjednodušiť, ale stále je to zásah do celého webu. Sprav zálohu, skontroluj hosting, obnov web, vyčisti cache a prejdi najdôležitejšie stránky ručne.</p>
+            </div>
+          </div>
+          <aside class="case-sidebar">
+            <div class="case-block">
+              <h3>Súvisiace služby</h3>
+              <a href="/TH-Studio/sluzby/uprava-wordpress-webu.html" class="bento-link">Úprava WordPress webu →</a>
+              <a href="/TH-Studio/sluzby/tvorba-webstranok.html" class="bento-link">Tvorba WordPress webstránok →</a>
+              <a href="/TH-Studio/sluzby/tvorba-eshopov.html" class="bento-link">Tvorba WooCommerce e-shopu →</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </article>
+    <section class="case-section case-section--compact"><div class="container"><div class="case-nav"><a href="/TH-Studio/blog/" class="btn btn-ghost">Späť na blog</a><a href="/TH-Studio/#kontakt" class="btn btn-primary">Pomôcť s migráciou</a></div></div></section>
+  </main>
+  <div data-shared-footer></div>
+  <script type="module" src="/src/js/shared-layout.js"></script>
+</body>
+</html>
