@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WooCommerce problém oprava: diagnostika pokazeného e-shopu | TH Studio</title>
+  <meta name="description" content="WooCommerce problém oprava: praktický postup diagnostiky pokazeného e-shopu. Čo skontrolovať pri pokladni, platbách, objednávkach, emailoch, pluginoch, cache a logoch." />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tomashusivarga.github.io/TH-Studio/blog/woocommerce-problem-oprava-diagnostika-eshopu.html" />
+  <link rel="alternate" hreflang="sk" href="https://tomashusivarga.github.io/TH-Studio/blog/woocommerce-problem-oprava-diagnostika-eshopu.html" />
+  <link rel="alternate" hreflang="en" href="https://tomashusivarga.github.io/TH-Studio/en/blog/woocommerce-issue-repair-store-diagnostics.html" />
+  <link rel="icon" type="image/svg+xml" href="/TH-Studio/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/TH-Studio/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/TH-Studio/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/TH-Studio/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/TH-Studio/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "WooCommerce problém oprava: ako diagnostikovať pokazený e-shop",
+    "description": "Praktický postup diagnostiky WooCommerce problémov pri pokladni, platbách, objednávkach, emailoch, pluginoch, cache a logoch.",
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/"},
+    "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
+    "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/blog/woocommerce-problem-oprava-diagnostika-eshopu.html",
+    "inLanguage": "sk"
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div data-shared-header></div>
+  <main>
+    <article>
+      <section class="case-hero">
+        <div class="container">
+          <div class="case-hero__grid">
+            <div>
+              <p class="case-kicker">WooCommerce / diagnostika</p>
+              <h1 class="case-title">WooCommerce problém oprava: ako diagnostikovať pokazený e-shop</h1>
+              <p class="case-lead">Keď sa pokazí WooCommerce, prvý reflex býva klikať v nastaveniach a skúšať, čo zaberie. Väčšinou je to presne opačne, než treba. Najprv chcem vedieť, kde sa problém láme.</p>
+            </div>
+            <aside class="case-meta">
+              <div><span>Téma</span><strong>WooCommerce problém oprava</strong></div>
+              <div><span>Prístup</span><strong>diagnostika pred zásahom</strong></div>
+              <a href="/TH-Studio/sluzby/uprava-wordpress-webu.html" class="btn btn-primary">Oprava WordPress webu</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container case-content-grid">
+          <div>
+            <div class="case-block">
+              <h2>Najprv zistiť, čo presne nefunguje</h2>
+              <p>„Nefunguje WooCommerce“ môže znamenať veľa vecí. Niekedy nejde pridať produkt do košíka. Inokedy padá pokladňa, neprichádzajú emaily, platobná brána nevracia objednávku alebo sa po aktualizácii rozbije layout produktu.</p>
+              <p>Preto je prvý krok jednoduchý: pomenovať konkrétny problém. Čo sa stane, na akej stránke, v akom prehliadači, po akej akcii a či sa to deje všetkým zákazníkom alebo iba pri jednej platbe či produkte.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Čo kontrolujem ako prvé</h2>
+              <ul>
+                <li><strong>Objednávky:</strong> či sa vytvárajú, v akom stave skončia a či majú správne údaje.</li>
+                <li><strong>Pokladňu:</strong> povinné polia, dopravu, platbu, chyby pri odoslaní a konzolu v prehliadači.</li>
+                <li><strong>Platobné brány:</strong> nastavenie API kľúčov, režim test/live, návratové URL a logy platby.</li>
+                <li><strong>Email:</strong> či WooCommerce email vytvorí, či ho WordPress odošle a či ho nezastaví hosting alebo SMTP.</li>
+                <li><strong>Dopravu:</strong> zóny, metódy, podmienky, váhu, krajinu a pravidlá dopravy zdarma.</li>
+                <li><strong>Pluginy a tému:</strong> posledné aktualizácie, konflikty a vlastné úpravy šablón.</li>
+                <li><strong>Cache:</strong> hlavne ak je cachovaná pokladňa, košík alebo účet zákazníka.</li>
+              </ul>
+            </div>
+
+            <div class="case-block">
+              <h2>Najčastejšia chyba: opravovať bez logov</h2>
+              <p>Pri WooCommerce sa dá veľa zistiť z logov. Platobné brány majú vlastné logy, WooCommerce má stav systému, WordPress môže mať debug log a prehliadač ukáže JavaScript chyby. Bez toho človek iba háda.</p>
+              <p>Ak napríklad platba neprejde, nie je dobrý postup hneď meniť päť pluginov. Najprv pozriem, či brána vôbec dostala požiadavku, čo odpovedala a či sa objednávka vrátila do správneho stavu.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Diagnostický postup, ktorý dáva zmysel</h2>
+              <ol>
+                <li>Spraviť zálohu webu alebo aspoň mať možnosť vrátiť zmeny späť.</li>
+                <li>Zopakovať problém krok za krokom a zapísať presný scenár.</li>
+                <li>Skontrolovať WooCommerce stav systému, logy a posledné chyby.</li>
+                <li>Overiť, či problém nevznikol po aktualizácii pluginu, témy alebo PHP.</li>
+                <li>Dočasne vypnúť cache pre košík, pokladňu a účet zákazníka.</li>
+                <li>Otestovať konflikt pluginov na stagingu alebo mimo špičky, nie naslepo na živej pokladni.</li>
+                <li>Po oprave prejsť reálny nákupný scenár od produktu až po email objednávky.</li>
+              </ol>
+            </div>
+
+            <div class="case-block">
+              <h2>Kedy je problém urgentný</h2>
+              <p>Urgentné je všetko, čo zastavuje objednávky: nefunkčná pokladňa, nefunkčná platba, chýbajúce objednávkové emaily alebo chyba, ktorá zákazníka nepustí dokončiť nákup. Pri vizuálnej chybe na karte produktu sa dá často postupovať pokojnejšie.</p>
+              <p>Pri aktívnom e-shope by som nerobil veľké zásahy bez zálohy a bez testu. Aj malá oprava vie mať dopad na platby, dopravu alebo objednávky.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Krátky záver</h2>
+              <p>Dobrá WooCommerce oprava nezačína kliknutím na náhodné nastavenie. Začína diagnostikou: kde presne problém vzniká, čo hovoria logy, čo sa menilo naposledy a ako overiť, že oprava naozaj funguje.</p>
+            </div>
+          </div>
+
+          <aside class="case-sidebar">
+            <div class="case-block">
+              <h3>Súvisiace služby</h3>
+              <a href="/TH-Studio/sluzby/uprava-wordpress-webu.html" class="bento-link">Úprava WordPress webu →</a>
+              <a href="/TH-Studio/sluzby/tvorba-eshopov.html" class="bento-link">Tvorba WooCommerce e-shopu →</a>
+            </div>
+            <div class="case-block">
+              <h3>Pointa</h3>
+              <p>Pri e-shope nestačí, že stránka „vyzerá opravená“. Treba prejsť nákup, objednávku, platbu a email.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </article>
+
+    <section class="case-section case-section--compact"><div class="container"><div class="case-nav"><a href="/TH-Studio/blog/" class="btn btn-ghost">Späť na blog</a><a href="/TH-Studio/#kontakt" class="btn btn-primary">Riešiť WooCommerce problém</a></div></div></section>
+  </main>
+  <div data-shared-footer></div>
+  <script type="module" src="/src/js/shared-layout.js"></script>
+</body>
+</html>

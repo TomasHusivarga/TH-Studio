@@ -120,6 +120,8 @@ function languageUrl(lang) {
     '/TH-Studio/en/blog/how-to-use-ai-when-cleaning-infected-wordpress-site.html': '/TH-Studio/blog/ako-pouzit-ai-pri-cisteni-napadnuteho-wordpress-webu.html',
     '/TH-Studio/blog/ako-presunut-wordpress-web-cez-backup-migration-plugin.html': '/TH-Studio/en/blog/how-to-move-wordpress-site-with-backup-migration-plugin.html',
     '/TH-Studio/en/blog/how-to-move-wordpress-site-with-backup-migration-plugin.html': '/TH-Studio/blog/ako-presunut-wordpress-web-cez-backup-migration-plugin.html',
+    '/TH-Studio/blog/woocommerce-problem-oprava-diagnostika-eshopu.html': '/TH-Studio/en/blog/woocommerce-issue-repair-store-diagnostics.html',
+    '/TH-Studio/en/blog/woocommerce-issue-repair-store-diagnostics.html': '/TH-Studio/blog/woocommerce-problem-oprava-diagnostika-eshopu.html',
   };
 
   if (blogArticleMap[path]) {

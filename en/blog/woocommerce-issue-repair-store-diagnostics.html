@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WooCommerce issue repair: store diagnostics | TH Studio</title>
+  <meta name="description" content="WooCommerce issue repair: a practical diagnostic workflow for checkout, payments, orders, emails, shipping, plugins, cache and logs." />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tomashusivarga.github.io/TH-Studio/en/blog/woocommerce-issue-repair-store-diagnostics.html" />
+  <link rel="alternate" hreflang="sk" href="https://tomashusivarga.github.io/TH-Studio/blog/woocommerce-problem-oprava-diagnostika-eshopu.html" />
+  <link rel="alternate" hreflang="en" href="https://tomashusivarga.github.io/TH-Studio/en/blog/woocommerce-issue-repair-store-diagnostics.html" />
+  <link rel="icon" type="image/svg+xml" href="/TH-Studio/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/TH-Studio/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/TH-Studio/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/TH-Studio/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/TH-Studio/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "WooCommerce issue repair: how to diagnose a broken store",
+    "description": "A practical diagnostic workflow for WooCommerce checkout, payments, orders, emails, shipping, plugins, cache and logs.",
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/en/"},
+    "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
+    "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/en/blog/woocommerce-issue-repair-store-diagnostics.html",
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div data-shared-header></div>
+  <main>
+    <article>
+      <section class="case-hero">
+        <div class="container">
+          <div class="case-hero__grid">
+            <div>
+              <p class="case-kicker">WooCommerce / diagnostics</p>
+              <h1 class="case-title">WooCommerce issue repair: how to diagnose a broken store</h1>
+              <p class="case-lead">When WooCommerce breaks, the first reaction is often to click through settings and hope something works. Usually that makes the problem harder to read. First, I want to know where the issue actually starts.</p>
+            </div>
+            <aside class="case-meta">
+              <div><span>Topic</span><strong>WooCommerce issue repair</strong></div>
+              <div><span>Approach</span><strong>diagnostics before changes</strong></div>
+              <a href="/TH-Studio/en/sluzby/uprava-wordpress-webu.html" class="btn btn-primary">WordPress edits</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container case-content-grid">
+          <div>
+            <div class="case-block">
+              <h2>First define what is broken</h2>
+              <p>“WooCommerce does not work” can mean many things. Maybe customers cannot add products to cart. Maybe checkout fails, emails do not arrive, payment does not return correctly, or a product layout broke after an update.</p>
+              <p>The first step is simple: name the exact issue. What happens, on which page, in which browser, after which action, and whether it affects everyone or only one payment method, product or shipping option.</p>
+            </div>
+            <div class="case-block">
+              <h2>What I check first</h2>
+              <ul>
+                <li><strong>Orders:</strong> whether they are created, what status they end in, and whether the data is correct.</li>
+                <li><strong>Checkout:</strong> required fields, shipping, payment, submit errors and browser console issues.</li>
+                <li><strong>Payment gateways:</strong> API keys, test/live mode, return URLs and payment logs.</li>
+                <li><strong>Email:</strong> whether WooCommerce creates the email, WordPress sends it, and hosting or SMTP does not block it.</li>
+                <li><strong>Shipping:</strong> zones, methods, conditions, weight, country and free-shipping rules.</li>
+                <li><strong>Plugins and theme:</strong> recent updates, conflicts and custom template overrides.</li>
+                <li><strong>Cache:</strong> especially if cart, checkout or customer account pages are cached.</li>
+              </ul>
+            </div>
+            <div class="case-block">
+              <h2>The common mistake: fixing without logs</h2>
+              <p>WooCommerce gives a lot of clues through logs. Payment gateways have logs, WooCommerce has system status, WordPress can have debug logs, and the browser shows JavaScript errors. Without that, you are guessing.</p>
+              <p>If a payment fails, I would not start by changing five plugins. First I check whether the gateway received the request, what it returned, and whether the order came back with the correct status.</p>
+            </div>
+            <div class="case-block">
+              <h2>A diagnostic workflow that makes sense</h2>
+              <ol>
+                <li>Back up the site or make sure changes can be reverted.</li>
+                <li>Repeat the problem step by step and write down the exact scenario.</li>
+                <li>Check WooCommerce system status, logs and recent errors.</li>
+                <li>Check whether it started after a plugin, theme or PHP update.</li>
+                <li>Disable cache for cart, checkout and customer account pages.</li>
+                <li>Test plugin conflicts on staging or outside peak hours, not blindly on live checkout.</li>
+                <li>After the fix, run a real purchase flow from product page to order email.</li>
+              </ol>
+            </div>
+            <div class="case-block">
+              <h2>When it is urgent</h2>
+              <p>Anything that blocks orders is urgent: broken checkout, failed payment, missing order emails or an error that stops customers from buying. A visual issue on a product card can usually be handled with less pressure.</p>
+              <p>On an active store, I would not make large changes without a backup and a test. Even a small change can affect payments, shipping or order handling.</p>
+            </div>
+            <div class="case-block">
+              <h2>Short takeaway</h2>
+              <p>Good WooCommerce repair does not start with random settings. It starts with diagnostics: where the issue happens, what the logs say, what changed recently, and how to verify that the fix really works.</p>
+            </div>
+          </div>
+          <aside class="case-sidebar">
+            <div class="case-block">
+              <h3>Related services</h3>
+              <a href="/TH-Studio/en/sluzby/uprava-wordpress-webu.html" class="bento-link">WordPress edits →</a>
+              <a href="/TH-Studio/en/sluzby/tvorba-eshopov.html" class="bento-link">WooCommerce store development →</a>
+            </div>
+            <div class="case-block">
+              <h3>The point</h3>
+              <p>For a store, “looks fixed” is not enough. Cart, checkout, payment, order and email all need to be checked.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </article>
+    <section class="case-section case-section--compact"><div class="container"><div class="case-nav"><a href="/TH-Studio/en/blog/" class="btn btn-ghost">Back to blog</a><a href="/TH-Studio/en/#kontakt" class="btn btn-primary">Discuss a WooCommerce issue</a></div></div></section>
+  </main>
+  <div data-shared-footer></div>
+  <script type="module" src="/src/js/shared-layout.js"></script>
+</body>
+</html>
