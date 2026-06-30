@@ -25,7 +25,7 @@
     "headline": "How to move a WordPress site with Backup Migration",
     "description": "Step-by-step workflow for moving a WordPress site with the Backup Migration plugin.",
     "datePublished": "2026-06-28",
-    "dateModified": "2026-06-28",
+    "dateModified": "2026-06-30",
     "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/en/"},
     "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
     "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-move-wordpress-site-with-backup-migration-plugin.html",
@@ -62,6 +62,12 @@
               <p>I would use it when moving a whole site from one host to another, creating a working copy, or restoring from backup. If you only need one Gutenberg page, copying block code or using WordPress export/import may be cleaner.</p>
             </div>
             <div class="case-block">
+              <h2>Before the move</h2>
+              <p>Before migration, I would not check only the plugin. The new hosting matters too: PHP version, site size, upload limit, free disk space, SSL certificate, and whether the target site already contains content that must not be overwritten.</p>
+              <p>A restore through Backup Migration can overwrite the target WordPress install. So it is worth having a backup of the new install too, especially if someone already configured anything there.</p>
+            </div>
+
+            <div class="case-block">
               <h2>Step-by-step workflow</h2>
               <ol>
                 <li>On the old site, update WordPress, plugins and theme if it is safe to do so.</li>
@@ -75,13 +81,28 @@
               </ol>
             </div>
             <div class="case-block">
+              <h2>If you only need one page</h2>
+              <p>Backup Migration is not the best tool if you only want to move one page. In that case, copying Gutenberg blocks, using WordPress export/import, or moving the content manually can be cleaner.</p>
+              <p>A full-site migration makes sense when you are moving the whole WordPress setup: theme, plugins, media, settings, menus, forms and database.</p>
+            </div>
+
+            <div class="case-block">
               <h2>What usually needs checking</h2>
               <p>The common problems after a move are old URLs, broken forms, mixed HTTPS content, cache, missing images or a different PHP version on the new host. The migration is not done when the import finishes. It is done when the live site is checked.</p>
+              <ul>
+                <li>click through menu, services, blog, contact and important landing pages,</li>
+                <li>save permalinks and check for 404 errors,</li>
+                <li>test forms, SMTP and email delivery,</li>
+                <li>check images, favicon, logo and mobile layout,</li>
+                <li>clear cache and check SSL/mixed content,</li>
+                <li>verify robots.txt, sitemap and basic SEO settings.</li>
+              </ul>
               <p>For WooCommerce stores, also test cart, checkout, emails, payment methods and shipping. I would not migrate a live store during active orders without a clear plan.</p>
             </div>
             <div class="case-block">
               <h2>Short takeaway</h2>
               <p>Backup Migration can make moving WordPress much easier, but it is still a full-site operation. Back up, check hosting, restore, clear cache and manually test the important pages.</p>
+              <p>For a larger site, I would not treat migration as “click and see what happens”. First plan, then export, import, and only after that switch the domain or DNS.</p>
             </div>
           </div>
           <aside class="case-sidebar">

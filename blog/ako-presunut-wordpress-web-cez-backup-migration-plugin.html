@@ -25,7 +25,7 @@
     "headline": "Ako presunúť WordPress web cez Backup Migration plugin",
     "description": "Krokový návod, ako presunúť WordPress web cez Backup Migration plugin bez zbytočného chaosu.",
     "datePublished": "2026-06-28",
-    "dateModified": "2026-06-28",
+    "dateModified": "2026-06-30",
     "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/"},
     "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
     "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/blog/ako-presunut-wordpress-web-cez-backup-migration-plugin.html",
@@ -62,6 +62,12 @@
               <p>Použil by som ho vtedy, keď chceš presunúť celý web z jedného hostingu na druhý, spraviť pracovnú kópiu alebo obnoviť web zo zálohy. Ak chceš preniesť len jednu stránku z Gutenbergu, často stačí kopírovať blokový kód alebo použiť WordPress export/import.</p>
             </div>
             <div class="case-block">
+              <h2>Pred presunom</h2>
+              <p>Pred migráciou by som si neskontroloval iba plugin. Dôležitý je aj nový hosting: verzia PHP, veľkosť webu, limit uploadu, voľné miesto, SSL certifikát a to, či už na cieľovom webe nie je obsah, ktorý sa nesmie prepísať.</p>
+              <p>Obnova cez Backup Migration vie prepísať cieľový WordPress. Preto je dobré mať zálohu aj z novej inštalácie, hlavne ak tam už niekto niečo nastavoval.</p>
+            </div>
+
+            <div class="case-block">
               <h2>Postup krok za krokom</h2>
               <ol>
                 <li>Na pôvodnom webe aktualizuj WordPress, pluginy a tému, ak je to bezpečné.</li>
@@ -75,13 +81,28 @@
               </ol>
             </div>
             <div class="case-block">
+              <h2>Keď ide len o jednu stránku</h2>
+              <p>Backup Migration nie je najlepší nástroj, ak chceš presunúť iba jednu podstránku. Vtedy často stačí skopírovať Gutenberg bloky, použiť WordPress export/import alebo preniesť konkrétny obsah ručne.</p>
+              <p>Celowebová migrácia dáva zmysel vtedy, keď sa presúva celý WordPress: téma, pluginy, médiá, nastavenia, menu, formuláre a databáza.</p>
+            </div>
+
+            <div class="case-block">
               <h2>Na čo si dať pozor</h2>
               <p>Najčastejšie problémy po presune sú staré URL adresy, nefunkčné formuláre, zmiešaný obsah pri HTTPS, cache, chýbajúce obrázky alebo rozdielna verzia PHP na hostingu. Preto presun nekončí importom. Končí až kontrolou webu naživo.</p>
+              <ul>
+                <li>prekliknúť menu, služby, blog, kontakt a dôležité vstupné stránky,</li>
+                <li>uložiť permalinky a skontrolovať 404 chyby,</li>
+                <li>otestovať formuláre, SMTP a doručenie emailu,</li>
+                <li>pozrieť obrázky, favicon, logo a mobilné zobrazenie,</li>
+                <li>vyčistiť cache a skontrolovať SSL/mixed content,</li>
+                <li>overiť robots.txt, sitemapu a základné SEO nastavenia.</li>
+              </ul>
               <p>Ak ide o e-shop, treba navyše otestovať košík, pokladňu, emaily, platby a dopravu. Pri WooCommerce by som migráciu nerobil počas aktívnych objednávok bez jasného plánu.</p>
             </div>
             <div class="case-block">
               <h2>Krátky záver</h2>
               <p>Backup Migration vie presun výrazne zjednodušiť, ale stále je to zásah do celého webu. Sprav zálohu, skontroluj hosting, obnov web, vyčisti cache a prejdi najdôležitejšie stránky ručne.</p>
+              <p>Pri väčšom webe by som migráciu nerobil v štýle „kliknem a uvidíme“. Najprv plán, potom export, import a až nakoniec prepnutie domény alebo DNS.</p>
             </div>
           </div>
           <aside class="case-sidebar">

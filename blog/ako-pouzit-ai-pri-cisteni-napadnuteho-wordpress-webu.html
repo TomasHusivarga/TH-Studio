@@ -25,7 +25,7 @@
     "headline": "Ako použiť AI pri čistení napadnutého WordPress webu",
     "description": "Praktický návod, ako môže AI pomôcť pri čistení napadnutého WordPress webu bez slepého spoliehania sa na automatické odpovede.",
     "datePublished": "2026-06-28",
-    "dateModified": "2026-06-28",
+    "dateModified": "2026-06-30",
     "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/"},
     "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
     "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/blog/ako-pouzit-ai-pri-cisteni-napadnuteho-wordpress-webu.html",
@@ -64,6 +64,12 @@
               <p>Ak web odosiela spam, presmerúva návštevníkov alebo vytvára nové admin účty, priorita je dostať situáciu pod kontrolu. AI môže pomôcť s analýzou, ale nie je náhrada za základnú bezpečnostnú hygienu.</p>
             </div>
             <div class="case-block">
+              <h2>Čo by som AI neposielal</h2>
+              <p>AI vie pomôcť, ale netreba jej posielať celý web aj s citlivými údajmi. Pri bezpečnostnom probléme by som z ukážok najprv odstránil heslá, API kľúče, databázové údaje, zákaznícke dáta a všetko, čo nemá byť verejné.</p>
+              <p>Stačí poslať podozrivý úsek kódu, názov súboru, kontext a otázku, čo ten kód robí. Nie celý export databázy alebo konfiguračný súbor bez kontroly.</p>
+            </div>
+
+            <div class="case-block">
               <h2>Kde AI reálne pomáha</h2>
               <ul>
                 <li>Vysvetlí podozrivý PHP alebo JavaScript kód v ľudskej reči.</li>
@@ -73,6 +79,19 @@
                 <li>Vie preformulovať technický nález tak, aby mu rozumel aj klient.</li>
               </ul>
             </div>
+            <div class="case-block">
+              <h2>Kde sa infekcia často skrýva</h2>
+              <p>Pri napadnutom WordPresse nestačí pozrieť len jeden súbor, ktorý vyzerá divne. Problém môže byť na viacerých miestach naraz.</p>
+              <ul>
+                <li><code>wp-content/uploads</code>, kde nemajú čo robiť PHP súbory,</li>
+                <li><code>mu-plugins</code> a vlastné malé pluginy, ktoré si človek bežne nevšimne,</li>
+                <li><code>functions.php</code> v téme alebo child téme,</li>
+                <li><code>wp-config.php</code>, <code>.htaccess</code> a podozrivé presmerovania,</li>
+                <li>neznáme admin účty, cron úlohy a divné záznamy v databáze,</li>
+                <li>nulled pluginy alebo témy, ktoré nikdy nemali byť na webe.</li>
+              </ul>
+            </div>
+
             <div class="case-block">
               <h2>Kde by som AI neveril naslepo</h2>
               <p>Nenechal by som AI rozhodnúť, že konkrétny súbor môžeš bezpečne zmazať, ak nepozná celý kontext webu. Tiež by som nekopíroval naspäť žiadny vygenerovaný „fix“ bez toho, aby som mu rozumel.</p>
@@ -91,6 +110,12 @@
                 <li>Po čistení otestuj web, formuláre, presmerovania a Search Console.</li>
               </ol>
             </div>
+            <div class="case-block">
+              <h2>Po čistení ešte nie je hotovo</h2>
+              <p>Keď sa web prestane správať divne, ešte to neznamená, že je hotovo. Treba zmeniť heslá, aktualizovať WordPress, pluginy a tému, odstrániť nepoužívané veci, skontrolovať oprávnenia súborov a nechať web ešte chvíľu sledovať.</p>
+              <p>Ak bol web označený prehliadačom alebo Googlom ako nebezpečný, treba po čistení skontrolovať aj Search Console a požiadať o nové preverenie. Inak môže byť web technicky čistý, ale stále pôsobiť nedôveryhodne.</p>
+            </div>
+
             <div class="case-block">
               <h2>Krátky záver</h2>
               <p>AI je pri napadnutom WordPresse dobrý druhý pár očí. Pomáha rýchlejšie pochopiť podozrivý kód a nezabudnúť na dôležité kontroly. Ale stále platí: najprv záloha, potom kontrola, až potom zásahy.</p>

@@ -25,7 +25,7 @@
     "headline": "WooCommerce issue repair: how to diagnose a broken store",
     "description": "A practical diagnostic workflow for WooCommerce checkout, payments, orders, emails, shipping, plugins, cache and logs.",
     "datePublished": "2026-06-29",
-    "dateModified": "2026-06-29",
+    "dateModified": "2026-06-30",
     "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/en/"},
     "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
     "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/en/blog/woocommerce-issue-repair-store-diagnostics.html",
@@ -76,8 +76,21 @@
               </ul>
             </div>
             <div class="case-block">
+              <h2>Split the issue by type</h2>
+              <p>With WooCommerce, it is usually a mistake to treat every problem as one generic store issue. Checkout, payment gateways, emails and product variations all break in different ways.</p>
+              <ul>
+                <li><strong>Cart and checkout:</strong> the customer cannot reach payment or the order fails on submit.</li>
+                <li><strong>Payment:</strong> the gateway rejects payment, does not return correctly, or sets the wrong order status.</li>
+                <li><strong>Emails:</strong> the order exists, but the customer or store owner never receives the message.</li>
+                <li><strong>Shipping and tax:</strong> methods are missing, totals are wrong, or rules conflict with each other.</li>
+                <li><strong>Products and variations:</strong> a specific size, quantity, package or stock state cannot be purchased.</li>
+              </ul>
+              <p>Once the issue is split like this, the repair gets much less random. You are not fixing the whole store. You are finding the exact place where the buying flow breaks.</p>
+            </div>
+
+            <div class="case-block">
               <h2>The common mistake: fixing without logs</h2>
-              <p>WooCommerce gives a lot of clues through logs. Payment gateways have logs, WooCommerce has system status, WordPress can have debug logs, and the browser shows JavaScript errors. Without that, you are guessing.</p>
+              <p>WooCommerce gives a lot of clues through logs. Payment gateways have logs, WooCommerce has system status, WordPress can have debug logs, hosting has PHP error logs, and the browser shows JavaScript or network errors. Without that, you are guessing.</p>
               <p>If a payment fails, I would not start by changing five plugins. First I check whether the gateway received the request, what it returned, and whether the order came back with the correct status.</p>
             </div>
             <div class="case-block">
@@ -93,6 +106,19 @@
               </ol>
             </div>
             <div class="case-block">
+              <h2>What I ask for before fixing it</h2>
+              <p>The most useful thing is a precise description. Not just “the store is broken”, but what was clicked, what should have happened, and what happened instead.</p>
+              <ul>
+                <li>a link to the exact product, cart or checkout,</li>
+                <li>a screenshot or the exact error text,</li>
+                <li>when the issue started and what was updated before it,</li>
+                <li>whether it happens for every payment, every product or only one scenario,</li>
+                <li>whether there is a backup or staging version available.</li>
+              </ul>
+              <p>This is not extra paperwork. On a live store it can save hours and reduce the risk of fixing one thing while breaking another.</p>
+            </div>
+
+            <div class="case-block">
               <h2>When it is urgent</h2>
               <p>Anything that blocks orders is urgent: broken checkout, failed payment, missing order emails or an error that stops customers from buying. A visual issue on a product card can usually be handled with less pressure.</p>
               <p>On an active store, I would not make large changes without a backup and a test. Even a small change can affect payments, shipping or order handling.</p>
@@ -100,6 +126,7 @@
             <div class="case-block">
               <h2>Short takeaway</h2>
               <p>Good WooCommerce repair does not start with random settings. It starts with diagnostics: where the issue happens, what the logs say, what changed recently, and how to verify that the fix really works.</p>
+              <p>If the issue blocks orders, I deal with functionality first. Design tweaks, small text changes and nicer details can wait. Checkout, payment, order creation and email come first.</p>
             </div>
           </div>
           <aside class="case-sidebar">

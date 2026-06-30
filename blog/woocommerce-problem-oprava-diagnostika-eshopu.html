@@ -25,7 +25,7 @@
     "headline": "WooCommerce problém oprava: ako diagnostikovať pokazený e-shop",
     "description": "Praktický postup diagnostiky WooCommerce problémov pri pokladni, platbách, objednávkach, emailoch, pluginoch, cache a logoch.",
     "datePublished": "2026-06-29",
-    "dateModified": "2026-06-29",
+    "dateModified": "2026-06-30",
     "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/"},
     "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
     "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/blog/woocommerce-problem-oprava-diagnostika-eshopu.html",
@@ -78,8 +78,21 @@
             </div>
 
             <div class="case-block">
+              <h2>Rozdeliť problém podľa typu</h2>
+              <p>Pri WooCommerce sa neoplatí hádzať všetko do jedného vreca. Inak sa rieši pokladňa, inak platobná brána, inak emaily a úplne inak rozbitý produkt alebo variant.</p>
+              <ul>
+                <li><strong>Košík a pokladňa:</strong> zákazník sa nevie dostať k platbe alebo objednávka padne pri odoslaní.</li>
+                <li><strong>Platba:</strong> brána odmietne platbu, nevráti zákazníka späť alebo zmení objednávku na zlý stav.</li>
+                <li><strong>Emaily:</strong> objednávka existuje, ale zákazník alebo obchod nedostane správu.</li>
+                <li><strong>Doprava a daň:</strong> chýba možnosť doručenia, zle sa ráta cena alebo sa pravidlá bijú medzi sebou.</li>
+                <li><strong>Produkt a varianty:</strong> nejde kúpiť konkrétna veľkosť, množstvo, balenie alebo skladová dostupnosť.</li>
+              </ul>
+              <p>Keď sa problém takto rozdelí, oprava je oveľa menej chaotická. Neopravuješ celý e-shop, ale konkrétne miesto, kde sa proces láme.</p>
+            </div>
+
+            <div class="case-block">
               <h2>Najčastejšia chyba: opravovať bez logov</h2>
-              <p>Pri WooCommerce sa dá veľa zistiť z logov. Platobné brány majú vlastné logy, WooCommerce má stav systému, WordPress môže mať debug log a prehliadač ukáže JavaScript chyby. Bez toho človek iba háda.</p>
+              <p>Pri WooCommerce sa dá veľa zistiť z logov. Platobné brány majú vlastné logy, WooCommerce má stav systému, WordPress môže mať debug log, hosting má PHP error log a prehliadač ukáže JavaScript alebo network chyby. Bez toho človek iba háda.</p>
               <p>Ak napríklad platba neprejde, nie je dobrý postup hneď meniť päť pluginov. Najprv pozriem, či brána vôbec dostala požiadavku, čo odpovedala a či sa objednávka vrátila do správneho stavu.</p>
             </div>
 
@@ -97,6 +110,19 @@
             </div>
 
             <div class="case-block">
+              <h2>Čo si vypýtam pred opravou</h2>
+              <p>Najviac pomôže presný popis chyby. Ideálne nie veta „nejde e-shop“, ale čo sa kliklo, čo sa malo stať a čo sa stalo namiesto toho.</p>
+              <ul>
+                <li>odkaz na konkrétny produkt, košík alebo pokladňu,</li>
+                <li>screenshot alebo presný text chyby,</li>
+                <li>kedy sa problém začal a čo sa predtým aktualizovalo,</li>
+                <li>či ide o všetky platby, všetky produkty alebo len jeden scenár,</li>
+                <li>či existuje záloha alebo staging verzia webu.</li>
+              </ul>
+              <p>Toto nie je papierovanie navyše. Pri aktívnom e-shope to vie ušetriť hodiny a hlavne znížiť riziko, že sa opraví jedna vec a pokazí druhá.</p>
+            </div>
+
+            <div class="case-block">
               <h2>Kedy je problém urgentný</h2>
               <p>Urgentné je všetko, čo zastavuje objednávky: nefunkčná pokladňa, nefunkčná platba, chýbajúce objednávkové emaily alebo chyba, ktorá zákazníka nepustí dokončiť nákup. Pri vizuálnej chybe na karte produktu sa dá často postupovať pokojnejšie.</p>
               <p>Pri aktívnom e-shope by som nerobil veľké zásahy bez zálohy a bez testu. Aj malá oprava vie mať dopad na platby, dopravu alebo objednávky.</p>
@@ -105,6 +131,7 @@
             <div class="case-block">
               <h2>Krátky záver</h2>
               <p>Dobrá WooCommerce oprava nezačína kliknutím na náhodné nastavenie. Začína diagnostikou: kde presne problém vzniká, čo hovoria logy, čo sa menilo naposledy a ako overiť, že oprava naozaj funguje.</p>
+              <p>Ak ide o problém, ktorý zastavuje objednávky, najprv riešim funkčnosť. Dizajn, drobné texty a pekné úpravy počkajú. Pokladňa, platba, objednávka a email musia byť prvé.</p>
             </div>
           </div>
 

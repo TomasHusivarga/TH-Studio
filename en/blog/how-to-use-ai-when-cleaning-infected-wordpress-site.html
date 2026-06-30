@@ -25,7 +25,7 @@
     "headline": "How to use AI when cleaning an infected WordPress site",
     "description": "A practical guide on using AI during WordPress malware cleanup without blindly trusting generated fixes.",
     "datePublished": "2026-06-28",
-    "dateModified": "2026-06-28",
+    "dateModified": "2026-06-30",
     "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/en/"},
     "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
     "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-use-ai-when-cleaning-infected-wordpress-site.html",
@@ -63,6 +63,12 @@
               <p>If the site sends spam, redirects visitors or creates new admin users, the priority is control. AI can help with analysis, but it does not replace basic security work.</p>
             </div>
             <div class="case-block">
+              <h2>What I would not send to AI</h2>
+              <p>AI can help, but I would not paste a whole site with sensitive data into it. For a security issue, I would first remove passwords, API keys, database credentials, customer data and anything that should not be public.</p>
+              <p>A suspicious code snippet, file name, context and a clear question are usually enough. Not a full database export or config file without checking it first.</p>
+            </div>
+
+            <div class="case-block">
               <h2>Where AI actually helps</h2>
               <ul>
                 <li>Explaining suspicious PHP or JavaScript in plain language.</li>
@@ -72,6 +78,19 @@
                 <li>Turning a technical finding into a client-friendly explanation.</li>
               </ul>
             </div>
+            <div class="case-block">
+              <h2>Where infections often hide</h2>
+              <p>On an infected WordPress site, checking one weird-looking file is not enough. The same problem can be spread across several places.</p>
+              <ul>
+                <li><code>wp-content/uploads</code>, where PHP files usually should not be,</li>
+                <li><code>mu-plugins</code> and small custom plugins people often miss,</li>
+                <li><code>functions.php</code> in the theme or child theme,</li>
+                <li><code>wp-config.php</code>, <code>.htaccess</code> and suspicious redirects,</li>
+                <li>unknown admin users, cron tasks and strange database records,</li>
+                <li>nulled plugins or themes that should never have been installed.</li>
+              </ul>
+            </div>
+
             <div class="case-block">
               <h2>Where I would not trust AI blindly</h2>
               <p>I would not let AI decide that a specific file is safe to delete without the full site context. I also would not paste a generated “fix” back into the site without understanding it.</p>
@@ -90,6 +109,12 @@
                 <li>After cleanup, test the site, forms, redirects and Search Console.</li>
               </ol>
             </div>
+            <div class="case-block">
+              <h2>After cleanup, it is not finished yet</h2>
+              <p>When the site stops behaving strangely, that still does not mean the job is done. Passwords need to be changed, WordPress, plugins and theme updated, unused items removed, file permissions checked, and the site watched for a while.</p>
+              <p>If the site was flagged by a browser or Google, I would also check Search Console and request a review after cleanup. Otherwise the site can be technically clean but still look unsafe to visitors.</p>
+            </div>
+
             <div class="case-block">
               <h2>Short takeaway</h2>
               <p>AI is a useful second pair of eyes for an infected WordPress site. It helps you understand suspicious code faster and avoid missing checks. But the order still matters: backup first, verify manually, then change things.</p>
