@@ -221,6 +221,14 @@ section {
     margin-bottom: 0;
 }
 
+.portfolio-note {
+    max-width: 58rem;
+    margin: 1rem 0 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
 .portfolio-count {
     display: inline-flex;
     align-items: center;
