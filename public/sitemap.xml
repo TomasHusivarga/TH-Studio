@@ -14,7 +14,13 @@
   </url>
   <url>
     <loc>https://tomashusivarga.github.io/TH-Studio/blog/</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tomashusivarga.github.io/TH-Studio/blog/preco-kazdy-biznis-potrebuje-webstranku.html</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -44,7 +50,13 @@
   </url>
   <url>
     <loc>https://tomashusivarga.github.io/TH-Studio/en/blog/</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tomashusivarga.github.io/TH-Studio/en/blog/why-every-business-needs-a-website.html</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -1,11 +1,13 @@
 https://tomashusivarga.github.io/TH-Studio/
 https://tomashusivarga.github.io/TH-Studio/en/
 https://tomashusivarga.github.io/TH-Studio/blog/
+https://tomashusivarga.github.io/TH-Studio/blog/preco-kazdy-biznis-potrebuje-webstranku.html
 https://tomashusivarga.github.io/TH-Studio/blog/preco-portfolio-ma-impresie-bez-klikov.html
 https://tomashusivarga.github.io/TH-Studio/blog/ako-pouzit-ai-pri-cisteni-napadnuteho-wordpress-webu.html
 https://tomashusivarga.github.io/TH-Studio/blog/ako-presunut-wordpress-web-cez-backup-migration-plugin.html
 https://tomashusivarga.github.io/TH-Studio/blog/woocommerce-problem-oprava-diagnostika-eshopu.html
 https://tomashusivarga.github.io/TH-Studio/en/blog/
+https://tomashusivarga.github.io/TH-Studio/en/blog/why-every-business-needs-a-website.html
 https://tomashusivarga.github.io/TH-Studio/en/blog/why-portfolio-gets-impressions-without-clicks.html
 https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-use-ai-when-cleaning-infected-wordpress-site.html
 https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-move-wordpress-site-with-backup-migration-plugin.html
