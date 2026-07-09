@@ -14,7 +14,13 @@
   </url>
   <url>
     <loc>https://tomashusivarga.github.io/TH-Studio/blog/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tomashusivarga.github.io/TH-Studio/blog/ako-mi-ai-pomaha-pri-tvorbe-webstranok-pre-klientov.html</loc>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -50,7 +56,13 @@
   </url>
   <url>
     <loc>https://tomashusivarga.github.io/TH-Studio/en/blog/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tomashusivarga.github.io/TH-Studio/en/blog/how-ai-helps-me-build-client-websites.html</loc>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

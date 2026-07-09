@@ -114,6 +114,8 @@ function languageUrl(lang) {
   const blogPath = '/TH-Studio/blog/';
   const blogPathEn = '/TH-Studio/en/blog/';
   const blogArticleMap = {
+    '/TH-Studio/blog/ako-mi-ai-pomaha-pri-tvorbe-webstranok-pre-klientov.html': '/TH-Studio/en/blog/how-ai-helps-me-build-client-websites.html',
+    '/TH-Studio/en/blog/how-ai-helps-me-build-client-websites.html': '/TH-Studio/blog/ako-mi-ai-pomaha-pri-tvorbe-webstranok-pre-klientov.html',
     '/TH-Studio/blog/preco-kazdy-biznis-potrebuje-webstranku.html': '/TH-Studio/en/blog/why-every-business-needs-a-website.html',
     '/TH-Studio/en/blog/why-every-business-needs-a-website.html': '/TH-Studio/blog/preco-kazdy-biznis-potrebuje-webstranku.html',
     '/TH-Studio/blog/preco-portfolio-ma-impresie-bez-klikov.html': '/TH-Studio/en/blog/why-portfolio-gets-impressions-without-clicks.html',
