@@ -1,3 +1,5 @@
+import { initGoatCounter } from './modules/goatCounter.js';
+
 const projects = [
   ['Rehamax', '/TH-Studio/projects/rehamax.html'],
   ['DonnaBella', '/TH-Studio/projects/donnabella.html'],
@@ -305,6 +307,7 @@ export function initSharedNavigation() {
 }
 
 export function renderSharedLayout() {
+  initGoatCounter();
   renderHeader();
   renderFooter();
   initSharedNavigation();
