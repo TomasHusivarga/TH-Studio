@@ -5,6 +5,7 @@ import { initContactForm } from './modules/contactForm.js';
 import { initCookieBanner } from './modules/cookieBanner.js';
 import { initCursorRing } from './modules/cursorRing.js';
 import { initFaqTabs } from './modules/faqTabs.js';
+import { initLeadSourceTracking } from './modules/leadSourceTracking.js';
 import { initMagneticButtons } from './modules/magneticButtons.js';
 import { initMobileNav } from './modules/mobileNav.js';
 import { getMotionPreferences } from './modules/motionPreferences.js';
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMagneticButtons();
   initScrollReveal({ motion });
   initMobileNav();
+  initLeadSourceTracking();
   initContactForm();
   initTiltCards({ motion });
   initScene();
