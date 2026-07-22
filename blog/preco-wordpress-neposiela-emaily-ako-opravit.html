@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prečo WordPress neposiela e-maily | TH Studio</title>
+  <meta name="description" content="WordPress neposiela e-maily? Praktický postup kontroly SMTP, formulárov, WooCommerce emailov, DNS a testovania bez hádania." />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tomashusivarga.github.io/TH-Studio/blog/preco-wordpress-neposiela-emaily-ako-opravit.html" />
+  <link rel="alternate" hreflang="sk" href="https://tomashusivarga.github.io/TH-Studio/blog/preco-wordpress-neposiela-emaily-ako-opravit.html" />
+  <link rel="alternate" hreflang="en" href="https://tomashusivarga.github.io/TH-Studio/en/blog/why-wordpress-is-not-sending-emails-how-to-fix.html" />
+  <link rel="icon" type="image/svg+xml" href="/TH-Studio/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/TH-Studio/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/TH-Studio/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/TH-Studio/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/TH-Studio/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Prečo WordPress neposiela e-maily a ako to opraviť",
+    "description": "WordPress neposiela e-maily? Praktický postup kontroly SMTP, formulárov, WooCommerce emailov, DNS a testovania bez hádania.",
+    "datePublished": "2026-07-22",
+    "dateModified": "2026-07-22",
+    "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/"},
+    "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
+    "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/blog/preco-wordpress-neposiela-emaily-ako-opravit.html",
+    "inLanguage": "sk"
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div data-shared-header></div>
+  <main>
+    <article>
+      <section class="case-hero">
+        <div class="container">
+          <div class="case-hero__grid">
+            <div>
+              <p class="case-kicker">WordPress / SMTP</p>
+              <h1 class="case-title">Prečo WordPress neposiela e-maily a ako to opraviť</h1>
+              <p class="case-lead">Najčastejšie nejde o pokazený web, ale o to, že WordPress posiela správy cez hosting spôsobom, ktorému e-mailové schránky neveria. Riešenie je väčšinou SMTP, správny odosielateľ a test po každej zmene.</p>
+            </div>
+            <aside class="case-meta">
+              <div><span>Hlavný dotaz</span><strong>WordPress neposiela e-maily</strong></div>
+              <div><span>Riešenie</span><strong>SMTP a test doručenia</strong></div>
+              <a href="/TH-Studio/sluzby/uprava-wordpress-webu.html" class="btn btn-primary">Oprava WordPress webu</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container case-content-grid">
+          <div>
+            <div class="case-block">
+              <h2>Čo sa deje</h2>
+              <p>WordPress vie odosielať e-maily cez funkciu webhostingu. To môže fungovať pri jednoduchom teste, ale pri formulároch, objednávkach alebo resetovaní hesla sa správy často stratia, skončia v spame alebo ich príjemca odmietne.</p>
+              <p>Preto pri probléme nepozerám iba na formulár. Najprv chcem oddeliť tri veci: či web email vytvorí, či ho vie odoslať a či ho cieľová schránka prijme.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Čo skontrolovať ako prvé</h2>
+              <ol>
+                <li>Pošli testovací email z WordPressu alebo SMTP pluginu.</li>
+                <li>Skontroluj spam, reklamy a záložky v schránke.</li>
+                <li>Over, či je adresa odosielateľa z rovnakej domény ako web.</li>
+                <li>Pri formulári skontroluj príjemcu, predmet a Reply-To.</li>
+                <li>Pri WooCommerce pozri, či sú konkrétne emailové notifikácie zapnuté.</li>
+                <li>Ak používaš SMTP, pošli test cez SMTP nastavenia, nie iba cez formulár.</li>
+              </ol>
+            </div>
+
+            <div class="case-block">
+              <h2>Prečo SMTP väčšinou pomôže</h2>
+              <p>SMTP plugin povie WordPressu, aby neposielal správy len cez hosting, ale cez reálnu emailovú službu alebo overený mailer. To je dôveryhodnejšie pre Gmail, Outlook aj firemné schránky.</p>
+              <p>Dôležitý je aj odosielateľ. Ak web tvrdí, že posiela z cudzej adresy, príjemca tomu nemusí veriť. Pri firemnom webe dáva zmysel adresa z vlastnej domény.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Praktický príklad</h2>
+              <p>Ak máš kontaktný formulár na webe firma.sk a odosielateľ je osobný Gmail, môže to vyzerať podozrivo. Lepšie je použiť doménový email, nastaviť SMTP a do Reply-To vložiť email človeka, ktorý formulár vyplnil.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Kedy to zvládneš sám</h2>
+              <p>Ak máš prístup do WordPressu, vieš vytvoriť email na doméne a hosting má jasné SMTP údaje, základné nastavenie vieš spraviť aj sám. Po nastavení otestuj formulár, reset hesla a pri e-shope aj objednávkový email.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Kedy má zmysel pomoc</h2>
+              <p>Ak emaily padajú iba niekedy, WooCommerce neposiela objednávky, schránka používa Microsoft 365 alebo Google Workspace, alebo nevieš čítať DNS/SPF/DKIM nastavenia, je rýchlejšie riešiť to ako technickú opravu. Vtedy dáva zmysel moja <a href="/TH-Studio/sluzby/uprava-wordpress-webu.html">úprava WordPress webu</a>.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Časté chyby</h2>
+              <ul>
+                <li>Testovať iba jeden email a neprejsť reálny formulár.</li>
+                <li>Použiť ako odosielateľa Gmail na webe s vlastnou doménou.</li>
+                <li>Zabudnúť zapnúť WooCommerce notifikáciu pre admina alebo zákazníka.</li>
+                <li>Neotestovať reset hesla, objednávku a kontaktný formulár samostatne.</li>
+              </ul>
+            </div>
+
+            <div class="case-block">
+              <h2>Krátky záver</h2>
+              <p>Pri WordPress emailoch sa neoplatí hádať. Najprv zisti, či email vzniká, potom či odchádza a až potom rieš doručiteľnosť. SMTP je často správny krok, ale musí byť nastavené čisto a otestované na reálnych situáciách.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Zdroje</h2>
+              <ul>
+                <li><a href="https://woocommerce.com/document/email-faq/" target="_blank" rel="noopener">WooCommerce - Email troubleshooting</a></li>
+                <li><a href="https://woocommerce.com/document/email-smtp-providers/" target="_blank" rel="noopener">WooCommerce - Email and SMTP providers</a></li>
+                <li><a href="https://woocommerce.com/document/email-authentication/" target="_blank" rel="noopener">WooCommerce - Email authentication and sender requirements</a></li>
+                <li><a href="https://wordpress.org/plugins/wp-mail-smtp/" target="_blank" rel="noopener">WordPress.org - WP Mail SMTP plugin</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="case-sidebar">
+            <div class="case-block">
+              <h3>Súvisiace služby</h3>
+              <a href="/TH-Studio/sluzby/uprava-wordpress-webu.html" class="bento-link">Úprava WordPress webu →</a>
+              <a href="/TH-Studio/sluzby/tvorba-webstranok.html" class="bento-link">Tvorba webstránok →</a>
+            </div>
+            <div class="case-block">
+              <h3>Pointa</h3>
+              <p>Treba vedieť, či email vznikol, či ho WordPress odoslal a či mu príjemca dôveruje.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </article>
+
+    <section class="case-section case-section--compact"><div class="container"><div class="case-nav"><a href="/TH-Studio/blog/" class="btn btn-ghost">Späť na blog</a><a href="/TH-Studio/#kontakt" class="btn btn-primary">Riešiť e-maily na webe</a></div></div></section>
+  </main>
+  <div data-shared-footer></div>
+  <script type="module" src="/src/js/shared-layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WooCommerce nezobrazuje dopravu v pokladni | TH Studio</title>
+  <meta name="description" content="WooCommerce nezobrazuje dopravu v pokladni? Skontroluj zóny, adresu zákazníka, metódy, produkty, triedy dopravy, cache a pluginy." />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tomashusivarga.github.io/TH-Studio/blog/preco-sa-vo-woocommerce-nezobrazuje-doprava-v-pokladni.html" />
+  <link rel="alternate" hreflang="sk" href="https://tomashusivarga.github.io/TH-Studio/blog/preco-sa-vo-woocommerce-nezobrazuje-doprava-v-pokladni.html" />
+  <link rel="alternate" hreflang="en" href="https://tomashusivarga.github.io/TH-Studio/en/blog/why-woocommerce-shipping-does-not-show-at-checkout.html" />
+  <link rel="icon" type="image/svg+xml" href="/TH-Studio/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/TH-Studio/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/TH-Studio/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/TH-Studio/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/TH-Studio/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Prečo sa vo WooCommerce nezobrazuje doprava v pokladni",
+    "description": "WooCommerce nezobrazuje dopravu v pokladni? Skontroluj zóny, adresu zákazníka, metódy, produkty, triedy dopravy, cache a pluginy.",
+    "datePublished": "2026-07-22",
+    "dateModified": "2026-07-22",
+    "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/"},
+    "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
+    "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/blog/preco-sa-vo-woocommerce-nezobrazuje-doprava-v-pokladni.html",
+    "inLanguage": "sk"
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div data-shared-header></div>
+  <main>
+    <article>
+      <section class="case-hero">
+        <div class="container">
+          <div class="case-hero__grid">
+            <div>
+              <p class="case-kicker">WooCommerce / oprava</p>
+              <h1 class="case-title">Prečo sa vo WooCommerce nezobrazuje doprava v pokladni</h1>
+              <p class="case-lead">Ak sa doprava v pokladni nezobrazuje, WooCommerce väčšinou nevie nájsť platnú dopravnú metódu pre adresu a košík. Prvé miesto kontroly sú zóny, potom metódy, produkty a až potom pluginy.</p>
+            </div>
+            <aside class="case-meta">
+              <div><span>Hlavný problém</span><strong>doprava chýba v pokladni</strong></div>
+              <div><span>Postup</span><strong>diagnostika pravidiel</strong></div>
+              <a href="/TH-Studio/sluzby/uprava-wordpress-webu.html" class="btn btn-primary">Oprava WordPress webu</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container case-content-grid">
+          <div>
+            <div class="case-block">
+              <h2>Najpravdepodobnejšia príčina</h2>
+              <p>WooCommerce zobrazuje dopravu podľa adresy zákazníka a obsahu košíka. Ak adresa nesedí na žiadnu zónu alebo zóna nemá zapnutú vhodnú metódu, zákazník neuvidí nič použiteľné.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Rýchla kontrola</h2>
+              <ol>
+                <li>Zadaj v pokladni reálnu adresu zákazníka.</li>
+                <li>Pozri, či táto krajina alebo PSČ spadá do správnej dopravnej zóny.</li>
+                <li>Skontroluj, či má zóna aspoň jednu zapnutú metódu dopravy.</li>
+                <li>Over, či produkt nie je virtuálny alebo inak vylúčený z dopravy.</li>
+                <li>Skontroluj shipping classes a podmienky ceny.</li>
+                <li>Vypni cache pre košík a pokladňu.</li>
+                <li>Otestuj s jednoduchým produktom bez špeciálnych pravidiel.</li>
+              </ol>
+            </div>
+
+            <div class="case-block">
+              <h2>Zóny, produkty a cache</h2>
+              <p>WooCommerce používa prvú zónu, ktorá sedí na adresu. Ak máš viac podobných zón, poradie môže rozhodnúť o tom, či sa zákazník dostane k správnej doprave.</p>
+              <p>Ak doprava funguje pri jednom produkte, ale nie pri druhom, problém býva v produkte, váhe, type produktu alebo shipping class. Košík a pokladňa by zároveň nemali byť agresívne cachované.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Kedy to zvládneš sám</h2>
+              <p>Ak máš jednu krajinu, jednu cenu dopravy a problém vznikol po malej zmene, vieš prejsť zóny a metódy sám. Testuj vždy s reálnou adresou, nie iba v administrácii.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Kedy má zmysel pomoc</h2>
+              <p>Ak doprava vypadáva iba pri niektorých produktoch, krajinách, Packete, dobierke alebo po aktualizácii pluginu, je to skôr diagnostika než jednoduché nastavenie. Vtedy pomôže <a href="/TH-Studio/sluzby/uprava-wordpress-webu.html">oprava WordPress/WooCommerce webu</a>.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Časté chyby</h2>
+              <ul>
+                <li>Testovanie bez vyplnenej adresy.</li>
+                <li>Zóna existuje, ale nemá zapnutú metódu.</li>
+                <li>Doprava zdarma má podmienku, ktorú košík nespĺňa.</li>
+                <li>Virtuálny produkt sa očakáva ako fyzický.</li>
+                <li>Pokladňa je cachovaná.</li>
+              </ul>
+            </div>
+
+            <div class="case-block">
+              <h2>Krátky záver</h2>
+              <p>Chýbajúca doprava v pokladni nie je náhodná. WooCommerce sa len riadi pravidlami, ktoré má. Úloha je nájsť, ktoré pravidlo zákazník nespĺňa alebo ktoré pravidlo chýba.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Zdroje</h2>
+              <ul>
+                <li><a href="https://woocommerce.com/document/troubleshooting-core-shipping/" target="_blank" rel="noopener">WooCommerce - Troubleshooting core shipping</a></li>
+                <li><a href="https://woocommerce.com/document/setting-up-shipping-zones/" target="_blank" rel="noopener">WooCommerce - Setting up shipping zones</a></li>
+                <li><a href="https://woocommerce.com/document/product-shipping-classes/" target="_blank" rel="noopener">WooCommerce - Product shipping classes</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="case-sidebar">
+            <div class="case-block">
+              <h3>Súvisiace služby</h3>
+              <a href="/TH-Studio/sluzby/uprava-wordpress-webu.html" class="bento-link">Úprava WordPress webu →</a>
+              <a href="/TH-Studio/sluzby/tvorba-eshopov.html" class="bento-link">Tvorba e-shopov →</a>
+            </div>
+            <div class="case-block">
+              <h3>Pointa</h3>
+              <p>Keď doprava zmizne v pokladni, neopravuj naslepo celý e-shop. Najprv zisti, prečo aktuálny košík nespadol do použiteľného pravidla.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </article>
+
+    <section class="case-section case-section--compact"><div class="container"><div class="case-nav"><a href="/TH-Studio/blog/" class="btn btn-ghost">Späť na blog</a><a href="/TH-Studio/#kontakt" class="btn btn-primary">Opraviť dopravu</a></div></div></section>
+  </main>
+  <div data-shared-footer></div>
+  <script type="module" src="/src/js/shared-layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ako nastaviť kontaktný formulár vo WordPresse | TH Studio</title>
+  <meta name="description" content="Ako nastaviť kontaktný formulár vo WordPresse: polia, e-mail, spam ochrana, SMTP, testovanie a časté chyby pri Contact Form 7." />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tomashusivarga.github.io/TH-Studio/blog/ako-nastavit-kontaktny-formular-wordpress.html" />
+  <link rel="alternate" hreflang="sk" href="https://tomashusivarga.github.io/TH-Studio/blog/ako-nastavit-kontaktny-formular-wordpress.html" />
+  <link rel="alternate" hreflang="en" href="https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-set-up-wordpress-contact-form-that-works.html" />
+  <link rel="icon" type="image/svg+xml" href="/TH-Studio/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/TH-Studio/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/TH-Studio/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/TH-Studio/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/TH-Studio/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Ako nastaviť kontaktný formulár vo WordPresse, aby reálne fungoval",
+    "description": "Ako nastaviť kontaktný formulár vo WordPresse: polia, e-mail, spam ochrana, SMTP, testovanie a časté chyby pri Contact Form 7.",
+    "datePublished": "2026-07-22",
+    "dateModified": "2026-07-22",
+    "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/"},
+    "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
+    "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/blog/ako-nastavit-kontaktny-formular-wordpress.html",
+    "inLanguage": "sk"
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div data-shared-header></div>
+  <main>
+    <article>
+      <section class="case-hero">
+        <div class="container">
+          <div class="case-hero__grid">
+            <div>
+              <p class="case-kicker">WordPress / formulár</p>
+              <h1 class="case-title">Ako nastaviť kontaktný formulár vo WordPresse, aby reálne fungoval</h1>
+              <p class="case-lead">Kontaktný formulár nie je hotový v momente, keď sa zobrazí na stránke. Hotový je až vtedy, keď správa príde správnemu človeku, dá sa na ňu odpovedať a formulár neplní schránku spamom.</p>
+            </div>
+            <aside class="case-meta">
+              <div><span>Hlavný dotaz</span><strong>kontaktný formulár WordPress</strong></div>
+              <div><span>Kontrola</span><strong>odoslanie, odpoveď, spam</strong></div>
+              <a href="/TH-Studio/sluzby/tvorba-webstranok.html" class="btn btn-primary">Tvorba webstránok</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container case-content-grid">
+          <div>
+            <div class="case-block">
+              <h2>Čo musí formulár zvládnuť</h2>
+              <p>Základný kontaktný formulár má zobrať meno, email, správu a poslať ju na správnu adresu. Pri službách často pridávam aj výber služby, ale iba ak to pomáha. Dlhý formulár vie človeka zbytočne odradiť.</p>
+              <p>Technicky musí formulár správne mapovať polia do emailu. V Contact Form 7 nestačí vytvoriť pole v šablóne formulára. Rovnaký tag musí byť použitý aj v emailovej správe.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Postup nastavenia</h2>
+              <ol>
+                <li>Vyber plugin, napríklad Contact Form 7, WPForms alebo Fluent Forms.</li>
+                <li>Vytvor len polia, ktoré naozaj potrebuješ.</li>
+                <li>Nastav príjemcu správy na správny firemný email.</li>
+                <li>Do Reply-To nastav email človeka z formulára.</li>
+                <li>Pridaj jasnú úspešnú správu po odoslaní.</li>
+                <li>Zapni základnú spam ochranu.</li>
+                <li>Otestuj formulár na mobile aj desktope.</li>
+              </ol>
+            </div>
+
+            <div class="case-block">
+              <h2>E-mail je polovica formulára</h2>
+              <p>Veľa formulárov funguje iba vizuálne. Človek klikne odoslať, stránka ukáže úspech, ale email nikam nepríde. Preto vždy testujem nielen zelenú hlášku, ale reálnu doručenú správu.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Praktický príklad</h2>
+              <p>Pre jednoduchý firemný web väčšinou stačí meno, email, správa a voliteľne typ služby. Pri e-shope môže dávať zmysel číslo objednávky. Pri citlivej službe by som sa vyhol zbytočnému zbieraniu detailov cez obyčajný formulár.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Kedy to zvládneš sám</h2>
+              <p>Ak potrebuješ obyčajný formulár a vieš otestovať doručenie, vieš ho nastaviť aj sám. Drž sa krátkych polí, čistého emailového nastavenia a nekomplikuj ho logikou, ktorú nepotrebuješ.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Kedy má zmysel pomoc</h2>
+              <p>Ak formulár neposiela, potrebuje napojenie na e-shop, viac jazykov, lepší dizajn alebo spam ochranu bez otravovania ľudí, je lepšie spraviť to poriadne v rámci <a href="/TH-Studio/sluzby/tvorba-webstranok.html">tvorby webstránky</a> alebo úpravy existujúceho webu.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Časté chyby</h2>
+              <ul>
+                <li>Príliš veľa povinných polí.</li>
+                <li>Chýbajúci Reply-To, takže sa nedá pohodlne odpovedať.</li>
+                <li>Formulár ukáže úspech, ale nikto netestoval doručenie.</li>
+                <li>Žiadna spam ochrana.</li>
+                <li>Formulár je na mobile úzky alebo zle čitateľný.</li>
+              </ul>
+            </div>
+
+            <div class="case-block">
+              <h2>Krátky záver</h2>
+              <p>Dobrý kontaktný formulár je nudne spoľahlivý. Človek ho rýchlo vyplní, správa príde, dá sa na ňu odpovedať a majiteľ webu nemusí hádať, či niečo nezmizlo.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Zdroje</h2>
+              <ul>
+                <li><a href="https://contactform7.com/getting-started-with-contact-form-7/" target="_blank" rel="noopener">Contact Form 7 - Getting started</a></li>
+                <li><a href="https://contactform7.com/setting-up-mail/" target="_blank" rel="noopener">Contact Form 7 - Setting up mail</a></li>
+                <li><a href="https://wordpress.org/plugins/wp-mail-smtp/" target="_blank" rel="noopener">WordPress.org - WP Mail SMTP plugin</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="case-sidebar">
+            <div class="case-block">
+              <h3>Súvisiace služby</h3>
+              <a href="/TH-Studio/sluzby/tvorba-webstranok.html" class="bento-link">Tvorba webstránok →</a>
+              <a href="/TH-Studio/sluzby/uprava-wordpress-webu.html" class="bento-link">Oprava WordPress webu →</a>
+            </div>
+            <div class="case-block">
+              <h3>Pointa</h3>
+              <p>Pekné políčka bez doručenia nič neriešia. Formulár musí byť jednoduchý pre človeka a spoľahlivý technicky.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </article>
+
+    <section class="case-section case-section--compact"><div class="container"><div class="case-nav"><a href="/TH-Studio/blog/" class="btn btn-ghost">Späť na blog</a><a href="/TH-Studio/#kontakt" class="btn btn-primary">Nastaviť formulár</a></div></div></section>
+  </main>
+  <div data-shared-footer></div>
+  <script type="module" src="/src/js/shared-layout.js"></script>
+</body>
+</html>

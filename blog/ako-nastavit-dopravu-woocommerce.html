@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ako nastaviť dopravu vo WooCommerce | TH Studio</title>
+  <meta name="description" content="Ako nastaviť dopravu vo WooCommerce: zóny, metódy, doprava zdarma, lokálny odber, Packeta/Zásielkovňa a testovanie pokladne." />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tomashusivarga.github.io/TH-Studio/blog/ako-nastavit-dopravu-woocommerce.html" />
+  <link rel="alternate" hreflang="sk" href="https://tomashusivarga.github.io/TH-Studio/blog/ako-nastavit-dopravu-woocommerce.html" />
+  <link rel="alternate" hreflang="en" href="https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-set-up-woocommerce-shipping.html" />
+  <link rel="icon" type="image/svg+xml" href="/TH-Studio/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/TH-Studio/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/TH-Studio/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/TH-Studio/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/TH-Studio/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Ako nastaviť dopravu vo WooCommerce",
+    "description": "Ako nastaviť dopravu vo WooCommerce: zóny, metódy, doprava zdarma, lokálny odber, Packeta/Zásielkovňa a testovanie pokladne.",
+    "datePublished": "2026-07-22",
+    "dateModified": "2026-07-22",
+    "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/"},
+    "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
+    "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/blog/ako-nastavit-dopravu-woocommerce.html",
+    "inLanguage": "sk"
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div data-shared-header></div>
+  <main>
+    <article>
+      <section class="case-hero">
+        <div class="container">
+          <div class="case-hero__grid">
+            <div>
+              <p class="case-kicker">WooCommerce / doprava</p>
+              <h1 class="case-title">Ako nastaviť dopravu vo WooCommerce</h1>
+              <p class="case-lead">Vo WooCommerce sa doprava nastavuje cez zóny. Najprv určíš, kam predávaš, potom aké metódy dopravy v danej zóne ponúkaš. Ak sú zóny zle zoradené alebo neúplné, pokladňa sa začne správať zvláštne.</p>
+            </div>
+            <aside class="case-meta">
+              <div><span>Hlavný dotaz</span><strong>WooCommerce doprava</strong></div>
+              <div><span>Základ</span><strong>zóny a metódy</strong></div>
+              <a href="/TH-Studio/sluzby/tvorba-eshopov.html" class="btn btn-primary">Tvorba e-shopov</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container case-content-grid">
+          <div>
+            <div class="case-block">
+              <h2>Ako fungujú zóny dopravy</h2>
+              <p>Shipping zone je oblasť, pre ktorú platia konkrétne možnosti dopravy. Môže to byť Slovensko, Česko, Európa alebo konkrétne PSČ. Zákazník v pokladni vidí metódy z prvej zóny, ktorá sedí na jeho adresu.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Základný postup</h2>
+              <ol>
+                <li>Otvor WooCommerce → Nastavenia → Doprava → Dopravné zóny.</li>
+                <li>Vytvor zónu Slovensko a vyber región Slovensko.</li>
+                <li>Pridaj metódy: paušálna sadzba, doprava zdarma alebo lokálny odber.</li>
+                <li>Nastav názvy tak, aby im zákazník rozumel.</li>
+                <li>Ak používaš Packetu/Zásielkovňu, nastav plugin podľa jeho dokumentácie.</li>
+                <li>Otestuj pokladňu s reálnou slovenskou adresou.</li>
+                <li>Otestuj aj adresu mimo hlavnej zóny.</li>
+              </ol>
+            </div>
+
+            <div class="case-block">
+              <h2>Doprava zdarma a triedy dopravy</h2>
+              <p>Doprava zdarma funguje najlepšie vtedy, keď má jasnú podmienku, napríklad hodnotu košíka. Shipping classes sa hodia pri rôznych typoch produktov, ale samy cenu nevytvoria. Musia byť použité v dopravnej metóde.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Praktický príklad</h2>
+              <p>E-shop s kozmetikou môže mať Slovensko: Packeta, kuriér, dobierka a doprava zdarma od 60 €. Česko môže mať inú cenu a možno bez dobierky. Lokálny odber dáva zmysel iba ak ho vieš reálne vybaviť.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Kedy to zvládneš sám</h2>
+              <p>Ak máš pár produktov, predávaš iba na Slovensku a používaš jednoduchú paušálnu cenu, nastavenie zvládneš aj sám. Najdôležitejšie je testovať pokladňu, nie iba pozerať nastavenia.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Kedy má zmysel pomoc</h2>
+              <p>Ak máš viac krajín, Packetu, dobierku, dopravu zdarma, rôzne triedy produktov alebo napojenie na dopravcu, oplatí sa nastaviť to poriadne pri <a href="/TH-Studio/sluzby/tvorba-eshopov.html">tvorbe WooCommerce e-shopu</a>.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Časté chyby</h2>
+              <ul>
+                <li>Zóna neobsahuje krajinu zákazníka.</li>
+                <li>Metóda dopravy je vytvorená, ale nie je zapnutá.</li>
+                <li>Zóny sú v zlom poradí.</li>
+                <li>Doprava zdarma nemá správnu podmienku.</li>
+                <li>Produkt má shipping class, ale metóda s ňou nepočíta.</li>
+              </ul>
+            </div>
+
+            <div class="case-block">
+              <h2>Krátky záver</h2>
+              <p>Dopravu vo WooCommerce nastavuj od jednoduchého k zložitému: krajiny, zóny, metódy, podmienky, test. Hotovo je až vtedy, keď pokladňa ukáže správnu dopravu pre správnu adresu a produkt.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Zdroje</h2>
+              <ul>
+                <li><a href="https://woocommerce.com/document/setting-up-shipping-zones/" target="_blank" rel="noopener">WooCommerce - Setting up shipping zones</a></li>
+                <li><a href="https://woocommerce.com/document/product-shipping-classes/" target="_blank" rel="noopener">WooCommerce - Product shipping classes</a></li>
+                <li><a href="https://woocommerce.com/document/free-shipping/" target="_blank" rel="noopener">WooCommerce - Free shipping</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="case-sidebar">
+            <div class="case-block">
+              <h3>Súvisiace služby</h3>
+              <a href="/TH-Studio/sluzby/tvorba-eshopov.html" class="bento-link">Tvorba WooCommerce e-shopu →</a>
+              <a href="/TH-Studio/sluzby/uprava-wordpress-webu.html" class="bento-link">Úprava WordPress webu →</a>
+            </div>
+            <div class="case-block">
+              <h3>Pointa</h3>
+              <p>Doprava nie je iba cena. Je to pravidlo, ktoré musí sedieť s adresou, produktom, váhou, košíkom a pokladňou.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </article>
+
+    <section class="case-section case-section--compact"><div class="container"><div class="case-nav"><a href="/TH-Studio/blog/" class="btn btn-ghost">Späť na blog</a><a href="/TH-Studio/#kontakt" class="btn btn-primary">Nastaviť dopravu</a></div></div></section>
+  </main>
+  <div data-shared-footer></div>
+  <script type="module" src="/src/js/shared-layout.js"></script>
+</body>
+</html>

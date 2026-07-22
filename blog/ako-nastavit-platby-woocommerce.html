@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ako nastaviť platby vo WooCommerce | TH Studio</title>
+  <meta name="description" content="Ako nastaviť platby vo WooCommerce: bankový prevod, dobierka, platba kartou, WooPayments, testovanie objednávky a časté chyby." />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tomashusivarga.github.io/TH-Studio/blog/ako-nastavit-platby-woocommerce.html" />
+  <link rel="alternate" hreflang="sk" href="https://tomashusivarga.github.io/TH-Studio/blog/ako-nastavit-platby-woocommerce.html" />
+  <link rel="alternate" hreflang="en" href="https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-set-up-woocommerce-payments.html" />
+  <link rel="icon" type="image/svg+xml" href="/TH-Studio/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/TH-Studio/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/TH-Studio/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/TH-Studio/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/TH-Studio/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Ako nastaviť platby vo WooCommerce bez zbytočného chaosu",
+    "description": "Ako nastaviť platby vo WooCommerce: bankový prevod, dobierka, platba kartou, WooPayments, testovanie objednávky a časté chyby.",
+    "datePublished": "2026-07-22",
+    "dateModified": "2026-07-22",
+    "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/"},
+    "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
+    "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/blog/ako-nastavit-platby-woocommerce.html",
+    "inLanguage": "sk"
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div data-shared-header></div>
+  <main>
+    <article>
+      <section class="case-hero">
+        <div class="container">
+          <div class="case-hero__grid">
+            <div>
+              <p class="case-kicker">WooCommerce / platby</p>
+              <h1 class="case-title">Ako nastaviť platby vo WooCommerce bez zbytočného chaosu</h1>
+              <p class="case-lead">Platby vo WooCommerce nastavuj podľa toho, ako chce zákazník reálne zaplatiť a čo vieš prevádzkovo zvládnuť. Na začiatok často stačí bankový prevod, dobierka a platba kartou cez jednu spoľahlivú bránu.</p>
+            </div>
+            <aside class="case-meta">
+              <div><span>Hlavný dotaz</span><strong>WooCommerce platby</strong></div>
+              <div><span>Kontrola</span><strong>test objednávky</strong></div>
+              <a href="/TH-Studio/sluzby/tvorba-eshopov.html" class="btn btn-primary">Tvorba e-shopov</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container case-content-grid">
+          <div>
+            <div class="case-block">
+              <h2>Aké platby dáva zmysel riešiť</h2>
+              <p>Pre menší e-shop netreba hneď desať platobných možností. Čím viac metód, tým viac nastavení, testovania a možných chýb. Dôležité je mať metódy, ktoré zákazníci očakávajú a ktoré vieš spracovať.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Základný postup</h2>
+              <ol>
+                <li>Otvor WooCommerce → Nastavenia → Platby.</li>
+                <li>Zapni iba metódy, ktoré chceš reálne používať.</li>
+                <li>Pri bankovom prevode nastav správne číslo účtu a inštrukcie.</li>
+                <li>Pri dobierke over, či sedí s dopravnými metódami.</li>
+                <li>Pri karte nastav platobnú bránu a API údaje.</li>
+                <li>Najprv testuj v test režime, ak ho brána ponúka.</li>
+                <li>Prejdi celú objednávku od produktu po email a stav objednávky.</li>
+              </ol>
+            </div>
+
+            <div class="case-block">
+              <h2>Platba kartou</h2>
+              <p>Platba kartou zvyčajne potrebuje plugin alebo bránu, napríklad WooPayments, Stripe alebo lokálne riešenie podľa krajiny a účtovníctva. Nestačí plugin zapnúť. Treba dokončiť účet, overenie, meny, krajinu, webhooky alebo návratové URL podľa konkrétnej brány.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Dobierka a bankový prevod</h2>
+              <p>Dobierka je jednoduchá pre zákazníka, ale nie vždy výhodná pre predajcu. Bankový prevod je technicky jednoduchý, ale zákazník musí dostať jasné inštrukcie a email objednávky musí obsahovať správne údaje.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Praktický test</h2>
+              <p>Po nastavení sprav testovací produkt za nízku cenu alebo objednávku v test režime. Prejdi košík, pokladňu, platbu, návrat späť do e-shopu, email zákazníkovi, email adminovi a stav objednávky v administrácii.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Kedy to zvládneš sám</h2>
+              <p>Bankový prevod a jednoduchú dobierku vieš nastaviť sám, ak máš jasné údaje a vieš spraviť test objednávky. Pri platbe kartou záleží na bráne a na tom, či máš všetky účty a overenia pripravené.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Kedy má zmysel pomoc</h2>
+              <p>Ak nastavuješ platbu kartou, viac mien, viac krajín, dobierku len pre vybrané dopravy alebo riešiš chybný návrat objednávky po platbe, oplatí sa to spraviť v rámci <a href="/TH-Studio/sluzby/tvorba-eshopov.html">tvorby WooCommerce e-shopu</a> alebo technickej úpravy.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Časté chyby</h2>
+              <ul>
+                <li>Použiť live platbu bez testovania.</li>
+                <li>Nechať zapnuté metódy, ktoré obchod reálne nepoužíva.</li>
+                <li>Zlé číslo účtu alebo chýbajúce inštrukcie v emaile.</li>
+                <li>Platba prebehne, ale objednávka ostane v zlom stave.</li>
+                <li>Neotestovať emaily po objednávke.</li>
+              </ul>
+            </div>
+
+            <div class="case-block">
+              <h2>Krátky záver</h2>
+              <p>Platby nastavuj jednoducho a testuj ich ako zákazník. E-shop nie je pripravený vtedy, keď v administrácii svieti zapnutá platobná metóda, ale keď objednávka prejde od produktu až po správny email a stav.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Zdroje</h2>
+              <ul>
+                <li><a href="https://woocommerce.com/document/woopayments/startup-guide/" target="_blank" rel="noopener">WooCommerce - WooPayments startup guide</a></li>
+                <li><a href="https://woocommerce.com/document/woopayments/settings-guide/" target="_blank" rel="noopener">WooCommerce - WooPayments settings guide</a></li>
+                <li><a href="https://woocommerce.com/document/woopayments/payment-methods/" target="_blank" rel="noopener">WooCommerce - WooPayments payment methods</a></li>
+                <li><a href="https://woocommerce.com/document/configuring-woocommerce-settings/emails/" target="_blank" rel="noopener">WooCommerce - Email settings</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="case-sidebar">
+            <div class="case-block">
+              <h3>Súvisiace služby</h3>
+              <a href="/TH-Studio/sluzby/tvorba-eshopov.html" class="bento-link">Tvorba WooCommerce e-shopu →</a>
+              <a href="/TH-Studio/sluzby/uprava-wordpress-webu.html" class="bento-link">Oprava WordPress webu →</a>
+            </div>
+            <div class="case-block">
+              <h3>Pointa</h3>
+              <p>Platobná metóda je hotová až po teste objednávky, stavu platby, emailu a návratu zákazníka späť do e-shopu.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </article>
+
+    <section class="case-section case-section--compact"><div class="container"><div class="case-nav"><a href="/TH-Studio/blog/" class="btn btn-ghost">Späť na blog</a><a href="/TH-Studio/#kontakt" class="btn btn-primary">Nastaviť platby</a></div></div></section>
+  </main>
+  <div data-shared-footer></div>
+  <script type="module" src="/src/js/shared-layout.js"></script>
+</body>
+</html>

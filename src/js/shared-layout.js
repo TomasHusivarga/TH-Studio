@@ -116,6 +116,16 @@ function languageUrl(lang) {
   const blogPath = '/TH-Studio/blog/';
   const blogPathEn = '/TH-Studio/en/blog/';
   const blogArticleMap = {
+    '/TH-Studio/blog/preco-wordpress-neposiela-emaily-ako-opravit.html': '/TH-Studio/en/blog/why-wordpress-is-not-sending-emails-how-to-fix.html',
+    '/TH-Studio/en/blog/why-wordpress-is-not-sending-emails-how-to-fix.html': '/TH-Studio/blog/preco-wordpress-neposiela-emaily-ako-opravit.html',
+    '/TH-Studio/blog/ako-nastavit-kontaktny-formular-wordpress.html': '/TH-Studio/en/blog/how-to-set-up-wordpress-contact-form-that-works.html',
+    '/TH-Studio/en/blog/how-to-set-up-wordpress-contact-form-that-works.html': '/TH-Studio/blog/ako-nastavit-kontaktny-formular-wordpress.html',
+    '/TH-Studio/blog/ako-nastavit-dopravu-woocommerce.html': '/TH-Studio/en/blog/how-to-set-up-woocommerce-shipping.html',
+    '/TH-Studio/en/blog/how-to-set-up-woocommerce-shipping.html': '/TH-Studio/blog/ako-nastavit-dopravu-woocommerce.html',
+    '/TH-Studio/blog/preco-sa-vo-woocommerce-nezobrazuje-doprava-v-pokladni.html': '/TH-Studio/en/blog/why-woocommerce-shipping-does-not-show-at-checkout.html',
+    '/TH-Studio/en/blog/why-woocommerce-shipping-does-not-show-at-checkout.html': '/TH-Studio/blog/preco-sa-vo-woocommerce-nezobrazuje-doprava-v-pokladni.html',
+    '/TH-Studio/blog/ako-nastavit-platby-woocommerce.html': '/TH-Studio/en/blog/how-to-set-up-woocommerce-payments.html',
+    '/TH-Studio/en/blog/how-to-set-up-woocommerce-payments.html': '/TH-Studio/blog/ako-nastavit-platby-woocommerce.html',
     '/TH-Studio/blog/kolko-stoji-wordpress-webstranka.html': '/TH-Studio/en/blog/how-much-does-a-wordpress-website-cost.html',
     '/TH-Studio/en/blog/how-much-does-a-wordpress-website-cost.html': '/TH-Studio/blog/kolko-stoji-wordpress-webstranka.html',
     '/TH-Studio/blog/ako-mi-ai-pomaha-pri-tvorbe-webstranok-pre-klientov.html': '/TH-Studio/en/blog/how-ai-helps-me-build-client-websites.html',

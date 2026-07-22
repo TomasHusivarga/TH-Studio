@@ -1,6 +1,16 @@
 https://tomashusivarga.github.io/TH-Studio/
 https://tomashusivarga.github.io/TH-Studio/en/
 https://tomashusivarga.github.io/TH-Studio/blog/
+https://tomashusivarga.github.io/TH-Studio/blog/preco-wordpress-neposiela-emaily-ako-opravit.html
+https://tomashusivarga.github.io/TH-Studio/blog/ako-nastavit-dopravu-woocommerce.html
+https://tomashusivarga.github.io/TH-Studio/blog/preco-sa-vo-woocommerce-nezobrazuje-doprava-v-pokladni.html
+https://tomashusivarga.github.io/TH-Studio/blog/ako-nastavit-kontaktny-formular-wordpress.html
+https://tomashusivarga.github.io/TH-Studio/blog/ako-nastavit-platby-woocommerce.html
+https://tomashusivarga.github.io/TH-Studio/en/blog/why-wordpress-is-not-sending-emails-how-to-fix.html
+https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-set-up-woocommerce-shipping.html
+https://tomashusivarga.github.io/TH-Studio/en/blog/why-woocommerce-shipping-does-not-show-at-checkout.html
+https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-set-up-wordpress-contact-form-that-works.html
+https://tomashusivarga.github.io/TH-Studio/en/blog/how-to-set-up-woocommerce-payments.html
 https://tomashusivarga.github.io/TH-Studio/blog/kolko-stoji-wordpress-webstranka.html
 https://tomashusivarga.github.io/TH-Studio/blog/ako-mi-ai-pomaha-pri-tvorbe-webstranok-pre-klientov.html
 https://tomashusivarga.github.io/TH-Studio/blog/preco-kazdy-biznis-potrebuje-webstranku.html
