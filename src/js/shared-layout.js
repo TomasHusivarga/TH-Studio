@@ -116,6 +116,8 @@ function languageUrl(lang) {
   const blogPath = '/TH-Studio/blog/';
   const blogPathEn = '/TH-Studio/en/blog/';
   const blogArticleMap = {
+    '/TH-Studio/blog/co-je-smtp-preco-je-dolezite-ho-nastavit-wordpress.html': '/TH-Studio/en/blog/what-is-smtp-and-why-it-matters-for-wordpress.html',
+    '/TH-Studio/en/blog/what-is-smtp-and-why-it-matters-for-wordpress.html': '/TH-Studio/blog/co-je-smtp-preco-je-dolezite-ho-nastavit-wordpress.html',
     '/TH-Studio/blog/preco-wordpress-neposiela-emaily-ako-opravit.html': '/TH-Studio/en/blog/why-wordpress-is-not-sending-emails-how-to-fix.html',
     '/TH-Studio/en/blog/why-wordpress-is-not-sending-emails-how-to-fix.html': '/TH-Studio/blog/preco-wordpress-neposiela-emaily-ako-opravit.html',
     '/TH-Studio/blog/ako-nastavit-kontaktny-formular-wordpress.html': '/TH-Studio/en/blog/how-to-set-up-wordpress-contact-form-that-works.html',

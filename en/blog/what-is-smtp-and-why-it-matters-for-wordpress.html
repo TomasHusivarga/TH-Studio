@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What is SMTP and why it matters for WordPress | TH Studio</title>
+  <meta name="description" content="What SMTP means for WordPress websites, why forms and WooCommerce emails can fail without it, and what should be tested before launch." />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tomashusivarga.github.io/TH-Studio/en/blog/what-is-smtp-and-why-it-matters-for-wordpress.html" />
+  <link rel="alternate" hreflang="sk" href="https://tomashusivarga.github.io/TH-Studio/blog/co-je-smtp-preco-je-dolezite-ho-nastavit-wordpress.html" />
+  <link rel="alternate" hreflang="en" href="https://tomashusivarga.github.io/TH-Studio/en/blog/what-is-smtp-and-why-it-matters-for-wordpress.html" />
+  <link rel="icon" type="image/svg+xml" href="/TH-Studio/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/TH-Studio/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/TH-Studio/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/TH-Studio/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/TH-Studio/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What is SMTP and why it matters for WordPress",
+    "description": "What SMTP means for WordPress websites, why forms and WooCommerce emails can fail without it, and what should be tested before launch.",
+    "datePublished": "2026-07-22",
+    "dateModified": "2026-07-22",
+    "author": {"@type": "Person", "name": "Tomáš Husivarga", "url": "https://tomashusivarga.github.io/TH-Studio/en/"},
+    "publisher": {"@type": "Person", "name": "Tomáš Husivarga"},
+    "mainEntityOfPage": "https://tomashusivarga.github.io/TH-Studio/en/blog/what-is-smtp-and-why-it-matters-for-wordpress.html",
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div data-shared-header></div>
+  <main>
+    <article>
+      <section class="case-hero">
+        <div class="container">
+          <div class="case-hero__grid">
+            <div>
+              <p class="case-kicker">WordPress / SMTP</p>
+              <h1 class="case-title">What is SMTP and why it matters for WordPress</h1>
+              <p class="case-lead">SMTP is the route your website uses to send email through a trusted mail service. Without it, a form, password reset or WooCommerce order can look finished on the website while the message never reaches the inbox.</p>
+            </div>
+            <aside class="case-meta">
+              <div><span>Main query</span><strong>what is SMTP</strong></div>
+              <div><span>Useful for</span><strong>forms, orders, password resets</strong></div>
+              <a href="/TH-Studio/en/sluzby/uprava-wordpress-webu.html" class="btn btn-primary">Fix website emails</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container case-content-grid">
+          <div>
+            <div class="case-block">
+              <h2>What SMTP means in practice</h2>
+              <p>SMTP means Simple Mail Transfer Protocol. For a normal website owner, the useful translation is simpler: SMTP is how WordPress sends emails through a real mail server instead of hoping the web host can deliver them properly.</p>
+              <p>Without SMTP, WordPress often sends messages through the hosting server. Sometimes that works. Sometimes it lands in spam. Sometimes it disappears. That is not good enough for a business website or an online store.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>A successful form message is not proof</h2>
+              <p>A contact form can show a success message after submission, but that only means the form accepted the input. It does not prove that the email was created, sent, accepted by the recipient server and delivered to the inbox.</p>
+              <p>This is why form issues are annoying. The visitor thinks the message was sent. The website owner sees nothing. Without proper email setup and testing, both sides can be technically “right” while the lead is gone.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Where SMTP matters</h2>
+              <ul>
+                <li>contact forms on business websites,</li>
+                <li>WooCommerce order emails,</li>
+                <li>customer email confirmations,</li>
+                <li>password reset emails,</li>
+                <li>admin notifications,</li>
+                <li>automatic replies after form submission.</li>
+              </ul>
+              <p>If the website is supposed to bring enquiries or orders, email delivery is not a small detail. One missed form submission can cost more than setting SMTP correctly.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>What usually needs to be set up</h2>
+              <ol>
+                <li>A mail provider or SMTP server used for outgoing email.</li>
+                <li>A sender address from the same domain as the website.</li>
+                <li>Login credentials or API connection, depending on the provider.</li>
+                <li>A test email from WordPress itself.</li>
+                <li>A real test of the form, order email or password reset.</li>
+                <li>For business mail, often SPF, DKIM or DMARC DNS records.</li>
+              </ol>
+              <p>Not every website needs a complex setup. But every website that sends important messages needs proof that those messages actually arrive.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>An SMTP plugin is not magic</h2>
+              <p>A plugin such as WP Mail SMTP can connect WordPress to a proper sending service. That is usually the right direction. It still needs the correct sender address, domain settings, real form testing and, for WooCommerce, order email testing.</p>
+              <p>A common mistake is sending one plugin test email, seeing it arrive and calling the job done. The contact form can still have the wrong recipient. WooCommerce can still have a disabled notification. SMTP improves delivery, but it does not replace checking the full website flow.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>When to set it up</h2>
+              <p>Ideally before the website goes live. Email delivery should be tested like mobile layout, links and buttons. A form should arrive in the inbox, replies should go to the right person, and a store should send the correct order emails to the customer and owner.</p>
+              <p>If the site is already live and you are not sure whether forms arrive, do a proper test: submit the form, check inbox and spam, check sender address, Reply-To, SMTP logs and the actual checkout flow if WooCommerce is involved.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>When you can handle it yourself</h2>
+              <p>If you have WordPress access, your host gives clear SMTP settings and the site uses a simple form, you can often handle the basic setup yourself. Just do not test only the admin screen. Test the same path a real visitor would use.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>When help makes sense</h2>
+              <p>If the issue involves WooCommerce, Google Workspace, Microsoft 365, DNS records, several forms, or a problem that only happens sometimes, help can save time. At that point it is not just one plugin setting. It is email delivery diagnostics.</p>
+              <p>I handle this as part of <a href="/TH-Studio/en/sluzby/uprava-wordpress-webu.html">WordPress edits and fixes</a>. For a new project, it belongs inside a proper <a href="/TH-Studio/en/sluzby/tvorba-webstranok.html">website build</a>.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Short version</h2>
+              <p>SMTP is not a flashy feature visitors see. It is the quiet technical part that decides whether website messages reach the right inbox. For a business website, contact form or e-shop, I would treat it as a basic launch requirement.</p>
+            </div>
+
+            <div class="case-block">
+              <h2>Sources</h2>
+              <ul>
+                <li><a href="https://developer.wordpress.org/reference/functions/wp_mail/" target="_blank" rel="noopener">WordPress Developer Resources - wp_mail()</a></li>
+                <li><a href="https://woocommerce.com/document/email-smtp-providers/" target="_blank" rel="noopener">WooCommerce - Email and SMTP providers</a></li>
+                <li><a href="https://woocommerce.com/document/email-faq/" target="_blank" rel="noopener">WooCommerce - Email troubleshooting</a></li>
+                <li><a href="https://support.google.com/mail/answer/81126" target="_blank" rel="noopener">Gmail Help - Email sender guidelines</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="case-sidebar">
+            <div class="case-block">
+              <h3>Related reading</h3>
+              <a href="/TH-Studio/en/blog/why-wordpress-is-not-sending-emails-how-to-fix.html" class="bento-link">Why WordPress is not sending emails →</a>
+              <a href="/TH-Studio/en/blog/how-to-set-up-wordpress-contact-form-that-works.html" class="bento-link">How to set up a contact form →</a>
+              <a href="/TH-Studio/en/blog/how-to-set-up-woocommerce-payments.html" class="bento-link">How to set up WooCommerce payments →</a>
+            </div>
+            <div class="case-block">
+              <h3>Services</h3>
+              <a href="/TH-Studio/en/sluzby/uprava-wordpress-webu.html" class="bento-link">WordPress edits →</a>
+              <a href="/TH-Studio/en/sluzby/tvorba-webstranok.html" class="bento-link">Website development →</a>
+              <a href="/TH-Studio/en/sluzby/tvorba-eshopov.html" class="bento-link">E-shop development →</a>
+            </div>
+            <div class="case-block">
+              <h3>The point</h3>
+              <p>If the website should bring enquiries or orders, emails need to be tested as carefully as the visible design.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </article>
+
+    <section class="case-section case-section--compact"><div class="container"><div class="case-nav"><a href="/TH-Studio/en/blog/" class="btn btn-ghost">Back to blog</a><a href="/TH-Studio/en/#kontakt" class="btn btn-primary">Fix website emails</a></div></div></section>
+  </main>
+  <div data-shared-footer></div>
+  <script type="module" src="/src/js/shared-layout.js"></script>
+</body>
+</html>

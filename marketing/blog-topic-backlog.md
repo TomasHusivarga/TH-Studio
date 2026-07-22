@@ -20,6 +20,14 @@ Use this as a practical SEO/content backlog for TH Studio blog posts. The goal i
 - Internal link: `/TH-Studio/sluzby/uprava-wordpress-webu.html`.
 - Lead value: high. People searching this usually need help now.
 
+### 1a. Čo je SMTP a prečo je dôležité ho nastaviť vo WordPresse
+
+- Intent: site owner sees SMTP mentioned in a plugin, hosting support message, or WordPress email problem and does not know what it means.
+- Target phrases: `čo je SMTP`, `WordPress SMTP`, `SMTP WordPress nastavenie`, `prečo WordPress neposiela emaily`, `kontaktný formulár neposiela email`.
+- Angle: explain SMTP simply: WordPress should not send important emails "len tak cez server", but through a real trusted mail sender. Cover forms, order emails, password resets, deliverability, spam, DNS basics and why this matters before the website goes live.
+- Internal links: `/TH-Studio/blog/preco-wordpress-neposiela-emaily-ako-opravit.html` and `/TH-Studio/sluzby/uprava-wordpress-webu.html`.
+- Lead value: high. Good supporting article for contact form, WooCommerce email and repair searches.
+
 ### 2. Ako nastaviť kontaktný formulár vo WordPresse, aby reálne fungoval
 
 - Intent: beginner wants a contact form, or form exists but submissions are not arriving.
@@ -181,15 +189,16 @@ Use this as a practical SEO/content backlog for TH Studio blog posts. The goal i
 ## Suggested Publishing Order
 
 1. Prečo WordPress neposiela e-maily a ako to opraviť
-2. Ako nastaviť dopravu vo WooCommerce
-3. Prečo sa vo WooCommerce nezobrazuje doprava v pokladni
-4. Ako nastaviť kontaktný formulár vo WordPresse, aby reálne fungoval
-5. Prečo WooCommerce neodosiela objednávkové e-maily
-6. Čo skontrolovať pred aktualizáciou WordPressu a pluginov
-7. Ako zálohovať WordPress web a kedy nestačí iba plugin
-8. Ako nastaviť platby vo WooCommerce bez zbytočného chaosu
-9. Ako zrýchliť WordPress web bez toho, aby sa rozbil dizajn
-10. Koľko stojí úprava WordPress webu
+2. Čo je SMTP a prečo je dôležité ho nastaviť vo WordPresse
+3. Ako nastaviť dopravu vo WooCommerce
+4. Prečo sa vo WooCommerce nezobrazuje doprava v pokladni
+5. Ako nastaviť kontaktný formulár vo WordPresse, aby reálne fungoval
+6. Prečo WooCommerce neodosiela objednávkové e-maily
+7. Čo skontrolovať pred aktualizáciou WordPressu a pluginov
+8. Ako zálohovať WordPress web a kedy nestačí iba plugin
+9. Ako nastaviť platby vo WooCommerce bez zbytočného chaosu
+10. Ako zrýchliť WordPress web bez toho, aby sa rozbil dizajn
+11. Koľko stojí úprava WordPress webu
 
 ## Article Template
 
