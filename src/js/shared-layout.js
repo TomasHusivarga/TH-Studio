@@ -1,6 +1,7 @@
 import { initGoatCounter } from './modules/goatCounter.js';
 
 const projects = [
+  ['Matano', '/TH-Studio/projects/matano.html'],
   ['Rehamax', '/TH-Studio/projects/rehamax.html'],
   ['DonnaBella', '/TH-Studio/projects/donnabella.html'],
   ['Eko-Profit SK', '/TH-Studio/projects/ekoprofit.html'],

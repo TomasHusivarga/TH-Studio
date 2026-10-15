@@ -89,6 +89,7 @@ export default defineConfig({
         slovasozmyslom: resolve(__dirname, 'projects/slovasozmyslom.html'),
         modafinilCz: resolve(__dirname, 'projects/modafinil-cz.html'),
         profivyziva: resolve(__dirname, 'projects/profivyziva.html'),
+        matano: resolve(__dirname, 'projects/matano.html'),
         humienokNewsletter: resolve(__dirname, 'projects/humienok-newsletter.html'),
         viamaxFooterTemplate: resolve(__dirname, 'projects/viamax-footer-template.html'),
       },
