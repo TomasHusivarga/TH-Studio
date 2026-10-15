@@ -12,11 +12,13 @@ export default class UniversalCarousel {
    * @param {string} options.cards - Selector for individual cards
    * @param {number} [options.gap=24] - Gap between cards in pixels
    * @param {boolean} [options.mobileOnly=false] - If true, only activates below 900px
+   * @param {boolean} [options.reverseCards=false] - If true, renders cards in reverse DOM order
    */
-  constructor({ container, dots, cards, gap = 24, mobileOnly = false }) {
+  constructor({ container, dots, cards, gap = 24, mobileOnly = false, reverseCards = false }) {
     this.selectors = { container, dots, cards };
     this.gap = gap;
     this.mobileOnly = mobileOnly;
+    this.reverseCards = reverseCards;
     
     this.container = null;
     this.dotsContainer = null;
@@ -43,6 +45,10 @@ export default class UniversalCarousel {
 
     this.cards = [...this.container.querySelectorAll(this.selectors.cards)];
     if (this.cards.length === 0) return;
+
+    if (this.reverseCards) {
+      this.cards.reverse().forEach((card) => this.container.appendChild(card));
+    }
 
     this.dotsContainer = document.querySelector(this.selectors.dots);
     if (this.dotsContainer) this.dotsContainer.style.display = 'flex';

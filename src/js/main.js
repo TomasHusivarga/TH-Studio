@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cards: '.bento-wrapper',
     gap: 24,
     mobileOnly: true,
+    reverseCards: true,
   }).init();
 
   initCookieBanner();
