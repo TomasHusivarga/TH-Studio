@@ -2,6 +2,8 @@
 
 Speak English in chat.
 
+Before taking an action, consider the purpose and intended outcome of the workflow. Choose steps that advance that outcome; do not follow steps mechanically or act without considering how they fit the overall goal.
+
 When writing or editing public blog posts for this portfolio:
 
 - Read `BLOG_WRITING_STYLE.md` first.
